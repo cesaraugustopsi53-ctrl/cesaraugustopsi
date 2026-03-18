@@ -10,7 +10,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Facebook Pixel -->
   <script>
@@ -29,7 +29,7 @@
 
   <!-- Viewers Badge -->
   <div class="viewers-badge" id="viewersBadge">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
     <span id="viewersNum">47</span> pessoas vendo agora
   </div>
 
@@ -37,13 +37,13 @@
   <div class="exit-overlay" id="exitOverlay">
     <div class="exit-popup">
       <button class="exit-close" id="exitClose">✕</button>
-      <h2>Espere. Ainda tem dúvidas?</h2>
-      <p>Fale comigo direto no WhatsApp antes de sair.</p>
+      <h2>Espere! Ainda tem dúvidas?</h2>
+      <p>Fale comigo direto no WhatsApp antes de sair. Estou aqui para ajudar.</p>
       <a href="https://wa.me/5531991550421?text=Olá!%20Vim%20através%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20curso%20de%20Reconstrução%20Masculina." target="_blank" class="btn-cta" rel="noopener noreferrer">Falar no WhatsApp</a>
     </div>
   </div>
 
-  <!-- ═══ HEADER ═══ -->
+  <!-- Header -->
   <header class="header" id="header">
     <div class="container header-inner">
       <a href="#" class="logo">Reconstrução Masculina</a>
@@ -59,26 +59,22 @@
     </div>
   </header>
 
-  <!-- ═══ HERO — Full-Bleed Cinematográfico ═══ -->
+  <!-- Hero -->
   <section class="hero">
-    <div class="hero-bg" style="background-image: url(img/hero-casal.jpeg);"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-vinheta"></div>
-    <div class="hero-light-leak"></div>
-    <div class="hero-content">
-      <div class="container">
-        <div class="hero-inner reveal">
-          <span class="hero-eyebrow">Psicanalista · Terapeuta Masculino · +200 alunos</span>
-          <h1 class="hero-h1">Você traiu, feriu e quase perdeu<br><em>a mulher da sua vida?</em></h1>
-          <p class="hero-sub">Aprenda o caminho para se tornar um homem confiável novamente e reconstruir a confiança, a admiração e o vínculo com sua esposa.</p>
-          <a href="https://pay.kiwify.com.br/OE1Ah0O" target="_blank" class="btn-cta pulse" onclick="trackCheckout()" rel="noopener noreferrer">Quero iniciar minha restauração</a>
-          <p class="hero-proof">200+ alunos transformados &nbsp;·&nbsp; 7 dias de garantia incondicional</p>
-        </div>
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1 class="hero-h1">Você traiu, feriu e quase perdeu a mulher da sua vida?</h1>
+        <p class="hero-sub">Aprenda o caminho para se tornar um homem confiável novamente e reconstruir a confiança, a admiração e o vínculo com sua esposa.</p>
+        <a href="https://pay.kiwify.com.br/OE1Ah0O" target="_blank" class="btn-cta pulse" onclick="trackCheckout()" rel="noopener noreferrer">Quero iniciar minha restauração</a>
+        <p class="hero-proof">200+ alunos transformados &nbsp;•&nbsp; 7 dias de garantia</p>
+      </div>
+      <div class="hero-img-wrap">
+        <img src="img/hero-casal.jpeg" alt="César Augusto com sua esposa — relacionamento restaurado" class="hero-img" loading="eager" fetchpriority="high" />
       </div>
     </div>
   </section>
 
-  <!-- ═══ STATS ═══ -->
+  <!-- Stats -->
   <section class="stats">
     <div class="container">
       <div class="stats-grid">
@@ -103,40 +99,30 @@
     </div>
   </section>
 
-  <div class="gold-rule"></div>
-
-  <!-- ═══ VÍDEO 1 — Para quem é ═══ -->
-  <section class="section s-verde-escuro">
+  <!-- Video 1: Para quem é -->
+  <section class="section">
     <div class="container">
-      <div class="title-accent text-center reveal">
-        <span class="sec-label">Antes de qualquer coisa</span>
-        <h2 class="section-title">Para quem é este curso?</h2>
-      </div>
+      <h2 class="section-title reveal">Para quem é este curso?</h2>
       <div class="video-wrap reveal">
         <iframe src="https://www.youtube.com/embed/pdxydVN07Tw" title="Para quem é o curso Reconstrução Masculina" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
   </section>
 
-  <div class="gold-rule"></div>
-
-  <!-- ═══ DEPOIMENTOS ═══ -->
-  <section class="section s-verde" id="depoimentos">
+  <!-- Depoimentos -->
+  <section class="section bg-light" id="depoimentos">
     <div class="container">
-      <div class="title-accent text-center reveal">
-        <span class="sec-label">Prova social real</span>
-        <h2 class="section-title" style="color:#fff;">O que os alunos estão dizendo</h2>
-        <p class="section-quote">"O que 3 anos de terapia não fez, o curso fez em 3 aulas"</p>
-        <p class="section-sub" style="color:rgba(232,228,220,0.65);">Prints originais de mensagens recebidas. Nomes preservados por privacidade.</p>
-      </div>
+      <h2 class="section-title reveal">O que os alunos estão dizendo</h2>
+      <p class="section-quote reveal">"O que 3 anos de terapia não fez, o curso fez em 3 aulas"</p>
+      <p class="section-sub reveal">Prints reais de mensagens que recebo dos homens que passaram pelo curso</p>
       <div class="deps-grid">
         <div class="dep reveal">
           <p class="dep-label">⭐ Aluno após 3 aulas</p>
           <img src="img/dep-1.jpeg" alt="Depoimento — 3 meses de terapia não chegou onde chegou com seu curso" loading="lazy" />
         </div>
         <div class="dep reveal">
-          <p class="dep-label">💌 Mensagem da esposa de um aluno</p>
-          <img src="img/dep-2.jpeg" alt="Depoimento da esposa — nem 3 anos de terapia" loading="lazy" />
+          <p class="dep-label">⭐ Esposa sobre terapia</p>
+          <img src="img/dep-2.jpeg" alt="Depoimento da esposa — 3 anos de acompanhamento" loading="lazy" />
         </div>
         <div class="dep reveal">
           <p class="dep-label">⭐ Recuperando o casamento</p>
@@ -148,11 +134,11 @@
         </div>
         <div class="dep reveal">
           <p class="dep-label">💬 Prático e direto</p>
-          <img src="img/dep-5.jpeg" alt="Depoimento aluno" loading="lazy" />
+          <img src="img/dep-5.jpeg" alt="Depoimento — conteúdo prático sem enrolação" loading="lazy" />
         </div>
         <div class="dep reveal">
           <p class="dep-label">💬 Esposa de aluno</p>
-          <img src="img/dep-6.jpeg" alt="Depoimento da esposa" loading="lazy" />
+          <img src="img/dep-6.jpeg" alt="Depoimento da esposa — conhecendo nova versão do marido" loading="lazy" />
         </div>
       </div>
       <div class="mini-cta reveal">
@@ -162,13 +148,11 @@
     </div>
   </section>
 
-  <div class="gold-rule"></div>
-
-  <!-- ═══ IDENTIFICAÇÃO ═══ -->
-  <section class="section s-dark">
+  <!-- Identificação -->
+  <section class="section">
     <div class="container">
       <div class="id-block reveal">
-        <h2>Você não está aqui por curiosidade.<br>Você está aqui porque algo se quebrou.</h2>
+        <h2 class="section-title">Você não está aqui por curiosidade.<br>Você está aqui porque algo se quebrou.</h2>
         <div class="id-text">
           <p>Talvez houve traição.</p>
           <p>Talvez mentiras.</p>
@@ -182,14 +166,11 @@
     </div>
   </section>
 
-  <div class="gold-rule"></div>
-
-  <!-- ═══ CONSEQUÊNCIA ═══ -->
-  <section class="section s-verde-escuro">
+  <!-- Consequência -->
+  <section class="section bg-dark">
     <div class="container">
       <div class="consequence-card reveal">
-        <span class="sec-label" style="display:block;text-align:center;margin-bottom:16px;">Se nada mudar</span>
-        <h2>A tendência é clara:</h2>
+        <h2>Se nada mudar, a tendência é clara:</h2>
         <ul class="cons-list">
           <li>✗ A frieza aumenta</li>
           <li>✗ A distância cresce</li>
@@ -202,15 +183,10 @@
     </div>
   </section>
 
-  <div class="gold-rule"></div>
-
-  <!-- ═══ ANTES / DEPOIS ═══ -->
-  <section class="section s-dark">
+  <!-- Antes / Depois -->
+  <section class="section">
     <div class="container">
-      <div class="title-accent text-center reveal">
-        <span class="sec-label">A transformação que te espera</span>
-        <h2 class="section-title">De onde você está para onde pode chegar</h2>
-      </div>
+      <h2 class="section-title reveal">A transformação que te espera</h2>
       <div class="comparison reveal">
         <div class="comp-card before">
           <div class="comp-header">
@@ -243,15 +219,10 @@
     </div>
   </section>
 
-  <div class="gold-rule"></div>
-
-  <!-- ═══ O QUE VAI APRENDER ═══ -->
-  <section class="section s-verde-card">
+  <!-- O que vai aprender -->
+  <section class="section bg-light">
     <div class="container">
-      <div class="title-accent text-center reveal">
-        <span class="sec-label">O conteúdo</span>
-        <h2 class="section-title">O que você vai aprender</h2>
-      </div>
+      <h2 class="section-title reveal">O que você vai aprender</h2>
       <div class="learn-grid">
         <div class="learn-card reveal">Reconstruir sua identidade masculina</div>
         <div class="learn-card reveal">Quebrar padrões inconscientes</div>
@@ -263,13 +234,10 @@
     </div>
   </section>
 
-  <div class="gold-rule"></div>
-
-  <!-- ═══ POSICIONAMENTO ═══ -->
-  <section class="section s-dark text-center">
-    <div class="container--narrow">
+  <!-- Posicionamento -->
+  <section class="section">
+    <div class="container text-center">
       <div class="reveal">
-        <span class="sec-label">A diferença</span>
         <h2 class="section-title">Este curso transforma você em um homem diferente.</h2>
         <p class="pos-sub">E homens diferentes constroem relacionamentos diferentes.</p>
         <p class="pos-text">A mudança começa em você, e o relacionamento reflete essa transformação.</p>
@@ -278,10 +246,8 @@
     </div>
   </section>
 
-  <div class="gold-rule"></div>
-
-  <!-- ═══ AUTOR ═══ -->
-  <section class="section s-verde-escuro" id="sobre">
+  <!-- Autor -->
+  <section class="section bg-green" id="sobre">
     <div class="container">
       <div class="author-grid reveal">
         <div class="author-img-wrap">
@@ -299,15 +265,10 @@
     </div>
   </section>
 
-  <div class="gold-rule"></div>
-
-  <!-- ═══ ESTRUTURA DO CURSO ═══ -->
-  <section class="section s-dark" id="curso">
+  <!-- Estrutura do Curso -->
+  <section class="section" id="curso">
     <div class="container">
-      <div class="title-accent text-center reveal">
-        <span class="sec-label">Estrutura real do curso</span>
-        <h2 class="section-title">O que está dentro do método</h2>
-      </div>
+      <h2 class="section-title reveal">Estrutura Real do Curso</h2>
 
       <div class="bonus-highlight reveal">
         <span class="bonus-icon">🎁</span>
@@ -359,29 +320,24 @@
     </div>
   </section>
 
-  <div class="gold-rule"></div>
-
-  <!-- ═══ FOTO CASAMENTO ═══ -->
-  <section class="section s-verde-card">
+  <!-- Foto casamento -->
+  <section class="section bg-light">
     <div class="container">
       <div class="marriage-grid reveal">
         <img src="img/casamento.jpeg" alt="Relacionamento restaurado" loading="lazy" class="marriage-img" />
         <div class="marriage-text">
-          <span class="sec-label">A transformação é possível</span>
-          <h2>Relacionamentos se reconstroem quando o homem se reconstrói.</h2>
-          <p>O trabalho é interno. Mas os frutos aparecem na vida a dois — e nos olhos dela olhando pra você de volta.</p>
+          <h2>A transformação é possível</h2>
+          <p>Relacionamentos podem ser reconstruídos quando há compromisso real com a mudança. O trabalho é interno, mas os frutos aparecem na vida a dois.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="gold-rule"></div>
-
-  <!-- ═══ OFERTA ═══ -->
-  <section class="section s-dark" id="oferta">
+  <!-- Oferta -->
+  <section class="section" id="oferta">
     <div class="container">
       <div class="offer-card reveal">
-        <span class="offer-badge">Oferta Especial</span>
+        <span class="offer-badge">🔥 Oferta Especial</span>
         <h2>Garanta seu acesso agora</h2>
         <div class="offer-includes">
           <p class="offer-includes-title">O que você recebe:</p>
@@ -395,7 +351,7 @@
         </div>
         <div class="price-block">
           <p class="price-old">De R$497</p>
-          <p class="price-atual">R$297</p>
+          <p class="price-atual">Por R$297</p>
           <p class="price-eco">💰 Economia de R$200</p>
           <p class="price-parc">à vista ou 12x de R$30,72</p>
         </div>
@@ -411,29 +367,22 @@
     </div>
   </section>
 
-  <div class="gold-rule"></div>
-
-  <!-- ═══ GARANTIA ═══ -->
-  <section class="section s-verde">
+  <!-- Garantia -->
+  <section class="section bg-light">
     <div class="container">
       <div class="guarantee-block reveal">
         <div class="guarantee-icon">🛡</div>
-        <h2 style="color:#fff;">Garantia Incondicional de 7 Dias</h2>
-        <p style="color:rgba(232,228,220,0.7);">Se dentro de 7 dias você sentir que o curso não é pra você, basta me enviar um email e eu devolvo <strong style="color:#fff;">100% do seu investimento</strong>. Sem perguntas, sem burocracia.</p>
-        <p class="guarantee-em" style="color:var(--dourado);">O risco é todo meu. Você não tem nada a perder.</p>
+        <h2>Garantia Incondicional de 7 Dias</h2>
+        <p>Se dentro de 7 dias você sentir que o curso não é pra você, basta me enviar um email e eu devolvo <strong>100% do seu investimento</strong>. Sem perguntas, sem burocracia.</p>
+        <p class="guarantee-em">O risco é todo meu. Você não tem nada a perder.</p>
       </div>
     </div>
   </section>
 
-  <div class="gold-rule"></div>
-
-  <!-- ═══ FAQ ═══ -->
-  <section class="section s-verde-escuro">
+  <!-- FAQ -->
+  <section class="section">
     <div class="container">
-      <div class="title-accent text-center reveal">
-        <span class="sec-label">Dúvidas frequentes</span>
-        <h2 class="section-title">Perguntas Frequentes</h2>
-      </div>
+      <h2 class="section-title reveal">Perguntas Frequentes</h2>
       <div class="faq reveal">
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">Em quanto tempo vejo resultados? <span>+</span></button>
@@ -467,13 +416,10 @@
     </div>
   </section>
 
-  <div class="gold-rule"></div>
-
-  <!-- ═══ CTA FINAL ═══ -->
-  <section class="final-section">
+  <!-- CTA Final -->
+  <section class="section bg-green">
     <div class="container text-center">
       <div class="reveal">
-        <span class="sec-label" style="display:block;text-align:center;margin-bottom:20px;">O momento é agora</span>
         <h2 class="final-h2">O momento de mudar é agora</h2>
         <p class="final-sub">Você pode continuar prometendo mudança.<br>Ou pode se tornar um homem diferente.</p>
         <a href="https://pay.kiwify.com.br/OE1Ah0O" target="_blank" class="btn-cta pulse" onclick="trackCheckout()" rel="noopener noreferrer">Começar minha transformação</a>
@@ -481,10 +427,10 @@
     </div>
   </section>
 
-  <!-- ═══ FOOTER ═══ -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>© 2026 Reconstrução Masculina. Todos os direitos reservados.</p>
+      <p>© 2025 Reconstrução Masculina. Todos os direitos reservados.</p>
       <nav class="footer-nav">
         <a href="privacidade.html">Política de Privacidade</a>
         <span>|</span>
@@ -496,7 +442,7 @@
 
   <!-- WhatsApp Float -->
   <a href="https://wa.me/5531991550421?text=Olá!%20Vim%20através%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20curso%20de%20Reconstrução%20Masculina." target="_blank" class="whatsapp-float" aria-label="Falar no WhatsApp" rel="noopener noreferrer">
-    <svg viewBox="0 0 32 32" width="26" height="26"><path fill="currentColor" d="M16 0C7.163 0 0 7.163 0 16c0 2.825.738 5.487 2.025 7.788L.05 30.525l7.05-1.85A15.932 15.932 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.288 22.663c-.362 1.025-1.8 1.875-2.95 2.1-.787.15-1.812.275-5.263-.888-4.413-1.488-7.263-5.625-7.488-5.888-.213-.262-1.8-2.4-1.8-4.575 0-2.175 1.125-3.238 1.538-3.675.412-.438.9-.55 1.2-.55.3 0 .6 0 .862.012.275.013.638-.1.988.75.363.888 1.237 3.025 1.35 3.238.112.212.187.462.037.737-.137.275-.212.45-.425.688-.212.237-.45.525-.637.7-.213.2-.437.425-.188.838.25.412 1.113 1.837 2.388 2.975 1.638 1.462 3.012 1.925 3.45 2.137.437.213.688.175.938-.112.25-.288 1.075-1.263 1.362-1.7.288-.437.575-.363.962-.213.388.15 2.45 1.163 2.875 1.375.425.213.7.312.8.487.1.175.1 1.013-.262 2.038z"/></svg>
+    <svg viewBox="0 0 32 32" width="28" height="28"><path fill="currentColor" d="M16 0C7.163 0 0 7.163 0 16c0 2.825.738 5.487 2.025 7.788L.05 30.525l7.05-1.85A15.932 15.932 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.288 22.663c-.362 1.025-1.8 1.875-2.95 2.1-.787.15-1.812.275-5.263-.888-4.413-1.488-7.263-5.625-7.488-5.888-.213-.262-1.8-2.4-1.8-4.575 0-2.175 1.125-3.238 1.538-3.675.412-.438.9-.55 1.2-.55.3 0 .6 0 .862.012.275.013.638-.1.988.75.363.888 1.237 3.025 1.35 3.238.112.212.187.462.037.737-.137.275-.212.45-.425.688-.212.237-.45.525-.637.7-.213.2-.437.425-.188.838.25.412 1.113 1.837 2.388 2.975 1.638 1.462 3.012 1.925 3.45 2.137.437.213.688.175.938-.112.25-.288 1.075-1.263 1.362-1.7.288-.437.575-.363.962-.213.388.15 2.45 1.163 2.875 1.375.425.213.7.312.8.487.1.175.1 1.013-.262 2.038z"/></svg>
     <span>Tire suas dúvidas</span>
   </a>
 
@@ -505,8 +451,6 @@
     function trackCheckout() {
       if (window.fbq) fbq('track', 'InitiateCheckout', { content_name: 'Curso Reconstrução Masculina', value: 297.00, currency: 'BRL' });
     }
-    // ViewContent
-    if (window.fbq) fbq('track', 'ViewContent', { content_name: 'Reconstrução Masculina', value: 297.00, currency: 'BRL' });
 
     // Scroll bar
     window.addEventListener('scroll', () => {
@@ -518,14 +462,14 @@
     // Viewers count
     let v = 47;
     setInterval(() => {
-      v = Math.max(38, Math.min(61, v + Math.floor(Math.random() * 5) - 2));
+      v = Math.max(38, Math.min(58, v + Math.floor(Math.random() * 5) - 2));
       document.getElementById('viewersNum').textContent = v;
     }, 8000);
 
     // Reveal on scroll
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.08 });
+    }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
     // FAQ toggle
