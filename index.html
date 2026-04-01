@@ -321,7 +321,9 @@
     .oferta-item:last-child { margin-bottom: 0; }
     .oferta-item svg { width: 18px; height: 18px; stroke: var(--dourado); fill: none; stroke-width: 2.5; flex-shrink: 0; margin-top: 2px; }
     .preco-de { font-size: 1.05rem; color: var(--cinza-claro); text-align: center; text-decoration: line-through; margin-bottom: 8px; }
-    .preco-por { font-size: 2.6rem; font-weight: 800; color: var(--dourado); text-align: center; line-height: 1; margin-bottom: 14px; }
+    .preco-por { font-size: 1rem; font-weight: 500; color: var(--cinza); text-align: center; margin-bottom: 14px; }
+    .preco-parcela-destaque { font-size: 2.8rem; font-weight: 800; color: var(--dourado); text-align: center; line-height: 1; margin-bottom: 4px; }
+    .preco-parcela-label { font-size: 0.95rem; color: var(--cinza); text-align: center; margin-bottom: 14px; }
     .economia-badge {
       display: flex; align-items: center; justify-content: center; gap: 6px;
       background: #2e7d32; color: #fff; font-size: 0.88rem; font-weight: 700;
@@ -431,7 +433,7 @@
       </div>
     </div>
     <a href="https://pay.kiwify.com.br/OE1Ah0O?utm_source=organico&utm_medium=site&utm_campaign=reconstrucao-masculina&utm_content=btn-hero" class="btn-primary" id="btn-hero" onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout')">Quero iniciar minha restauração</a>
-    <p class="hero-parcelas">ou 12x de R$ 33,08 no cartão</p>
+    <p class="hero-parcelas">12x de R$41,06 ou R$397 à vista</p>
     <div class="hero-img">
       <img src="img/casal-cesar.jpg" alt="Casal reconstruindo o relacionamento" fetchpriority="high">
     </div>
@@ -737,10 +739,11 @@
         <div class="oferta-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Acesso por 1 ano completo</div>
         <div class="oferta-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Assista no celular, tablet ou PC</div>
       </div>
-      <p class="preco-de">De R$497</p>
-      <p class="preco-por">Por R$397</p>
-      <div class="economia-badge">💰 Economia de R$100</div>
-      <p class="preco-parcelas">à vista ou 12x de R$33,08</p>
+      <p class="preco-de">De R$597</p>
+      <p class="preco-parcela-destaque">12x de R$41,06</p>
+      <p class="preco-parcela-label">no cartão</p>
+      <div class="economia-badge">💰 Economia de R$200</div>
+      <p class="preco-por">ou R$397 à vista</p>
       <a href="https://pay.kiwify.com.br/OE1Ah0O?utm_source=organico&utm_medium=site&utm_campaign=reconstrucao-masculina&utm_content=btn-oferta" class="btn-primary" id="btn-oferta" onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout')">Quero começar agora</a>
       <div class="garantia-mini">
         <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -822,8 +825,8 @@
 <!-- STICKY CTA BAR -->
 <div class="sticky-cta-bar" id="stickyBar">
   <div class="sticky-price-info">
-    <span class="sticky-price-main">R$ 397</span>
-    <span class="sticky-price-parcelas">ou 12x de R$ 33,08</span>
+    <span class="sticky-price-main">12x de R$41,06</span>
+    <span class="sticky-price-parcelas">ou R$397 à vista</span>
   </div>
   <a href="https://pay.kiwify.com.br/OE1Ah0O?utm_source=organico&utm_medium=site&utm_campaign=reconstrucao-masculina&utm_content=btn-sticky" class="btn-primary" onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout')">Quero começar agora</a>
 </div>
