@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>César Augusto — Psicanalista</title>
+<meta name="description" content="Psicanalista especialista em casamentos em crise. Reconstrução Masculina, Restauração do Casamento e Vença a Pornografia.">
+<meta name="robots" content="index,follow">
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','702407242839062');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=702407242839062&ev=PageView&noscript=1"/></noscript>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VS98RGD9JY"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VS98RGD9JY');</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --verde:#1B3A2D;
+  --dourado:#C9A84C;
+  --bege:#F5F0E8;
+  --branco:#FFFFFF;
+  --cinza:#666;
+  --texto:#1a1a1a;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--verde);
+  min-height:100vh;
+  color:var(--texto);
+  padding:40px 20px 60px;
+}
+
+/* WRAPPER */
+.bio-wrapper{
+  max-width:440px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+/* PERFIL */
+.perfil{
+  text-align:center;
+  margin-bottom:8px;
+}
+.perfil-foto{
+  width:88px;
+  height:88px;
+  border-radius:50%;
+  object-fit:cover;
+  object-position:center 15%;
+  border:3px solid var(--dourado);
+  margin-bottom:12px;
+}
+.perfil-nome{
+  font-size:1.2rem;
+  font-weight:800;
+  color:var(--branco);
+  line-height:1.2;
+  margin-bottom:4px;
+}
+.perfil-tag{
+  font-size:.82rem;
+  color:rgba(255,255,255,.55);
+  letter-spacing:.3px;
+}
+
+/* CARD DE PRODUTO */
+.card{
+  background:var(--branco);
+  border-radius:18px;
+  padding:24px 22px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  box-shadow:0 4px 24px rgba(0,0,0,.25);
+}
+.card-label{
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:var(--dourado);
+}
+.card-titulo{
+  font-size:1.15rem;
+  font-weight:800;
+  color:var(--verde);
+  line-height:1.2;
+}
+.card-desc{
+  font-size:.9rem;
+  color:var(--cinza);
+  line-height:1.6;
+}
+.card-preco{
+  font-size:1.6rem;
+  font-weight:800;
+  color:var(--verde);
+  line-height:1;
+}
+.card-preco small{
+  font-size:.85rem;
+  font-weight:500;
+  color:var(--cinza);
+}
+.card-preco-avista{
+  font-size:.78rem;
+  color:var(--cinza);
+  margin-top:2px;
+}
+.btn{
+  display:block;
+  width:100%;
+  background:var(--dourado);
+  color:var(--branco);
+  font-family:'DM Sans',sans-serif;
+  font-size:.97rem;
+  font-weight:700;
+  padding:15px 20px;
+  border-radius:12px;
+  border:none;
+  cursor:pointer;
+  text-decoration:none;
+  text-align:center;
+  margin-top:4px;
+  transition:opacity .2s;
+}
+.btn:hover{opacity:.88}
+
+/* CARD DESTAQUE (Restauração) */
+.card.destaque{
+  background:var(--verde);
+  border:2px solid var(--dourado);
+}
+.card.destaque .card-titulo{color:var(--branco)}
+.card.destaque .card-label{color:var(--dourado)}
+.card.destaque .card-desc{color:rgba(255,255,255,.72)}
+.card.destaque .card-preco{color:var(--dourado)}
+.card.destaque .card-preco-avista{color:rgba(255,255,255,.45)}
+.card.destaque .btn{background:var(--dourado);color:var(--branco)}
+
+/* TAG INCLUSO */
+.tag-incluso{
+  display:inline-block;
+  background:rgba(201,168,76,.15);
+  border:1px solid rgba(201,168,76,.4);
+  border-radius:50px;
+  padding:4px 12px;
+  font-size:.72rem;
+  font-weight:600;
+  color:var(--dourado);
+}
+.card.destaque .tag-incluso{
+  background:rgba(201,168,76,.2);
+  border-color:rgba(201,168,76,.5);
+}
+
+/* RODAPÉ */
+.rodape{
+  text-align:center;
+  margin-top:8px;
+}
+.rodape p{
+  font-size:.75rem;
+  color:rgba(255,255,255,.3);
+}
+</style>
+</head>
+<body>
+
+<div class="bio-wrapper">
+
+  <!-- PERFIL -->
+  <div class="perfil">
+    <img src="../img/hero-cesar.jpg" alt="César Augusto" class="perfil-foto">
+    <p class="perfil-nome">César Augusto</p>
+    <p class="perfil-tag">Psicanalista · @cesaraugustoo__</p>
+  </div>
+
+  <!-- CARD 1 — Reconstrução Masculina (DESTAQUE) -->
+  <div class="card destaque">
+    <span class="card-label">Principal · Curso online</span>
+    <h2 class="card-titulo">Reconstrução Masculina</h2>
+    <p class="card-desc">Se você traiu ou feriu sua esposa — esse é o caminho para se reconstruir como homem, restaurar seu casamento e vencer a pornografia.</p>
+    <div>
+      <div class="card-preco"><small>12x de </small>R$41,06</div>
+      <p class="card-preco-avista">ou R$397 à vista</p>
+    </div>
+    <a href="https://cesaraugustopsi.com.br" class="btn" onclick="fbq('track','ViewContent',{content_name:'RM-bio'})">Quero me reconstruir →</a>
+  </div>
+
+  <!-- CARD 2 — Restauração do Casamento -->
+  <div class="card">
+    <span class="card-label">Curso online para o casal</span>
+    <h2 class="card-titulo">Restauração do Casamento</h2>
+    <p class="card-desc">Para o casal que quer se reconstruir juntos — módulo masculino, módulo do relacionamento e muito mais.</p>
+    <span class="tag-incluso">✓ Reconstrução Masculina incluso</span>
+    <div>
+      <div class="card-preco"><small>12x de </small>R$66,42</div>
+      <p class="card-preco-avista">ou R$797 à vista</p>
+    </div>
+    <a href="https://reconstrucao.cesaraugustopsi.com.br" class="btn" onclick="fbq('track','ViewContent',{content_name:'RC-bio'})">Quero restaurar meu casamento →</a>
+  </div>
+
+  <!-- CARD 3 — Vença a Pornografia -->
+  <div class="card">
+    <span class="card-label">Curso online</span>
+    <h2 class="card-titulo">Vença a Pornografia</h2>
+    <p class="card-desc">Vença de vez o vício e nunca mais tenha uma recaída.</p>
+    <div>
+      <div class="card-preco">R$37</div>
+      <p class="card-preco-avista">acesso imediato</p>
+    </div>
+    <a href="https://vicio.cesaraugustopsi.com.br" class="btn" onclick="fbq('track','ViewContent',{content_name:'VV-bio'})">Quero vencer →</a>
+  </div>
+
+  <div class="rodape">
+    <p>cesaraugustopsi.com.br</p>
+  </div>
+
+</div>
+
+</body>
+</html>
