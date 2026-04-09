@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masterclass Reconstrução a Dois — César Augusto & Thais Ayumi</title>
+<meta name="robots" content="noindex,nofollow">
+
+<!-- Meta Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','702407242839062');
+  fbq('track','PageView');
+</script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VS98RGD9JY"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-VS98RGD9JY');
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","vxds1uep01");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bege: #EFEBE3;
+    --bege2: #E8E2D8;
+    --verde: #1B3A2D;
+    --dourado: #C9A84C;
+    --branco: #ffffff;
+    --texto: #2a2a2a;
+    --cinza: #666;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bege); color: var(--texto); overflow-x: hidden; line-height: 1.6; }
+  .container { max-width: 600px; margin: 0 auto; padding: 0 20px; }
+
+  /* HEADER */
+  header {
+    background: var(--verde);
+    padding: 14px 20px;
+    text-align: center;
+  }
+  header span {
+    font-size: 13px; font-weight: 600;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.05em;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--verde);
+    padding: 56px 20px 52px;
+    text-align: center;
+    color: #fff;
+  }
+  .hero .tag {
+    display: inline-block;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--dourado);
+    border: 1px solid rgba(201,168,76,0.35);
+    padding: 5px 14px; border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: clamp(30px, 7vw, 46px);
+    font-weight: 800; line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .hero h1 span { color: var(--dourado); }
+  .hero .sub {
+    font-size: clamp(15px, 2.5vw, 17px);
+    color: rgba(255,255,255,0.65);
+    max-width: 460px; margin: 0 auto 32px;
+    font-weight: 400;
+  }
+
+  /* BADGES DATA/FORMATO */
+  .badges {
+    display: flex; justify-content: center;
+    gap: 12px; flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+  .badge {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 10px 18px;
+    text-align: center;
+  }
+  .badge-label {
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    display: block; margin-bottom: 3px;
+  }
+  .badge-valor {
+    font-size: 15px; font-weight: 700; color: #fff;
+  }
+
+  /* APRESENTADORES */
+  .apresentadores {
+    font-size: 13px; color: rgba(255,255,255,0.5);
+  }
+  .apresentadores strong { color: rgba(255,255,255,0.85); }
+
+  /* O QUE VAI APRENDER */
+  .conteudo { padding: 48px 20px; }
+  .conteudo h2 {
+    font-size: clamp(20px, 4vw, 26px);
+    font-weight: 800; color: var(--verde);
+    margin-bottom: 24px; text-align: center;
+  }
+  .lista-itens { list-style: none; margin-bottom: 0; }
+  .lista-itens li {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 14px 0; border-bottom: 1px solid var(--bege2);
+    font-size: 0.97rem; color: var(--texto); line-height: 1.55;
+  }
+  .lista-itens li:last-child { border-bottom: none; }
+  .lista-itens li::before {
+    content: '';
+    width: 20px; height: 20px; min-width: 20px;
+    border-radius: 50%; background: var(--verde);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C9A84C' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: 12px; background-repeat: no-repeat; background-position: center;
+    margin-top: 2px;
+  }
+
+  /* PRECO */
+  .preco-secao {
+    background: var(--branco);
+    border-radius: 20px;
+    padding: 36px 32px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    margin: 0 20px 48px;
+    text-align: center;
+  }
+  .preco-secao .preco-label {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--cinza); margin-bottom: 12px; display: block;
+  }
+  .preco-numero {
+    font-size: 56px; font-weight: 800;
+    color: var(--verde); line-height: 1;
+    margin-bottom: 6px;
+  }
+  .preco-numero sup {
+    font-size: 24px; font-weight: 600;
+    vertical-align: super; margin-right: 2px;
+  }
+  .preco-desc {
+    font-size: 13px; color: var(--cinza);
+    margin-bottom: 28px;
+  }
+
+  .btn-cta {
+    display: block; width: 100%;
+    background: var(--dourado); color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 800; font-size: 1.1rem;
+    padding: 20px 24px; border-radius: 12px;
+    text-decoration: none; text-align: center;
+    transition: opacity 0.2s;
+    box-shadow: 0 4px 20px rgba(201,168,76,0.4);
+  }
+  .btn-cta:hover { opacity: 0.9; }
+  .btn-cta small {
+    display: block; font-size: 12px;
+    font-weight: 400; margin-top: 4px;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .garantia {
+    display: flex; align-items: center; justify-content: center;
+    gap: 8px; margin-top: 16px;
+    font-size: 12px; color: var(--cinza);
+  }
+  .garantia svg {
+    width: 16px; height: 16px;
+    stroke: var(--verde); fill: none;
+    stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 28px 20px;
+    text-align: center;
+    border-top: 1px solid var(--bege2);
+  }
+  footer p { font-size: 12px; color: var(--cinza); line-height: 1.8; }
+</style>
+</head>
+<body>
+
+<header>
+  <span>cesaraugustopsi.com.br</span>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="tag">Evento ao vivo · 26 de abril</span>
+    <h1>Masterclass<br><span>Reconstrução a Dois</span></h1>
+    <p class="sub">Uma noite para entender o que está destruindo o casamento — e o que pode reconstruí-lo.</p>
+
+    <div class="badges">
+      <div class="badge">
+        <span class="badge-label">Data</span>
+        <span class="badge-valor">26 de abril</span>
+      </div>
+      <div class="badge">
+        <span class="badge-label">Formato</span>
+        <span class="badge-valor">Ao vivo via Zoom</span>
+      </div>
+      <div class="badge">
+        <span class="badge-label">Duração</span>
+        <span class="badge-valor">~2 horas</span>
+      </div>
+    </div>
+
+    <p class="apresentadores">Apresentado por <strong>César Augusto</strong> e <strong>Thais Ayumi</strong></p>
+  </div>
+</section>
+
+<!-- CONTEÚDO -->
+<section class="conteudo">
+  <div class="container">
+    <h2>O que você vai ver na masterclass</h2>
+    <ul class="lista-itens">
+      <li>Por que a traição acontece — e o que ela revela sobre o casamento</li>
+      <li>O erro mais comum que os casais cometem na tentativa de reconstruir</li>
+      <li>Como a mulher processa a traição e o que ela precisa ver no homem para continuar</li>
+      <li>O caminho real da reconstrução — do ponto de ruptura até a reconexão</li>
+      <li>Perguntas ao vivo com César e Thais</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PREÇO -->
+<div class="preco-secao">
+  <span class="preco-label">Participação</span>
+  <div class="preco-numero"><sup>R$</sup>97</div>
+  <p class="preco-desc">Pagamento único. Acesso ao vivo + grupo exclusivo de participantes.</p>
+
+  <a href="https://pay.kiwify.com.br/2rTlEI1" class="btn-cta">
+    Garantir minha vaga agora
+    <small>Você será direcionado para o pagamento seguro</small>
+  </a>
+
+  <div class="garantia">
+    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+    Pagamento 100% seguro via Kiwify
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>
+      César Augusto & Thais Ayumi · cesaraugustopsi.com.br<br>
+      Dúvidas? WhatsApp: (31) 99155-0421
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
