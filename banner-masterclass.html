@@ -18,52 +18,28 @@
     overflow: hidden;
   }
 
-  /* FOTO — ocupa o banner inteiro como fundo */
-  .foto-bg {
-    position: absolute;
-    inset: 0;
-    background-image: url('img/hero-casal.jpeg');
-    background-size: cover;
-    background-position: center top;
-    filter: brightness(0.55);
-  }
-
-  /* Gradiente da esquerda para dar legibilidade ao texto */
-  .gradiente {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to right,
-      #1B3A2D 0%,
-      #1B3A2D 42%,
-      rgba(27,58,45,0.7) 62%,
-      rgba(27,58,45,0.1) 100%
-    );
-    z-index: 1;
-  }
-
   /* Linha dourada no topo */
-  .linha-topo {
+  .banner::before {
+    content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 4px;
     background: #C9A84C;
-    z-index: 3;
+    z-index: 10;
   }
 
-  /* CONTEÚDO */
-  .conteudo {
-    position: relative;
-    z-index: 2;
-    padding: 38px 44px;
+  /* ESQUERDA — texto fundo verde sólido */
+  .lado-esquerdo {
+    width: 390px;
+    min-width: 390px;
+    background: #1B3A2D;
+    padding: 38px 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
-    width: 460px;
+    position: relative;
+    z-index: 2;
   }
-
-  .topo { display: flex; flex-direction: column; gap: 0; }
 
   .tag {
     font-size: 10px;
@@ -71,43 +47,42 @@
     letter-spacing: 0.24em;
     text-transform: uppercase;
     color: #C9A84C;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .titulo {
-    font-size: 36px;
+    font-size: 34px;
     font-weight: 800;
     color: #fff;
-    line-height: 1.08;
-    margin-bottom: 22px;
+    line-height: 1.1;
+    margin-bottom: 20px;
   }
   .titulo span { color: #C9A84C; }
 
   .infos {
     display: flex;
     gap: 24px;
+    margin-bottom: 0;
   }
   .info-item { display: flex; flex-direction: column; gap: 2px; }
   .info-label {
     font-size: 9px; font-weight: 700;
     letter-spacing: 0.18em; text-transform: uppercase;
-    color: rgba(255,255,255,0.4);
+    color: rgba(255,255,255,0.38);
   }
   .info-valor {
     font-size: 14px; font-weight: 700; color: #fff;
   }
 
-  /* RODAPÉ do conteúdo */
   .rodape {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
   }
-
   .apresentado {
     font-size: 12px;
     color: rgba(255,255,255,0.5);
-    line-height: 1.5;
+    line-height: 1.6;
   }
   .apresentado strong { color: rgba(255,255,255,0.85); font-weight: 600; }
 
@@ -115,30 +90,66 @@
   .preco-label {
     font-size: 9px; font-weight: 700;
     letter-spacing: 0.18em; text-transform: uppercase;
-    color: rgba(255,255,255,0.4);
+    color: rgba(255,255,255,0.38);
     margin-bottom: 2px;
   }
   .preco-valor {
-    font-size: 48px; font-weight: 800;
+    font-size: 46px; font-weight: 800;
     color: #C9A84C; line-height: 1;
   }
   .preco-valor sup {
     font-size: 20px; font-weight: 600;
     vertical-align: super; margin-right: 1px;
   }
+
+  /* DIREITA — foto */
+  .lado-direito {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .lado-direito img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    top: 0;
+    /* ajusta horizontalmente para centralizar os rostos */
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    filter: brightness(0.88);
+  }
+
+  /* Gradiente suave na borda esquerda da foto para fundir com o verde */
+  .lado-direito::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 60px; height: 100%;
+    background: linear-gradient(to right, #1B3A2D, transparent);
+    z-index: 2;
+  }
+
+  /* Gradiente suave no rodapé da foto */
+  .lado-direito::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 60px;
+    background: linear-gradient(to top, rgba(27,58,45,0.6), transparent);
+    z-index: 2;
+  }
 </style>
 </head>
 <body>
 
 <div class="banner">
-  <div class="foto-bg"></div>
-  <div class="gradiente"></div>
-  <div class="linha-topo"></div>
 
-  <div class="conteudo">
-    <div class="topo">
+  <div class="lado-esquerdo">
+    <div>
       <div class="tag">Evento ao vivo · 26 de abril</div>
-      <div class="titulo">Masterclass<br><span>Reconstrução a Dois</span></div>
+      <div class="titulo">Masterclass<br><span>Reconstrução<br>a Dois</span></div>
       <div class="infos">
         <div class="info-item">
           <span class="info-label">Data</span>
@@ -161,6 +172,11 @@
       </div>
     </div>
   </div>
+
+  <div class="lado-direito">
+    <img src="img/hero-casal.jpeg" alt="César e Thais">
+  </div>
+
 </div>
 
 </body>
