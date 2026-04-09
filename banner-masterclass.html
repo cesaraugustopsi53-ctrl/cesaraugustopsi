@@ -126,8 +126,13 @@
     content: '';
     position: absolute;
     top: 0; left: 0;
-    width: 60px; height: 100%;
-    background: linear-gradient(to right, #1B3A2D, transparent);
+    width: 120px; height: 100%;
+    background: linear-gradient(to right,
+      #1B3A2D 0%,
+      rgba(27,58,45,0.85) 30%,
+      rgba(27,58,45,0.4) 60%,
+      transparent 100%
+    );
     z-index: 2;
   }
 
@@ -136,8 +141,8 @@
     content: '';
     position: absolute;
     bottom: 0; left: 0; right: 0;
-    height: 60px;
-    background: linear-gradient(to top, rgba(27,58,45,0.6), transparent);
+    height: 50px;
+    background: linear-gradient(to top, rgba(27,58,45,0.45), transparent);
     z-index: 2;
   }
 </style>
