@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O homem que fala sem falar</title>
+<meta name="description" content="Como parar de dizer sem dizer. Uma carta sobre comunicação assertiva, para homens e para as mulheres que vivem com eles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --preto:#100F0D;
+    --papel:#FBF9F5;
+    --papel2:#F2EDE3;
+    --tinta:#2A2622;
+    --tinta2:#4A443C;
+    --ouro:#C5A365;
+    --ouro-escuro:#A9863F;
+    --ouro-claro:#E4C98C;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background:var(--papel);
+    color:var(--tinta);
+    font-family:'Montserrat', sans-serif;
+    font-size:18px;
+    line-height:1.8;
+    font-weight:400;
+  }
+
+  /* topo */
+  .topo{
+    background:var(--preto);
+    color:var(--ouro-claro);
+    text-align:center;
+    padding:64px 24px 56px;
+    position:relative;
+  }
+  .topo::after{
+    content:""; position:absolute; left:0; right:0; bottom:0; height:5px;
+    background:var(--ouro);
+  }
+  .marca{
+    font-family:'Bebas Neue'; font-size:15px; letter-spacing:5px;
+    color:var(--ouro); margin-bottom:26px;
+  }
+  .topo h1{
+    font-family:'Bebas Neue'; font-weight:400;
+    font-size:clamp(42px, 7vw, 72px);
+    line-height:1.02; letter-spacing:1px; color:var(--ouro-claro);
+    max-width:760px; margin:0 auto;
+  }
+  .topo .sub{
+    margin:22px auto 0; max-width:540px;
+    font-size:16px; font-weight:300; color:#B9B0A4; line-height:1.75;
+  }
+
+  /* carta */
+  .carta{ max-width:680px; margin:0 auto; padding:64px 24px 40px; }
+
+  .carta p{ margin-bottom:26px; }
+  .carta p.abre{ font-size:20px; color:var(--preto); }
+  strong{ font-weight:700; color:var(--preto); }
+  em{ font-style:italic; }
+
+  h2{
+    font-family:'Bebas Neue'; font-weight:400;
+    font-size:34px; line-height:1.1; letter-spacing:0.5px;
+    color:var(--preto); margin:56px 0 6px;
+  }
+  h2 + .linha{ width:52px; height:3px; background:var(--ouro); margin-bottom:26px; }
+
+  .cena{
+    background:var(--papel2);
+    border-left:4px solid var(--ouro);
+    padding:22px 24px 18px;
+    margin:0 0 26px;
+  }
+  .cena .rot{
+    font-family:'Bebas Neue'; font-size:13px; letter-spacing:3px;
+    color:var(--ouro-escuro); margin-bottom:6px;
+  }
+  .cena p{ margin-bottom:0; font-size:17px; }
+  .cena p + p{ margin-top:14px; }
+
+  ul.lista{ list-style:none; margin:0 0 26px; }
+  ul.lista li{
+    position:relative; padding:0 0 16px 26px; font-size:17.5px;
+  }
+  ul.lista li::before{
+    content:""; position:absolute; left:0; top:14px;
+    width:14px; height:3px; background:var(--ouro);
+  }
+
+  ol.passos{ list-style:none; counter-reset:p; margin:0 0 26px; }
+  ol.passos li{
+    counter-increment:p; position:relative;
+    padding:0 0 24px 54px;
+  }
+  ol.passos li::before{
+    content:counter(p, decimal-leading-zero);
+    position:absolute; left:0; top:2px;
+    font-family:'Bebas Neue'; font-size:26px; color:var(--ouro);
+    letter-spacing:1px;
+  }
+  ol.passos li .t{
+    display:block; font-weight:700; color:var(--preto);
+    margin-bottom:4px; font-size:18px;
+  }
+  ol.passos li{ font-size:17px; }
+
+  .destaque{
+    border-left:4px solid var(--ouro);
+    padding:6px 0 6px 22px; margin:34px 0;
+    font-size:21px; line-height:1.6; font-weight:600; color:var(--preto);
+  }
+
+  table.troca{
+    width:100%; border-collapse:collapse; margin:0 0 26px; font-size:16px;
+  }
+  table.troca th{
+    font-family:'Bebas Neue'; font-weight:400; font-size:17px;
+    letter-spacing:2px; color:var(--ouro-escuro); text-align:left;
+    padding:0 12px 10px 0; border-bottom:2px solid var(--ouro);
+  }
+  table.troca td{
+    padding:14px 16px 14px 0; border-bottom:1px solid #E2DAC9;
+    vertical-align:top; width:50%; line-height:1.6;
+  }
+  table.troca td.b{ font-weight:600; color:var(--preto); }
+
+  .assina{
+    margin-top:48px; padding-top:28px; border-top:1px solid #E2DAC9;
+  }
+  .assina .nome{ font-weight:700; color:var(--preto); }
+  .assina .cargo{ font-size:15px; color:var(--tinta2); }
+
+  /* transição para oferta */
+  .ponte{
+    background:var(--papel2);
+    padding:56px 24px;
+    margin-top:24px;
+  }
+  .ponte .miolo{ max-width:680px; margin:0 auto; }
+  .ponte p{ margin-bottom:24px; }
+
+  /* oferta */
+  .oferta{
+    background:var(--preto); color:#C9C2B7;
+    padding:72px 24px 80px;
+  }
+  .oferta .miolo{ max-width:680px; margin:0 auto; }
+  .oferta h2{ color:var(--ouro-claro); font-size:clamp(34px,5vw,46px); margin-top:0; }
+  .oferta h2 + .linha{ background:var(--ouro); }
+  .oferta p{ margin-bottom:24px; font-size:17.5px; }
+  .oferta strong{ color:#F2E9D8; }
+
+  ul.entrega{ list-style:none; margin:0 0 34px; }
+  ul.entrega li{
+    position:relative; padding:0 0 16px 28px; font-size:17px;
+  }
+  ul.entrega li::before{
+    content:""; position:absolute; left:0; top:13px;
+    width:14px; height:3px; background:var(--ouro);
+  }
+  ul.entrega li strong{ color:#F2E9D8; }
+
+  .preco{
+    text-align:center; margin:44px 0 10px;
+  }
+  .preco .de{ font-size:15px; color:#8F877B; }
+  .preco .valor{
+    font-family:'Bebas Neue'; font-size:64px; line-height:1;
+    color:var(--ouro-claro); letter-spacing:1px; margin:6px 0 4px;
+  }
+  .preco .parc{ font-size:16px; color:#B9B0A4; }
+
+  .botao{
+    display:block; max-width:420px; margin:34px auto 0;
+    background:var(--ouro); color:var(--preto);
+    font-family:'Bebas Neue'; font-size:24px; letter-spacing:2px;
+    text-align:center; text-decoration:none;
+    padding:20px 24px; border-radius:4px;
+    transition:background .15s ease;
+  }
+  .botao:hover{ background:var(--ouro-claro); }
+  .garantia{
+    text-align:center; font-size:14.5px; color:#8F877B; margin-top:18px;
+  }
+
+  .rodape{
+    background:var(--preto); border-top:1px solid rgba(197,163,101,.25);
+    text-align:center; padding:28px 24px 36px;
+    font-family:'Bebas Neue'; font-size:13px; letter-spacing:4px;
+    color:rgba(197,163,101,.55);
+  }
+
+  @media (max-width:560px){
+    body{ font-size:17px; }
+    .carta{ padding-top:48px; }
+    table.troca, table.troca thead, table.troca tbody,
+    table.troca th, table.troca td, table.troca tr{ display:block; width:100%; }
+    table.troca thead{ display:none; }
+    table.troca td{ padding:12px 0 4px; border-bottom:none; }
+    table.troca td.b{ padding-top:2px; padding-bottom:16px;
+      border-bottom:1px solid #E2DAC9; }
+    table.troca td::before{
+      display:block; font-family:'Bebas Neue'; font-size:13px;
+      letter-spacing:2px; color:var(--ouro-escuro); margin-bottom:2px;
+    }
+    table.troca td:not(.b)::before{ content:"O QUE SE DIZ HOJE"; }
+    table.troca td.b::before{ content:"O QUE UM ADULTO DIZ"; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="marca">RECONSTRUÇÃO MASCULINA</div>
+  <h1>O HOMEM QUE FALA<br>SEM FALAR</h1>
+  <div class="sub">Uma carta sobre a raiva que sai disfarçada, o pedido que nunca é feito, e o que isso está custando dentro da sua casa.</div>
+</header>
+
+<main class="carta">
+
+  <p class="abre">Ela manda mensagem. Ele lê. Deixa lá, de propósito. Responde três horas depois com um "ok".</p>
+  <p>Ele não está ocupado. Ele está cobrando.</p>
+
+  <p>Se você é homem e leu isso com um leve desconforto, essa carta é sobre você. Se você é mulher e acabou de pensar em alguém, essa carta é sobre a sua casa. Vale a pena ler até o fim, nos dois casos.</p>
+
+  <h2>Mais duas cenas</h2><div class="linha"></div>
+
+  <div class="cena">
+    <div class="rot">CENA</div>
+    <p>Ela pergunta: "o que foi?". Ele responde: "nada". E fica com cara de quem tem tudo. Se ela insistir, ele venceu. Se ela desistir, ele tem mais um motivo para ficar magoado.</p>
+  </div>
+
+  <div class="cena">
+    <div class="rot">CENA</div>
+    <p>Ele não quer ir na casa da sogra domingo de novo. Nunca disse isso. Vai, senta no sofá, fica no celular, e na volta reclama do trânsito e diz que está cansado do trabalho.</p>
+  </div>
+
+  <p>Isso tem nome: comunicação passivo-agressiva. Em português simples, é <strong>bater sem levantar a mão</strong>. A pessoa machuca, mas não paga o preço, porque na frase que saiu da boca dela não tinha nada de errado. E assim ela segue sendo a vítima da história.</p>
+
+  <h2>Onde isso começa</h2><div class="linha"></div>
+
+  <p>Ninguém nasce falando por indireta. Isso se aprende dentro de casa, cedo, olhando os adultos.</p>
+
+  <p>Muita gente cresceu numa casa onde ninguém pedia nada. Onde a mãe não pedia: reclamava. Suspirava alto na cozinha até alguém perguntar o que foi. Dizia "deixa, eu faço sozinha mesmo" e fazia com cara de sofrimento para todo mundo ver. Dizia "eu larguei tudo por vocês", e conseguia exatamente o que queria sem nunca ter pedido.</p>
+
+  <p>A moeda daquela casa era a culpa. E o menino aprendeu a técnica assistindo: <strong>o jeito de conseguir as coisas é fazer o outro se sentir mal.</strong></p>
+
+  <p>Desse aprendizado, ele tirou três conclusões que carrega até hoje:</p>
+
+  <ul class="lista">
+    <li><strong>Raiva é perigo.</strong> Menino bravo assusta. Menino que responde perde carinho. Então guardou. A raiva não sumiu, só aprendeu a andar disfarçada.</li>
+    <li><strong>Querer é errado.</strong> Toda vez que pedia alguma coisa, sobrava cara feia ou sermão. Então parou de pedir e passou a esperar que percebessem.</li>
+    <li><strong>Ser eu mesmo é arriscado.</strong> Se eu mostrar do que gosto e do que não gosto, alguém se afasta. Melhor ser um homem sem arestas.</li>
+  </ul>
+
+  <p>Hoje ele é adulto, tem casa, tem filho, tem responsabilidade. Mas na hora de dizer "eu não quero", quem responde ainda é aquele menino.</p>
+
+  <h2>O contrato que ela nunca assinou</h2><div class="linha"></div>
+
+  <p>Embaixo de tudo isso existe um medo. O medo de que, se ele aparecer inteiro, com vontades e limites, ela veja quem ele é e não queira mais.</p>
+
+  <p>Então ele faz um acordo em silêncio, sem contar para ninguém. Funciona assim: <em>eu vou engolir, vou concordar, vou abrir mão, vou ser o cara tranquilo que nunca dá trabalho. E em troca, você vai me querer, vai me admirar e vai adivinhar o que eu preciso sem eu ter que pedir.</em></p>
+
+  <p>O detalhe é que <strong>ela nunca assinou esse contrato. Ela nem sabe que ele existe.</strong> E quando ela não cumpre a parte dela, ele se sente traído por uma dívida que ela nunca fez. Aí vem o ressentimento, a ironia, o silêncio de dois dias.</p>
+
+  <div class="cena">
+    <div class="rot">CENA</div>
+    <p>Ele lava a louça, arruma a casa, cuida do menino a tarde inteira. Não pediu nada. Só esperou. À noite ela está cansada e vira para o lado. Ele não fala nada, mas passa o domingo inteiro emburrado, achando que ela não o quer mais.</p>
+    <p>O contrato quebrou. Só que ela nunca soube que ele existia.</p>
+  </div>
+
+  <p>E é aqui que nasce a vítima. O lugar de vítima é confortável, porque dá razão sem cobrar nada. Quem nunca pediu, nunca foi negado. Quem nunca apareceu, nunca foi recusado. A pessoa fica segura e infeliz ao mesmo tempo.</p>
+
+  <h2>A correção</h2><div class="linha"></div>
+
+  <p>A mentira que segura tudo isso de pé é uma só: a ideia de que ter vontade própria custa amor. Foi a conclusão que o menino tirou, e o homem adulto continua vivendo dentro dela sem nunca ter testado se é verdade.</p>
+
+  <p>Na prática, acontece o contrário:</p>
+
+  <ul class="lista">
+    <li><strong>Quem não se mostra não é fácil de amar, é difícil de enxergar.</strong> Ela ama uma versão morna dele, porque é só isso que ele deixou ela conhecer.</li>
+    <li><strong>Homem sem vontade não gera desejo.</strong> Desejo precisa de alguém do outro lado. Alguém com gosto, com opinião, e com um não na boca quando é não.</li>
+    <li><strong>Quando ele fala, ela para de adivinhar.</strong> Some o clima pesado, some o jogo de quem está bravo com quem. A casa fica mais leve para os dois.</li>
+  </ul>
+
+  <div class="destaque">Você não vai perder o amor dela por dizer o que você quer. Você está perdendo por não dizer.</div>
+
+  <h2>Como mudar: os 10 passos</h2><div class="linha"></div>
+
+  <ol class="passos">
+    <li><span class="t">Dê nome ao que você sente</span>Não é "estou de boa". É raiva, é ciúme, é medo, é vergonha. Enquanto não tem nome, sai pelo comportamento.</li>
+    <li><span class="t">Descubra o que você quer</span>Toda reclamação esconde um pedido. Pergunte: o que eu queria que ela fizesse diferente? Se você não sabe responder, ainda não é hora de conversar.</li>
+    <li><span class="t">Vire a reclamação em pedido</span>"Você vive no celular" é reclamação. "Quero que a gente jante sem celular duas vezes na semana" é pedido. Reclamação acusa. Pedido abre porta.</li>
+    <li><span class="t">Escolha a hora</span>Nem no meio do fogo, nem guardado por três semanas. Guardar é juntar munição. Fale enquanto ainda dá para falar sem gritar.</li>
+    <li><span class="t">Comece a frase com "eu"</span>"Eu me senti ignorado quando você saiu no meio da conversa." Ninguém consegue discutir o que você sentiu. Todo mundo discute uma acusação.</li>
+    <li><span class="t">Um assunto por conversa</span>Se começou na sogra e terminou na fatura de dois anos atrás, você não queria resolver. Queria ganhar.</li>
+    <li><span class="t">Corte a pergunta que é ataque</span>"Você não vai lavar isso?" não é pergunta. É acusação vestida de dúvida. Se é reclamação, reclame. De frente.</li>
+    <li><span class="t">Falou, para de falar</span>Pediu, cala. Não enche de explicação, não amolece, não pede desculpa por ter pedido.</li>
+    <li><span class="t">Aguente o não</span>Assertivo não é quem consegue o que quer. É quem pede e continua inteiro se ouvir não. Se o não vira castigo de silêncio, aquilo não era pedido. Era chantagem.</li>
+    <li><span class="t">Repita na próxima vez</span>Falar uma vez e voltar a engolir ensina o outro que sua palavra não vale. É repetição chata, que com o tempo vira respeito.</li>
+  </ol>
+
+  <h2>Troque isso por aquilo</h2><div class="linha"></div>
+
+  <table class="troca">
+    <thead>
+      <tr><th>O QUE SE DIZ HOJE</th><th>O QUE UM ADULTO DIZ</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>"Nada, estou bem." (não está)</td><td class="b">"Estou incomodado com uma coisa. Quero falar com você hoje."</td></tr>
+      <tr><td>"Tanto faz, faz como quiser."</td><td class="b">"Eu prefiro assim, e vou te explicar por quê."</td></tr>
+      <tr><td>"Ninguém aqui tem consideração comigo."</td><td class="b">"Quero que você me avise quando for chegar tarde."</td></tr>
+      <tr><td>Dois dias respondendo por monossílabo.</td><td class="b">"Estou com raiva. Me dá uma hora e a gente conversa."</td></tr>
+      <tr><td>"Deixa, eu faço tudo sozinho mesmo."</td><td class="b">"Preciso da sua ajuda nisso aqui hoje."</td></tr>
+    </tbody>
+  </table>
+
+  <p>Se você é homem: escolha uma dessas frases e use essa semana. Uma só. Repare no que acontece.</p>
+  <p>Se você é mulher: você não consegue fazer esse trabalho por ele. Mas pode fazer duas coisas que mudam o jogo: parar de adivinhar, e quando ele fizer um pedido direto, por menor que seja, receber bem, mesmo que a resposta seja não. Pedido direto que é bem recebido tende a se repetir.</p>
+
+  <div class="assina">
+    <p class="nome">César Augusto</p>
+    <p class="cargo">Psicanalista. Atendo homens há anos, e a maioria chega ao consultório sem nunca ter dito em voz alta o que quer.</p>
+  </div>
+
+</main>
+
+<section class="ponte">
+  <div class="miolo">
+    <h2>Antes de você fechar essa página</h2><div class="linha"></div>
+    <p>Tudo o que você leu até aqui resolve uma camada do problema: a comunicação. E vale a pena aplicar, hoje mesmo.</p>
+    <p>Mas eu preciso ser honesto sobre uma coisa. A indireta, a ironia, o silêncio, o contrato secreto... nada disso é o problema em si. <strong>São sintomas de um homem que ainda não se sustenta.</strong> Que não sabe o que quer, que tem medo de não ser suficiente, que aprendeu a se esconder para ser aceito.</p>
+    <p>Dá para trocar as frases. Mas enquanto a estrutura embaixo continuar a mesma, o menino volta. Ele volta na primeira discussão, no primeiro não, na primeira semana difícil.</p>
+    <p>O trabalho de verdade é reconstruir essa estrutura. E é exatamente isso que eu faço no Reconstrução Masculina.</p>
+  </div>
+</section>
+
+<section class="oferta">
+  <div class="miolo">
+    <h2>RECONSTRUÇÃO MASCULINA</h2><div class="linha"></div>
+
+    <p>É o meu método completo para o homem que quer parar de se esconder e reconstruir a si mesmo e o próprio casamento. Não é curso de frase pronta. É o trabalho de base:</p>
+
+    <ul class="entrega">
+      <li><strong>Reconstrução do Homem.</strong> A raiz: de onde veio o menino que se esconde, o que ele acredita, e como construir um homem que sabe o que quer e sustenta o que diz.</li>
+      <li><strong>Restauração do Relacionamento.</strong> Como reconstruir a confiança, a conversa e o desejo dentro de casa, passo a passo, sem teatro.</li>
+      <li><strong>Bônus: Vença a Pornografia.</strong> Para o homem que usa a pornografia como fuga e sabe que isso está drenando a energia que faltava no casamento.</li>
+    </ul>
+
+    <p>Você tem <strong>1 ano de acesso</strong> para fazer no seu ritmo, e <strong>7 dias de garantia</strong>: se entrar e ver que não é para você, é só pedir o dinheiro de volta dentro do prazo.</p>
+
+    <p>Se você é mulher e chegou até aqui: boa parte dos meus alunos entrou porque a esposa encontrou o caminho primeiro. Você pode mandar essa carta para ele, ou dar o primeiro passo pelos dois. O trabalho vai ser dele. Mas a porta, muitas vezes, é você quem abre.</p>
+
+    <div class="preco">
+      <div class="valor">12x R$ 41,06</div>
+      <div class="parc">ou R$ 397 à vista</div>
+    </div>
+
+    <a class="botao" href="https://cesaraugustopsi.com.br" target="_blank" rel="noopener">QUERO COMEÇAR A RECONSTRUÇÃO</a>
+    <div class="garantia">Garantia incondicional de 7 dias. Acesso por 1 ano. Pagamento processado pela Kiwify.</div>
+  </div>
+</section>
+
+<footer class="rodape">RECONSTRUÇÃO MASCULINA · CÉSAR AUGUSTO</footer>
+
+</body>
+</html>
