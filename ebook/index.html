@@ -360,13 +360,13 @@ const KIWIFY_URL = 'https://pay.kiwify.com.br/COLE-SEU-LINK-AQUI';
 
 const end = (LAUNCH_END > new Date()) ? LAUNCH_END : new Date(Date.now() + 24*60*60*1000);
 const pad = n => String(n).padStart(2,'0');
-const top = document.getElementById('clock-top');
-const bottom = document.getElementById('clock-bottom');
+const clockTop = document.getElementById('clock-top');
+const clockBottom = document.getElementById('clock-bottom');
 
 function tick(){
   let ms = end - new Date();
   if (ms <= 0){
-    top.textContent = bottom.textContent = '00:00:00';
+    clockTop.textContent = clockBottom.textContent = '00:00:00';
     document.querySelectorAll('.preco-bloco .por').forEach(el=>{ el.textContent = 'R$49,90'; });
     document.querySelectorAll('[data-cta]').forEach(a=>{
       a.href = KIWIFY_URL; a.removeAttribute('download');
@@ -376,7 +376,7 @@ function tick(){
   }
   const h = Math.floor(ms/3.6e6), m = Math.floor(ms%3.6e6/6e4), s = Math.floor(ms%6e4/1e3);
   const t = pad(h)+':'+pad(m)+':'+pad(s);
-  top.textContent = t; bottom.textContent = t;
+  clockTop.textContent = t; clockBottom.textContent = t;
   setTimeout(tick, 250);
 }
 tick();
