@@ -344,10 +344,11 @@ const LAUNCH_END = new Date('2026-07-20T14:05:00-03:00');
 // =====================================================================
 const KIWIFY_URL = 'https://pay.kiwify.com.br/COLE-SEU-LINK-AQUI';
 
-const end = (LAUNCH_END > new Date()) ? LAUNCH_END : new Date(Date.now() + 24*60*60*1000);
+const end = LAUNCH_END;
 const pad = n => String(n).padStart(2,'0');
 const clockTop = document.getElementById('clock-top');
 const clockBottom = document.getElementById('clock-bottom');
+const kiwifyReady = KIWIFY_URL.indexOf('COLE-SEU-LINK-AQUI') === -1;
 
 function tick(){
   let ms = end - new Date();
@@ -355,8 +356,18 @@ function tick(){
     clockTop.textContent = clockBottom.textContent = '00:00:00';
     document.querySelectorAll('.preco-bloco .por').forEach(el=>{ el.textContent = 'R$49,90'; });
     document.querySelectorAll('[data-cta]').forEach(a=>{
-      a.href = KIWIFY_URL; a.removeAttribute('download');
-      a.textContent = 'Comprar por R$49,90';
+      a.removeAttribute('download');
+      if (kiwifyReady){
+        a.href = KIWIFY_URL;
+        a.textContent = 'Comprar por R$49,90';
+        a.style.pointerEvents = '';
+        a.style.opacity = '';
+      } else {
+        a.removeAttribute('href');
+        a.textContent = 'Em breve — disponível para compra';
+        a.style.pointerEvents = 'none';
+        a.style.opacity = '0.55';
+      }
     });
     return;
   }
