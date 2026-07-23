@@ -145,13 +145,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Todos os CTAs por classe
-  document.querySelectorAll('.cta-btn, a[href*="kiwify"]').forEach(function (btn) {
+  document.querySelectorAll('.cta-btn, a[href*="hotmart"]').forEach(function (btn) {
     btn.addEventListener('click', fireInitiateCheckout);
   });
 
   // Fallback: DOMContentLoaded caso algum botão dinâmico ainda não exista
   document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.cta-btn, a[href*="kiwify"]').forEach(function (btn) {
+    document.querySelectorAll('.cta-btn, a[href*="hotmart"]').forEach(function (btn) {
       btn.removeEventListener('click', fireInitiateCheckout);
       btn.addEventListener('click', fireInitiateCheckout);
     });
