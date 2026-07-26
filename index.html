@@ -195,6 +195,22 @@
     }
     .btn-outline-gold:hover { background: rgba(201,168,76,0.1); }
 
+    /* ── MAIS DEPOIMENTOS ── */
+    #mais-depoimentos { background: var(--verde); padding: 60px 0 50px; }
+    .container-wide { max-width: 900px; }
+    .mais-dep-sub { font-size: 0.95rem; color: rgba(255,255,255,0.75); text-align: center; margin-bottom: 32px; line-height: 1.5; }
+    .dep-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 16px; margin-bottom: 32px;
+    }
+    .dep-grid-item {
+      border: 1.5px solid rgba(201,168,76,0.3); border-radius: 12px;
+      overflow: hidden; background: rgba(255,255,255,0.03);
+    }
+    .dep-grid-item img { width: 100%; display: block; }
+    .dep-grid-item.destaque { grid-column: span 2; }
+    @media (max-width: 560px) { .dep-grid-item.destaque { grid-column: span 1; } }
+
     /* ── DOR ── */
     #dor { padding: 60px 0; text-align: center; }
     #dor h2 { font-size: 1.85rem; font-weight: 800; color: var(--verde); line-height: 1.22; margin-bottom: 32px; }
@@ -520,24 +536,19 @@
       <img src="img/dep-3.jpeg" alt="Depoimento — recuperando o casamento">
     </div>
 
-    <div class="dep-label-pill">💬 Comparando com terapia</div>
+    <div class="dep-label-pill">⭐ Círculo RM: quase 40 anos reaprendendo</div>
     <div class="dep-img-wrapper">
-      <img src="img/dep-4.jpeg" alt="Depoimento — comparando com terapia">
+      <img src="img/dep-novo-1-circulo-rm.jpeg" alt="Depoimento — Círculo RM, reaprendendo o que é ser homem">
     </div>
 
-    <div class="dep-label-pill">💬 Prático e direto</div>
+    <div class="dep-label-pill">⭐ Esposa e pornografia: a chave virou</div>
     <div class="dep-img-wrapper">
-      <img src="img/dep-5.jpeg" alt="Depoimento — prático e direto">
+      <img src="img/dep-novo-2-esposa-real.jpeg" alt="Depoimento — reflexão sobre pornografia e a esposa real">
     </div>
 
-    <div class="dep-label-pill">💬 Esposa de aluno</div>
+    <div class="dep-label-pill">⭐ Traindo e reconstruindo</div>
     <div class="dep-img-wrapper">
-      <img src="img/dep-6.jpeg" alt="Depoimento — esposa de aluno">
-    </div>
-
-    <div class="dep-label-pill">💬 Me pegou de jeito</div>
-    <div class="dep-img-wrapper">
-      <img src="img/IMG_1839.JPEG" alt="Depoimento — me pegou de jeito">
+      <img src="img/dep-novo-3-traicao-reconstrucao.jpeg" alt="Depoimento — depois de trair, reconstruindo o casamento">
     </div>
 
     <div class="dep-label-pill">⭐ Direcionamento como homem</div>
@@ -550,9 +561,14 @@
       <img src="img/IMG_2521.JPEG" alt="Depoimento — melhorei em muitos aspectos">
     </div>
 
-    <div class="dep-label-pill">💬 Quantas reflexões</div>
+    <div class="dep-label-pill">⭐ Poucos dias após a traição ser descoberta</div>
     <div class="dep-img-wrapper">
-      <img src="img/IMG_3578.JPEG" alt="Depoimento — quantas reflexões">
+      <img src="img/dep-novo-4-traicao-recente.jpeg" alt="Depoimento — reconstrução começando dias após a traição">
+    </div>
+
+    <div class="dep-label-pill">⭐ 23 anos de casamento, filhos, separação</div>
+    <div class="dep-img-wrapper">
+      <img src="img/dep-novo-5-23-anos.jpeg" alt="Depoimento — 23 anos de casamento em reconstrução">
     </div>
 
     <div class="mini-cta-dep">
@@ -754,6 +770,41 @@
           <p>Se não for para você, devolvemos 100% do seu investimento</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIS DEPOIMENTOS -->
+<section id="mais-depoimentos">
+  <div class="container container-wide">
+    <h2 class="section-title section-title-white">Mais homens, mais histórias reais</h2>
+    <p class="mais-dep-sub">Só nas últimas semanas, dezenas de mensagens como estas chegaram no meu WhatsApp e Instagram</p>
+
+    <div class="dep-grid">
+      <div class="dep-grid-item destaque"><img loading="lazy" src="img/mais-dep-13-caderno.jpeg" alt="Depoimento — caderno de anotações e propósitos"></div>
+      <div class="dep-grid-item destaque"><img loading="lazy" src="img/mais-dep-03-esposa.jpeg" alt="Depoimento — esposa relatando a mudança do marido"></div>
+      <div class="dep-grid-item"><img loading="lazy" src="img/mais-dep-10.jpeg" alt="Depoimento — curso, terapia e reconstrução masculina"></div>
+      <div class="dep-grid-item"><img loading="lazy" src="img/mais-dep-11.jpeg" alt="Depoimento — motivação para não continuar numa vida medíocre"></div>
+      <div class="dep-grid-item"><img loading="lazy" src="img/mais-dep-01.jpeg" alt="Depoimento — vou ficar sempre fazendo"></div>
+      <div class="dep-grid-item"><img loading="lazy" src="img/mais-dep-02.jpeg" alt="Depoimento — mudou minha mente e minha vida"></div>
+      <div class="dep-grid-item"><img loading="lazy" src="img/mais-dep-04.jpeg" alt="Depoimento — ensinamentos vão transformar a vida de muitas pessoas"></div>
+      <div class="dep-grid-item"><img loading="lazy" src="img/mais-dep-05.jpeg" alt="Depoimento — pornografia é um vício que destrói qualquer relacionamento"></div>
+      <div class="dep-grid-item"><img loading="lazy" src="img/mais-dep-06.jpeg" alt="Depoimento — o curso me ajudou a descobrir quem eu era"></div>
+      <div class="dep-grid-item"><img loading="lazy" src="img/mais-dep-07.jpeg" alt="Depoimento — tenho me tornado um homem melhor"></div>
+      <div class="dep-grid-item"><img loading="lazy" src="img/mais-dep-08.jpeg" alt="Depoimento — consegui dar espaço para ela conversar sem defensiva"></div>
+      <div class="dep-grid-item"><img loading="lazy" src="img/mais-dep-09.jpeg" alt="Depoimento — já comprei reconstrução masculina e adorei o conteúdo"></div>
+      <div class="dep-grid-item"><img loading="lazy" src="img/mais-dep-12.jpeg" alt="Depoimento — âncora emocional, simples e mágico"></div>
+      <div class="dep-grid-item"><img loading="lazy" src="img/mais-dep-14.jpeg" alt="Depoimento — quero meu casamento renovado"></div>
+      <div class="dep-grid-item"><img loading="lazy" src="img/mais-dep-15.jpeg" alt="Depoimento — minha filha merece um pai melhor"></div>
+      <div class="dep-grid-item"><img loading="lazy" src="img/mais-dep-16.jpeg" alt="Depoimento — desejo reconstruir um homem de verdade"></div>
+      <div class="dep-grid-item"><img loading="lazy" src="img/mais-dep-17.jpeg" alt="Depoimento — primeiro preciso me reconstruir como homem"></div>
+      <div class="dep-grid-item"><img loading="lazy" src="img/mais-dep-18.jpeg" alt="Depoimento — vou levar cada ensinamento dos módulos"></div>
+      <div class="dep-grid-item"><img loading="lazy" src="img/mais-dep-19.jpeg" alt="Depoimento — já comecei a perceber as causas da minha situação"></div>
+    </div>
+
+    <div class="mini-cta-dep">
+      <h3>Quer ser o próximo?</h3>
+      <a href="#oferta" class="btn-outline-gold" onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout')">Ver oferta especial</a>
     </div>
   </div>
 </section>
