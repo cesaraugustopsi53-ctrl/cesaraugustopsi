@@ -75,30 +75,25 @@
     display: block;
   }
 
+  .tag-reuniao {
+    display: inline-block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(15px, 2vw, 17px);
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--dourado-claro);
+    margin-bottom: 12px;
+  }
+
   .hero h1 {
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
-    font-size: clamp(48px, 10vw, 92px);
-    line-height: 0.98;
-    letter-spacing: 0.02em;
+    font-size: clamp(34px, 5.6vw, 54px);
+    line-height: 1.08;
+    letter-spacing: 0.01em;
     color: var(--off-white);
-    white-space: nowrap;
+    max-width: 560px;
   }
   .hero h1 span { color: var(--dourado-claro); }
-
-  @media (max-width: 460px) {
-    .hero h1 { font-size: clamp(38px, 11vw, 56px); white-space: normal; }
-  }
-
-  .hero h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: clamp(17px, 2.6vw, 20px);
-    line-height: 1.4;
-    color: var(--off-white);
-    margin-top: 14px;
-    max-width: 440px;
-  }
 
   .hero .sub {
     font-size: clamp(14.5px, 2vw, 15.5px);
@@ -126,7 +121,7 @@
     .hero .container { flex-direction: column; align-items: center; text-align: center; gap: 6px; }
     .hero-texto { text-align: center; padding-top: 0; order: 2; }
     .hero-foto { order: 1; width: 180px; height: 180px; margin: 0 auto 20px; }
-    .hero h2, .hero .sub { margin-left: auto; margin-right: auto; }
+    .hero h1, .hero .sub { margin-left: auto; margin-right: auto; }
   }
 
   /* O QUE VOCÊ VAI DESCOBRIR */
@@ -192,8 +187,8 @@
 <section class="hero">
   <div class="container">
     <div class="hero-texto">
-      <h1>REUNIÃO <span>SECRETA</span></h1>
-      <h2>Como reconstruir o casamento depois da traição, começando pela reconstrução do homem.</h2>
+      <span class="tag-reuniao">Reunião Secreta</span>
+      <h1>Como reconstruir o casamento depois da <span>traição</span>, começando pela reconstrução do homem</h1>
       <p class="sub">Vou abrir, pela primeira vez, o caminho que não está no curso Reconstrução Masculina.</p>
 
       <!-- TODO: trocar pelo link real do grupo de WhatsApp -->
