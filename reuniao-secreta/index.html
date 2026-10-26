@@ -69,20 +69,15 @@
   }
   .hero-texto { flex: 1 1 340px; text-align: left; padding-top: 28px; }
   .hero-foto {
-    flex: 0 0 auto; width: 240px; height: 290px;
-    position: relative; margin-top: -4px;
+    flex: 0 0 auto; width: 220px; height: 220px;
+    position: relative; margin-top: 4px;
+    border: 1px solid rgba(201,168,76,0.5);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.45);
   }
   .hero-foto img {
     width: 100%; height: 100%; object-fit: cover; object-position: top center;
-    filter: grayscale(55%) contrast(1.12) brightness(0.8) sepia(15%) hue-rotate(60deg) saturate(1.3);
-    -webkit-mask-image: radial-gradient(ellipse 58% 62% at 50% 30%, #000 25%, rgba(0,0,0,0.75) 45%, rgba(0,0,0,0.25) 68%, transparent 88%);
-    mask-image: radial-gradient(ellipse 58% 62% at 50% 30%, #000 25%, rgba(0,0,0,0.75) 45%, rgba(0,0,0,0.25) 68%, transparent 88%);
-  }
-  .hero-foto::after {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 60% 65% at 50% 30%, transparent 30%, var(--preto) 78%);
-    pointer-events: none;
+    filter: grayscale(25%) contrast(1.08) brightness(0.92);
+    display: block;
   }
 
   .selo {
@@ -141,7 +136,7 @@
   @media (max-width: 620px) {
     .hero .container { flex-direction: column; align-items: center; text-align: center; gap: 6px; }
     .hero-texto { text-align: center; padding-top: 0; order: 2; }
-    .hero-foto { order: 1; width: 180px; height: 210px; margin: 0 auto -10px; }
+    .hero-foto { order: 1; width: 180px; height: 180px; margin: 0 auto 20px; }
     .hero h2, .hero .sub { margin-left: auto; margin-right: auto; }
     .selo { margin-top: 8px; }
   }
