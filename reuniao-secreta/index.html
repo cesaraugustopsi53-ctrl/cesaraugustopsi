@@ -75,26 +75,20 @@
     display: block;
   }
 
-  .selo {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: 10.5px; font-weight: 700;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--dourado-claro);
-    border: 1px solid rgba(201,168,76,0.4);
-    padding: 7px 16px; border-radius: 30px; margin-bottom: 22px;
-    background: rgba(201,168,76,0.05);
-  }
-  .selo svg { width: 12px; height: 12px; stroke: var(--dourado-claro); fill: none; stroke-width: 2; }
-
   .hero h1 {
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
-    font-size: clamp(46px, 8vw, 72px);
+    font-size: clamp(48px, 10vw, 92px);
     line-height: 0.98;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
     color: var(--off-white);
+    white-space: nowrap;
   }
-  .hero h1 span { color: var(--dourado-claro); display: block; }
+  .hero h1 span { color: var(--dourado-claro); }
+
+  @media (max-width: 460px) {
+    .hero h1 { font-size: clamp(38px, 11vw, 56px); white-space: normal; }
+  }
 
   .hero h2 {
     font-family: 'Montserrat', sans-serif;
@@ -133,7 +127,6 @@
     .hero-texto { text-align: center; padding-top: 0; order: 2; }
     .hero-foto { order: 1; width: 180px; height: 180px; margin: 0 auto 20px; }
     .hero h2, .hero .sub { margin-left: auto; margin-right: auto; }
-    .selo { margin-top: 8px; }
   }
 
   /* O QUE VOCÊ VAI DESCOBRIR */
@@ -199,11 +192,7 @@
 <section class="hero">
   <div class="container">
     <div class="hero-texto">
-      <span class="selo">
-        <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="1.5"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
-        Acesso restrito
-      </span>
-      <h1>REUNIÃO<br><span>SECRETA</span></h1>
+      <h1>REUNIÃO <span>SECRETA</span></h1>
       <h2>Como reconstruir o casamento depois da traição, começando pela reconstrução do homem.</h2>
       <p class="sub">Vou abrir, pela primeira vez, o caminho que não está no curso Reconstrução Masculina.</p>
 
