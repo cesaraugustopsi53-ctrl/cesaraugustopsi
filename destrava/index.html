@@ -8,6 +8,7 @@
 <meta property="og:title" content="Destrava — Instagram para Terapeutas">
 <meta property="og:description" content="Destrave seu Instagram em 30 dias e construa uma agenda de atendimentos de R$ 10 mil por mês.">
 <meta property="og:image" content="https://cesaraugustopsi.com.br/img/hero-cesar.jpg">
+<meta name="theme-color" content="#0b0b0d">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 
 <!-- Meta Pixel -->
@@ -33,262 +34,480 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --preto: #0a0d0b;
-    --preto2: #121613;
-    --preto3: #181d19;
-    --dourado: #C9A84C;
-    --dourado-claro: #E4C977;
-    --off-white: #EFEBE3;
-    --cinza: #8d938e;
-    --cinza-claro: #b7bcb7;
-    --linha: rgba(201,168,76,0.12);
+    --bg: #0b0b0d;
+    --bg2: #111114;
+    --card: rgba(255,255,255,0.035);
+    --card-hover: rgba(255,255,255,0.06);
+    --borda: rgba(255,255,255,0.08);
+    --texto: #f4f2ee;
+    --suave: #a5a3a0;
+    --mudo: #6f6e6c;
+    --ouro: #d9b45a;
+    --ouro2: #f3d98b;
+    --grad: linear-gradient(120deg, #f6e3a1 0%, #d9b45a 45%, #b88a2e 100%);
+    --raio: 22px;
   }
 
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Montserrat', sans-serif; background: var(--preto); color: var(--off-white); overflow-x: hidden; line-height: 1.6; }
-  .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
-  section { padding: 64px 0; border-top: 1px solid var(--linha); }
-  .alt { background: var(--preto2); }
-
-  .eyebrow {
-    display: block; text-align: center; font-size: 10.5px; font-weight: 700;
-    letter-spacing: 0.22em; text-transform: uppercase; color: var(--dourado);
-    margin-bottom: 12px;
+  html { scroll-behavior: smooth; overflow-x: clip; }
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background: var(--bg); color: var(--texto);
+    line-height: 1.6; overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
   }
-  h2 {
-    font-family: 'Bebas Neue', sans-serif; font-weight: 400;
-    font-size: clamp(30px, 5vw, 42px); line-height: 1.1; letter-spacing: 0.01em;
-    color: var(--off-white); text-align: center; margin-bottom: 28px;
-  }
-  h2 span, h1 span { color: var(--dourado-claro); }
-  p.lead { color: var(--cinza-claro); font-size: 1rem; text-align: center; max-width: 580px; margin: -10px auto 32px; }
+  img { display: block; max-width: 100%; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .estreito { max-width: 760px; }
+  section { padding: 96px 0; position: relative; }
+  @media (max-width: 700px) { section { padding: 72px 0; } }
 
-  /* BOTÃO */
-  .btn-cta {
+  /* Tipografia */
+  .serif { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-style: italic; letter-spacing: -0.01em; }
+  .ouro-txt { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  h1, h2 { font-weight: 800; letter-spacing: -0.035em; line-height: 1.05; }
+  h2 { font-size: clamp(32px, 5vw, 52px); margin-bottom: 18px; }
+  h2 .serif { font-size: 1.12em; }
+  .titulo-sec { text-align: center; max-width: 760px; margin: 0 auto 52px; }
+  .titulo-sec p { color: var(--suave); font-size: 1.05rem; max-width: 560px; margin: 0 auto; }
+
+  .pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 600; color: var(--ouro2);
+    padding: 7px 14px 7px 10px; border-radius: 999px;
+    background: rgba(217,180,90,0.08); border: 1px solid rgba(217,180,90,0.22);
+    margin-bottom: 22px;
+  }
+  .pill .ponto { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 0 4px rgba(74,222,128,0.18); animation: pulso 2s infinite; }
+  @keyframes pulso { 50% { box-shadow: 0 0 0 7px rgba(74,222,128,0); } }
+
+  /* Botão */
+  .btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    background: linear-gradient(135deg, var(--dourado-claro), var(--dourado));
-    color: #1a1407;
-    font-weight: 800; font-size: 0.95rem; letter-spacing: 0.01em; text-transform: uppercase;
-    padding: 18px 34px; border-radius: 8px; border: none; cursor: pointer;
-    text-decoration: none; text-align: center;
-    box-shadow: 0 8px 30px rgba(201,168,76,0.28);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    background: var(--grad); color: #1b1404;
+    font-weight: 700; font-size: 1rem; letter-spacing: -0.01em;
+    padding: 17px 28px; border-radius: 999px; text-decoration: none;
+    box-shadow: 0 10px 40px -8px rgba(217,180,90,0.55), inset 0 1px 0 rgba(255,255,255,0.4);
+    transition: transform .2s ease, box-shadow .2s ease;
   }
-  .btn-cta:hover { transform: translateY(-1px); box-shadow: 0 10px 36px rgba(201,168,76,0.4); }
-  .cta-aviso { font-size: 12px; color: rgba(183,188,183,0.65); margin-top: 14px; letter-spacing: 0.02em; }
-  .centro { text-align: center; }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 16px 50px -8px rgba(217,180,90,0.7), inset 0 1px 0 rgba(255,255,255,0.4); }
+  .btn svg { width: 18px; height: 18px; transition: transform .2s ease; }
+  .btn:hover svg { transform: translateX(3px); }
+  .btn-sec {
+    display: inline-flex; align-items: center; gap: 8px; color: var(--texto);
+    font-weight: 600; font-size: 0.95rem; text-decoration: none;
+    padding: 16px 22px; border-radius: 999px; border: 1px solid var(--borda);
+    transition: background .2s;
+  }
+  .btn-sec:hover { background: var(--card-hover); }
+  .micro { font-size: 13px; color: var(--mudo); margin-top: 16px; display: flex; gap: 16px; flex-wrap: wrap; }
+  .micro span { display: inline-flex; align-items: center; gap: 6px; }
+  .micro svg { width: 14px; height: 14px; color: var(--ouro); }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    background: rgba(11,11,13,0.72); border-bottom: 1px solid var(--borda);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { font-weight: 800; font-size: 1.15rem; letter-spacing: -0.03em; display: flex; align-items: center; gap: 9px; }
+  .logo i { width: 26px; height: 26px; border-radius: 8px; background: var(--grad); display: grid; place-items: center; font-style: normal; color: #1b1404; font-size: 14px; }
+  nav .btn { padding: 10px 18px; font-size: 0.86rem; box-shadow: none; }
 
   /* HERO */
-  .hero { padding: 56px 0 64px; border-top: none; position: relative; overflow: hidden; }
+  .hero { padding: 72px 0 88px; overflow: hidden; position: relative; }
   .hero::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 80% 0%, rgba(201,168,76,0.12), transparent 60%);
-    pointer-events: none;
+    content: ''; position: absolute; width: 900px; height: 900px; right: -300px; top: -380px;
+    background: radial-gradient(circle, rgba(217,180,90,0.16), transparent 62%); pointer-events: none;
   }
-  .hero .container { position: relative; display: flex; align-items: center; gap: 36px; }
-  .hero-texto { flex: 1 1 380px; }
-  .tag {
-    display: inline-block; font-family: 'Bebas Neue', sans-serif;
-    font-size: 17px; letter-spacing: 0.12em; color: var(--dourado-claro);
-    border: 1px solid rgba(201,168,76,0.4); padding: 4px 12px; border-radius: 4px;
-    margin-bottom: 16px;
+  .hero::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background-image: linear-gradient(var(--borda) 1px, transparent 1px), linear-gradient(90deg, var(--borda) 1px, transparent 1px);
+    background-size: 64px 64px; opacity: 0.35;
+    mask-image: radial-gradient(ellipse at 50% 0%, #000 10%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse at 50% 0%, #000 10%, transparent 70%);
   }
-  .hero h1 {
-    font-family: 'Bebas Neue', sans-serif; font-weight: 400;
-    font-size: clamp(38px, 6vw, 60px); line-height: 1.04; letter-spacing: 0.01em;
-  }
-  .hero .sub { font-size: 1rem; color: var(--cinza-claro); max-width: 460px; margin: 18px 0 30px; }
-  .autores { font-size: 0.85rem; color: var(--cinza-claro); margin: -14px 0 26px; letter-spacing: 0.02em; }
-  .autores strong { color: var(--dourado-claro); font-weight: 600; }
-  .hero-fotos { flex: 0 0 auto; position: relative; width: 300px; height: 330px; }
-  .hero-fotos img {
-    position: absolute; width: 190px; height: 250px; object-fit: cover; object-position: top center;
-    border: 1px solid rgba(201,168,76,0.5); box-shadow: 0 16px 40px rgba(0,0,0,0.5);
-    filter: contrast(1.05) brightness(0.95);
-  }
-  .hero-fotos img:first-child { left: 0; top: 0; }
-  .hero-fotos img:last-child { right: 0; bottom: 0; }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; position: relative; z-index: 1; }
+  .hero h1 { font-size: clamp(40px, 5.6vw, 64px); }
+  .hero h1 .serif { font-size: 1.1em; }
+  .hero .sub { color: var(--suave); font-size: 1.12rem; max-width: 520px; margin: 22px 0 30px; }
+  .hero .acoes { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .autores { display: flex; align-items: center; gap: 12px; margin-top: 30px; font-size: 14px; color: var(--suave); }
+  .avatares { display: flex; }
+  .avatares img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; object-position: top; border: 2px solid var(--bg); }
+  .avatares img + img { margin-left: -10px; }
+  .autores strong { color: var(--texto); font-weight: 600; }
 
-  @media (max-width: 680px) {
-    .hero .container { flex-direction: column; text-align: center; gap: 22px; }
-    .hero-fotos { order: -1; width: 250px; height: 230px; }
-    .hero-fotos img { width: 150px; height: 190px; }
+  /* Visual do hero */
+  .visual { position: relative; height: 540px; }
+  .foto-card {
+    position: absolute; border-radius: 26px; overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 30px 80px -20px rgba(0,0,0,0.8);
+  }
+  .foto-card img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+  .foto-a { width: 62%; height: 74%; left: 0; top: 0; transform: rotate(-3deg); }
+  .foto-b { width: 58%; height: 70%; right: 0; bottom: 0; transform: rotate(3deg); }
+  .notif {
+    position: absolute; z-index: 3;
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px 16px 12px 12px; border-radius: 18px;
+    background: rgba(24,24,28,0.82); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 20px 50px -10px rgba(0,0,0,0.7);
+    font-size: 13px; line-height: 1.35; max-width: 270px;
+    animation: flutua 6s ease-in-out infinite;
+  }
+  .notif b { display: block; font-size: 12px; color: var(--suave); font-weight: 600; }
+  .notif .ic { width: 36px; height: 36px; min-width: 36px; border-radius: 11px; display: grid; place-items: center; }
+  .notif .ic svg { width: 18px; height: 18px; }
+  .ic-ig { background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7); color: #fff; }
+  .ic-ok { background: rgba(74,222,128,0.15); color: #4ade80; }
+  .ic-ouro { background: rgba(217,180,90,0.15); color: var(--ouro2); }
+  .n1 { left: -28px; top: 58%; }
+  .n2 { right: -14px; top: 6%; animation-delay: -2s; }
+  .n3 { left: 18%; bottom: -14px; animation-delay: -4s; }
+  @keyframes flutua { 50% { transform: translateY(-8px); } }
+
+  @media (max-width: 900px) {
+    .hero .wrap { grid-template-columns: 1fr; gap: 40px; }
+    .hero { padding-top: 48px; text-align: center; }
     .hero .sub { margin-left: auto; margin-right: auto; }
+    .hero .acoes, .autores, .hero .micro { justify-content: center; }
+    .visual { height: 420px; max-width: 420px; margin: 0 auto; width: 100%; }
+    .n1 { left: -6px; } .n2 { right: -6px; }
+    .notif { font-size: 12px; max-width: 220px; text-align: left; }
   }
 
-  /* LISTAS */
-  .lista { list-style: none; max-width: 600px; margin: 0 auto; }
-  .lista li {
-    display: flex; gap: 16px; padding: 16px 0;
-    border-bottom: 1px solid rgba(239,235,227,0.08);
-    color: var(--cinza-claro); font-size: 0.96rem;
-  }
-  .lista li:last-child { border-bottom: none; }
-  .lista li::before {
-    content: ''; width: 20px; height: 20px; min-width: 20px; margin-top: 2px;
-    border-radius: 50%; border: 1px solid rgba(201,168,76,0.5);
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C9A84C' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center / 11px no-repeat;
-  }
-  .lista.x li::before {
-    border-color: rgba(141,147,142,0.5);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238d938e' stroke-width='2.5' stroke-linecap='round'%3E%3Cline x1='6' y1='6' x2='18' y2='18'/%3E%3Cline x1='18' y1='6' x2='6' y2='18'/%3E%3C/svg%3E");
-  }
-  .lista strong { color: var(--off-white); font-weight: 600; }
-
-  /* TEXTO CORRIDO */
-  .texto { max-width: 600px; margin: 0 auto; color: var(--cinza-claro); }
-  .texto p + p { margin-top: 16px; }
-  .texto strong { color: var(--off-white); }
-  .destaque {
-    margin: 28px auto 0; max-width: 600px; padding: 22px 24px;
-    border-left: 3px solid var(--dourado); background: var(--preto3);
-    font-size: 1.05rem; color: var(--off-white); font-weight: 500;
+  /* Faixa de números */
+  .faixa { padding: 0; border-top: 1px solid var(--borda); border-bottom: 1px solid var(--borda); background: var(--bg2); }
+  .faixa .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .stat { padding: 30px 16px; text-align: center; }
+  .stat + .stat { border-left: 1px solid var(--borda); }
+  .stat strong { display: block; font-size: clamp(26px, 3.6vw, 38px); font-weight: 800; letter-spacing: -0.03em; }
+  .stat span { font-size: 13px; color: var(--suave); }
+  @media (max-width: 700px) {
+    .faixa .wrap { grid-template-columns: 1fr 1fr; }
+    .stat:nth-child(3) { border-left: none; }
+    .stat:nth-child(n+3) { border-top: 1px solid var(--borda); }
   }
 
-  /* SEMANAS */
-  .semanas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .semana {
-    background: var(--preto3); border: 1px solid var(--linha); border-radius: 10px;
-    padding: 24px 22px;
+  /* Cards genéricos */
+  .card {
+    background: var(--card); border: 1px solid var(--borda); border-radius: var(--raio);
+    padding: 28px; transition: background .25s, border-color .25s, transform .25s;
   }
-  .semana .num { font-family: 'Bebas Neue', sans-serif; color: var(--dourado); font-size: 15px; letter-spacing: 0.14em; }
-  .semana h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 26px; letter-spacing: 0.01em; margin: 2px 0 10px; }
-  .semana ul { list-style: none; }
-  .semana li { font-size: 0.9rem; color: var(--cinza-claro); padding: 4px 0 4px 16px; position: relative; }
-  .semana li::before { content: '—'; position: absolute; left: 0; color: var(--dourado); }
-  @media (max-width: 620px) { .semanas { grid-template-columns: 1fr; } }
+  .card:hover { background: var(--card-hover); border-color: rgba(255,255,255,0.14); }
+
+  /* DOR */
+  .dores { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .dor { display: flex; flex-direction: column; gap: 14px; }
+  .dor .emoji { font-size: 26px; line-height: 1; }
+  .dor p { color: var(--suave); font-size: 0.97rem; }
+  .dor p strong { color: var(--texto); font-weight: 600; }
+  .dor-grande { grid-column: span 2; }
+  .virada-box {
+    margin-top: 14px; padding: 34px; border-radius: var(--raio);
+    background: linear-gradient(135deg, rgba(217,180,90,0.14), rgba(217,180,90,0.02));
+    border: 1px solid rgba(217,180,90,0.28);
+    font-size: clamp(18px, 2.4vw, 23px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.4;
+  }
+  @media (max-width: 800px) { .dores { grid-template-columns: 1fr; } .dor-grande { grid-column: auto; } }
+
+  /* VIRADA */
+  .comparativo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .comparativo .card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+  .tag-mini { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
+  .tag-ruim { background: rgba(255,255,255,0.06); color: var(--mudo); }
+  .tag-bom { background: rgba(217,180,90,0.14); color: var(--ouro2); }
+  .comparativo ul { list-style: none; display: grid; gap: 12px; }
+  .comparativo li { display: flex; gap: 12px; font-size: 0.95rem; color: var(--suave); }
+  .comparativo li svg { width: 18px; height: 18px; min-width: 18px; margin-top: 3px; }
+  .lado-ruim li svg { color: var(--mudo); }
+  .lado-bom { border-color: rgba(217,180,90,0.3); background: linear-gradient(180deg, rgba(217,180,90,0.07), transparent); }
+  .lado-bom li { color: var(--texto); }
+  .lado-bom li svg { color: var(--ouro); }
+  @media (max-width: 760px) { .comparativo { grid-template-columns: 1fr; } }
+
+  /* MÉTODO — bento */
+  .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+  .semana { grid-column: span 3; display: flex; flex-direction: column; min-height: 260px; position: relative; overflow: hidden; }
+  .semana .num {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ouro);
+    display: flex; align-items: center; gap: 10px; margin-bottom: 14px;
+  }
+  .semana .num::after { content: ''; flex: 1; height: 1px; background: var(--borda); }
+  .semana h3 { font-size: 1.55rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 14px; }
+  .semana ul { list-style: none; display: grid; gap: 8px; margin-top: auto; }
+  .semana li { font-size: 0.93rem; color: var(--suave); display: flex; gap: 10px; }
+  .semana li::before { content: ''; width: 6px; height: 6px; min-width: 6px; border-radius: 50%; background: var(--ouro); margin-top: 9px; }
+  .semana .big {
+    position: absolute; right: -6px; top: -26px; font-size: 140px; font-weight: 800; letter-spacing: -0.06em;
+    color: rgba(255,255,255,0.03); line-height: 1; pointer-events: none;
+  }
+  @media (max-width: 760px) { .semana { grid-column: span 6; min-height: 0; } }
 
   /* PARA QUEM */
-  .duas-colunas { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-  .duas-colunas h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 24px; margin-bottom: 8px; letter-spacing: 0.02em; }
-  @media (max-width: 620px) { .duas-colunas { grid-template-columns: 1fr; } }
+  .quem { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .quem h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 18px; }
+  .quem ul { list-style: none; display: grid; gap: 14px; }
+  .quem li { display: flex; gap: 12px; color: var(--suave); font-size: 0.96rem; }
+  .quem li svg { width: 20px; height: 20px; min-width: 20px; margin-top: 2px; }
+  .sim li svg { color: #4ade80; }
+  .nao li svg { color: #f87171; }
+  @media (max-width: 760px) { .quem { grid-template-columns: 1fr; } }
 
   /* SOBRE */
-  .sobre .pessoas { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
-  .sobre .pessoa { text-align: center; }
-  .sobre .pessoa p:not(.cargo) { text-align: left; }
-  .sobre img { margin-bottom: 14px; width: 130px; height: 130px; border-radius: 50%; object-fit: cover; object-position: top; border: 2px solid var(--dourado); flex: 0 0 auto; }
-  .sobre h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 28px; letter-spacing: 0.02em; }
-  .sobre .cargo { color: var(--dourado); font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px; }
-  .sobre p { color: var(--cinza-claro); font-size: 0.94rem; }
-  .sobre p + p { margin-top: 10px; }
-  @media (max-width: 620px) { .sobre .pessoas { grid-template-columns: 1fr; } }
+  .pessoas { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .pessoa { padding: 0; overflow: hidden; }
+  .pessoa .foto { aspect-ratio: 4 / 3.4; overflow: hidden; }
+  .pessoa .foto img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; transition: transform .6s ease; }
+  .pessoa:hover .foto img { transform: scale(1.04); }
+  .pessoa .info { padding: 26px 28px 30px; }
+  .pessoa h3 { font-size: 1.45rem; font-weight: 800; letter-spacing: -0.03em; }
+  .pessoa .cargo { font-size: 13px; color: var(--ouro2); font-weight: 600; margin: 2px 0 12px; }
+  .pessoa p { color: var(--suave); font-size: 0.95rem; }
+  .citacao { text-align: center; max-width: 720px; margin: 48px auto 0; font-size: clamp(20px, 2.8vw, 28px); line-height: 1.35; letter-spacing: -0.02em; font-weight: 500; }
+  .citacao .serif { font-size: 1.12em; }
+  @media (max-width: 760px) { .pessoas { grid-template-columns: 1fr; } }
 
   /* OFERTA */
-  .oferta-box {
-    max-width: 520px; margin: 0 auto; text-align: center;
-    background: linear-gradient(180deg, var(--preto3), var(--preto2));
-    border: 1px solid rgba(201,168,76,0.45); border-radius: 14px;
-    padding: 36px 28px; box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  .oferta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: stretch; }
+  .inclui h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 20px; }
+  .inclui ul { list-style: none; display: grid; gap: 4px; }
+  .inclui li { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--borda); }
+  .inclui li:last-child { border-bottom: none; }
+  .inclui .ico { width: 40px; height: 40px; min-width: 40px; border-radius: 12px; background: rgba(217,180,90,0.1); color: var(--ouro2); display: grid; place-items: center; }
+  .inclui .ico svg { width: 20px; height: 20px; }
+  .inclui strong { display: block; font-weight: 600; font-size: 0.98rem; }
+  .inclui small { color: var(--suave); font-size: 0.86rem; }
+  .preco-card {
+    position: relative; text-align: center; display: flex; flex-direction: column; justify-content: center;
+    padding: 40px 32px; border-radius: var(--raio);
+    background: radial-gradient(120% 80% at 50% 0%, rgba(217,180,90,0.18), transparent 60%), #141417;
+    border: 1px solid rgba(217,180,90,0.35);
+    box-shadow: 0 40px 100px -30px rgba(217,180,90,0.35);
   }
-  .oferta-box .lista { text-align: left; margin-bottom: 26px; }
-  .oferta-box .lista li { padding: 10px 0; font-size: 0.92rem; }
-  .preco-de { color: var(--cinza); text-decoration: line-through; font-size: 0.95rem; }
-  .preco-parc { font-size: 0.95rem; color: var(--cinza-claro); margin-top: 6px; }
-  .preco { font-family: 'Bebas Neue', sans-serif; font-size: 64px; line-height: 1; color: var(--dourado-claro); }
-  .preco-avista { font-size: 0.9rem; color: var(--cinza-claro); margin-bottom: 24px; }
-  .oferta-box .btn-cta { width: 100%; }
-  .seguro { font-size: 12px; color: var(--cinza); margin-top: 14px; }
+  .preco-card .selo-top {
+    position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+    background: var(--grad); color: #1b1404; font-size: 12px; font-weight: 800; padding: 5px 14px; border-radius: 999px; white-space: nowrap;
+  }
+  .preco-de { color: var(--mudo); text-decoration: line-through; font-size: 0.95rem; }
+  .preco-parc { color: var(--suave); font-size: 0.95rem; margin-top: 8px; }
+  .preco { font-size: clamp(56px, 8vw, 76px); font-weight: 800; letter-spacing: -0.05em; line-height: 1; margin: 4px 0 6px; }
+  .preco small { font-size: 0.4em; letter-spacing: -0.02em; vertical-align: 0.9em; margin-right: 4px; }
+  .preco-avista { color: var(--suave); font-size: 0.95rem; margin-bottom: 28px; }
+  .preco-card .btn { width: 100%; }
+  .seguro { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--mudo); margin-top: 16px; }
+  @media (max-width: 860px) { .oferta-grid { grid-template-columns: 1fr; } .preco-card { order: -1; } }
 
   /* GARANTIA */
-  .garantia .container { display: flex; align-items: center; gap: 28px; max-width: 640px; }
+  .garantia { display: flex; align-items: center; gap: 28px; margin-top: 14px; }
   .selo {
-    flex: 0 0 auto; width: 120px; height: 120px; border-radius: 50%;
-    border: 2px solid var(--dourado); display: flex; flex-direction: column;
-    align-items: center; justify-content: center; text-align: center;
-    font-family: 'Bebas Neue', sans-serif; color: var(--dourado-claro); line-height: 1;
+    flex: 0 0 auto; width: 104px; height: 104px; border-radius: 50%;
+    background: conic-gradient(from 180deg, #f6e3a1, #b88a2e, #f6e3a1);
+    padding: 2px;
   }
-  .selo b { font-size: 46px; font-weight: 400; }
-  .selo small { font-size: 14px; letter-spacing: 0.1em; }
-  .garantia h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 28px; margin-bottom: 8px; }
-  .garantia p { color: var(--cinza-claro); font-size: 0.94rem; }
-  @media (max-width: 560px) { .garantia .container { flex-direction: column; text-align: center; } }
+  .selo div { width: 100%; height: 100%; border-radius: 50%; background: #141417; display: grid; place-items: center; text-align: center; line-height: 1; }
+  .selo b { font-size: 38px; font-weight: 800; letter-spacing: -0.04em; display: block; }
+  .selo small { font-size: 11px; letter-spacing: 0.14em; color: var(--suave); font-weight: 700; }
+  .garantia h3 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
+  .garantia p { color: var(--suave); font-size: 0.95rem; }
+  @media (max-width: 600px) { .garantia { flex-direction: column; text-align: center; } }
 
   /* FAQ */
-  .faq { max-width: 620px; margin: 0 auto; }
-  .faq details { border-bottom: 1px solid rgba(239,235,227,0.08); }
+  .faq { display: grid; gap: 10px; }
+  .faq details { background: var(--card); border: 1px solid var(--borda); border-radius: 16px; transition: background .2s; }
+  .faq details[open] { background: var(--card-hover); }
   .faq summary {
-    cursor: pointer; list-style: none; padding: 18px 32px 18px 0; position: relative;
-    font-weight: 600; font-size: 0.98rem;
+    cursor: pointer; list-style: none; padding: 20px 56px 20px 22px; position: relative;
+    font-weight: 600; font-size: 1rem; letter-spacing: -0.01em;
   }
   .faq summary::-webkit-details-marker { display: none; }
-  .faq summary::after { content: '+'; position: absolute; right: 4px; top: 14px; color: var(--dourado); font-size: 22px; font-weight: 400; }
-  .faq details[open] summary::after { content: '–'; }
-  .faq details p { color: var(--cinza-claro); font-size: 0.93rem; padding: 0 0 18px; }
+  .faq summary::after {
+    content: ''; position: absolute; right: 20px; top: 50%; width: 24px; height: 24px; margin-top: -12px;
+    border-radius: 50%; background: rgba(255,255,255,0.06) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f3d98b' stroke-width='2.5' stroke-linecap='round'%3E%3Cline x1='12' y1='6' x2='12' y2='18'/%3E%3Cline x1='6' y1='12' x2='18' y2='12'/%3E%3C/svg%3E") center / 12px no-repeat;
+    transition: transform .25s;
+  }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq details p { color: var(--suave); font-size: 0.95rem; padding: 0 22px 22px; }
 
   /* CTA FINAL */
-  .cta-final { text-align: center; }
-  .cta-final p { color: var(--cinza-claro); max-width: 540px; margin: -10px auto 28px; }
+  .cta-final .caixa {
+    text-align: center; padding: 72px 28px; border-radius: 32px; position: relative; overflow: hidden;
+    background: radial-gradient(80% 120% at 50% 0%, rgba(217,180,90,0.22), transparent 60%), #141417;
+    border: 1px solid rgba(217,180,90,0.25);
+  }
+  .cta-final h2 { max-width: 720px; margin: 0 auto 18px; }
+  .cta-final p { color: var(--suave); max-width: 520px; margin: 0 auto 32px; font-size: 1.05rem; }
+  .cta-final .micro { justify-content: center; }
 
-  footer { padding: 32px 0; text-align: center; border-top: 1px solid var(--linha); }
-  footer p { font-size: 11.5px; color: rgba(141,147,142,0.8); line-height: 1.8; }
-  footer a { color: var(--cinza-claro); }
-  .disclaimer { max-width: 620px; margin: 12px auto 0; font-size: 10.5px !important; }
+  footer { padding: 40px 0 120px; text-align: center; }
+  footer p { font-size: 13px; color: var(--mudo); line-height: 1.8; }
+  footer a { color: var(--suave); text-decoration: none; }
+  footer a:hover { color: var(--texto); }
+  .disclaimer { max-width: 680px; margin: 14px auto 0; font-size: 11.5px !important; }
+  @media (min-width: 761px) { footer { padding-bottom: 48px; } }
+
+  /* CTA fixo no celular */
+  .cta-fixo {
+    position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 60;
+    display: none; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 10px 10px 10px 18px; border-radius: 999px;
+    background: rgba(20,20,23,0.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    transform: translateY(140%); transition: transform .35s ease;
+  }
+  .cta-fixo.on { transform: none; }
+  .cta-fixo span { font-size: 13px; color: var(--suave); line-height: 1.3; }
+  .cta-fixo span b { color: var(--texto); display: block; font-size: 14px; }
+  .cta-fixo .btn { padding: 12px 20px; font-size: 0.9rem; white-space: nowrap; }
+  @media (max-width: 760px) { .cta-fixo { display: flex; } }
+
+  /* Animação de entrada */
+  .rv { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+  .rv.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .rv { opacity: 1; transform: none; transition: none; }
+    .notif, .pill .ponto { animation: none; }
+    html { scroll-behavior: auto; }
+  }
 </style>
 </head>
 <body>
 
+<!-- ícones reutilizáveis -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></symbol>
+  <symbol id="i-seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></symbol>
+  <symbol id="i-escudo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-raio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><polygon points="10 9 15 12 10 15 10 9"/></symbol>
+  <symbol id="i-gancho" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+  <symbol id="i-plan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-cifrao" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></symbol>
+</svg>
+
+<!-- NAV -->
+<nav>
+  <div class="wrap">
+    <div class="logo"><i>D</i>Destrava</div>
+    <a href="#oferta" class="btn">Quero entrar</a>
+  </div>
+</nav>
+
 <!-- ============ HERO ============ -->
 <header class="hero">
-  <div class="container">
-    <div class="hero-texto">
-      <span class="tag">Destrava · Instagram para Terapeutas</span>
-      <h1>Destrave seu Instagram em <span>30 dias</span> e fature <span>R$ 10 mil/mês</span> com atendimentos</h1>
+  <div class="wrap">
+    <div>
+      <span class="pill"><span class="ponto"></span>Curso de Instagram para terapeutas</span>
+      <h1>Destrave seu Instagram em <span class="serif ouro-txt">30 dias</span> e fature <span class="ouro-txt">R$&nbsp;10&nbsp;mil/mês</span> com atendimentos</h1>
       <p class="sub">O método que nós usamos para lotar nossas agendas como terapeutas pelo Instagram, sem dancinha, sem virar blogueiro e sem perder a ética.</p>
-      <p class="autores">Com <strong>César Augusto</strong> &amp; <strong>Thais Ayumi</strong></p>
-      <a href="#oferta" class="btn-cta">Quero destravar meu Instagram</a>
-      <p class="cta-aviso">Acesso imediato · Garantia de 7 dias</p>
+      <div class="acoes">
+        <a href="#oferta" class="btn">Quero destravar meu Instagram <svg><use href="#i-seta"/></svg></a>
+        <a href="#metodo" class="btn-sec">Ver o método</a>
+      </div>
+      <div class="micro">
+        <span><svg><use href="#i-raio"/></svg>Acesso imediato</span>
+        <span><svg><use href="#i-escudo"/></svg>Garantia de 7 dias</span>
+      </div>
+      <div class="autores">
+        <div class="avatares">
+          <img src="../img/hero-cesar.jpg" alt="César Augusto">
+          <img src="../img/thais-retrato-1.jpg" alt="Thais Ayumi">
+        </div>
+        <span>Com <strong>César Augusto</strong> &amp; <strong>Thais Ayumi</strong></span>
+      </div>
     </div>
-    <div class="hero-fotos">
-      <img src="../img/hero-cesar.jpg" alt="César Augusto">
-      <img src="../img/thais-consultorio-1.jpg" alt="Thais Ayumi">
+
+    <div class="visual" aria-hidden="true">
+      <div class="foto-card foto-a"><img src="../img/hero-cesar.jpg" alt=""></div>
+      <div class="foto-card foto-b"><img src="../img/thais-consultorio-1.jpg" alt=""></div>
+      <div class="notif n2"><span class="ic ic-ig"><svg><use href="#i-ig"/></svg></span><span><b>Nova mensagem</b>"Oi! Vocês atendem online?"</span></div>
+      <div class="notif n1"><span class="ic ic-ok"><svg><use href="#i-cal"/></svg></span><span><b>Agenda</b>Sessão agendada · Qui, 19h</span></div>
+      <div class="notif n3"><span class="ic ic-ouro"><svg><use href="#i-cifrao"/></svg></span><span><b>Meta do mês</b>R$ 10.000 em atendimentos</span></div>
     </div>
   </div>
 </header>
 
+<!-- ============ FAIXA ============ -->
+<div class="faixa">
+  <div class="wrap">
+    <div class="stat"><strong class="ouro-txt">30</strong><span>dias de método</span></div>
+    <div class="stat"><strong>4</strong><span>semanas práticas</span></div>
+    <div class="stat"><strong>1h</strong><span>por dia</span></div>
+    <div class="stat"><strong>7</strong><span>dias de garantia</span></div>
+  </div>
+</div>
+
 <!-- ============ DOR ============ -->
-<section class="alt">
-  <div class="container">
-    <span class="eyebrow">Talvez seja você</span>
-    <h2>Você estudou anos para cuidar de pessoas.<br><span>Ninguém te ensinou a ser encontrado.</span></h2>
-    <ul class="lista x">
-      <li>Você posta, posta, posta… e os únicos likes são de colegas de profissão e da sua mãe.</li>
-      <li>Trava na frente da câmera e não sabe o que falar sem parecer "vendedor".</li>
-      <li>Tem medo de expor demais, de ferir o código de ética ou de ser julgado pelos colegas.</li>
-      <li>Sua agenda depende de indicação. Num mês está cheia, no outro tem horário vago e boleto chegando.</li>
-      <li>Já pensou em baixar o valor da sessão só para conseguir mais pacientes.</li>
-    </ul>
-    <div class="destaque">O problema não é a sua competência clínica. É que o seu Instagram ainda fala para terapeutas, e não para quem precisa de você.</div>
+<section>
+  <div class="wrap">
+    <div class="titulo-sec rv">
+      <h2>Você estudou anos para cuidar de pessoas. <span class="serif ouro-txt">Ninguém te ensinou a ser encontrado.</span></h2>
+    </div>
+    <div class="dores">
+      <div class="card dor dor-grande rv"><span class="emoji">📉</span><p><strong>Você posta, posta, posta…</strong> e os únicos likes são de colegas de profissão e da sua mãe.</p></div>
+      <div class="card dor rv"><span class="emoji">🎥</span><p><strong>Trava na frente da câmera</strong> e não sabe o que falar sem parecer "vendedor".</p></div>
+      <div class="card dor rv"><span class="emoji">⚖️</span><p><strong>Tem medo de expor demais,</strong> de ferir o código de ética ou de ser julgado pelos colegas.</p></div>
+      <div class="card dor rv"><span class="emoji">📆</span><p><strong>Sua agenda depende de indicação.</strong> Num mês está cheia, no outro tem horário vago e boleto chegando.</p></div>
+      <div class="card dor rv"><span class="emoji">🏷️</span><p><strong>Já pensou em baixar o valor</strong> da sessão só para conseguir mais pacientes.</p></div>
+    </div>
+    <div class="virada-box rv">O problema não é a sua competência clínica. É que o seu Instagram ainda fala <span class="serif">para terapeutas</span>, e não para <span class="ouro-txt">quem precisa de você</span>.</div>
   </div>
 </section>
 
 <!-- ============ VIRADA ============ -->
 <section>
-  <div class="container">
-    <span class="eyebrow">A virada</span>
-    <h2>Instagram de terapeuta não é vitrine.<br><span>É consultório aberto.</span></h2>
-    <div class="texto">
-      <p>A maioria dos terapeutas usa o Instagram como um currículo: posta conceitos técnicos, frases bonitas e datas comemorativas. Isso gera respeito dos colegas, mas não faz um paciente pensar <strong>"essa pessoa entende exatamente o que eu estou vivendo"</strong>.</p>
-      <p>Quando você aprende a transformar a sua escuta clínica em conteúdo, a nomear a dor do seu paciente ideal com as palavras dele e a conduzir essa pessoa do primeiro vídeo até a primeira sessão, o Instagram deixa de ser obrigação e vira a sua principal fonte de atendimentos.</p>
-      <p>Foi exatamente o que nós fizemos. E é o que você vai implementar no <strong>Destrava</strong>, em 4 semanas.</p>
+  <div class="wrap">
+    <div class="titulo-sec rv">
+      <h2>Instagram de terapeuta não é vitrine. <span class="serif ouro-txt">É consultório aberto.</span></h2>
+      <p>Quando você transforma sua escuta clínica em conteúdo, o Instagram deixa de ser obrigação e vira sua principal fonte de atendimentos.</p>
+    </div>
+    <div class="comparativo">
+      <div class="card lado-ruim rv">
+        <h3><span class="tag-mini tag-ruim">Antes</span>Instagram-currículo</h3>
+        <ul>
+          <li><svg><use href="#i-x"/></svg>Conceitos técnicos que só colegas entendem</li>
+          <li><svg><use href="#i-x"/></svg>Frases bonitas e datas comemorativas</li>
+          <li><svg><use href="#i-x"/></svg>Posta sem saber para quem está falando</li>
+          <li><svg><use href="#i-x"/></svg>Seguidores que não viram pacientes</li>
+        </ul>
+      </div>
+      <div class="card lado-bom rv">
+        <h3><span class="tag-mini tag-bom">Depois</span>Instagram-consultório</h3>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Nomeia a dor do paciente com as palavras dele</li>
+          <li><svg><use href="#i-check"/></svg>Faz a pessoa pensar "isso é exatamente o que eu vivo"</li>
+          <li><svg><use href="#i-check"/></svg>Conduz do primeiro vídeo até a primeira sessão</li>
+          <li><svg><use href="#i-check"/></svg>Agenda previsível, sem depender de indicação</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ CONTEÚDO ============ -->
-<section class="alt" id="conteudo">
-  <div class="container">
-    <span class="eyebrow">O método</span>
-    <h2>30 dias, 4 semanas, <span>1 agenda cheia</span></h2>
-    <p class="lead">Cada semana tem aulas curtas e uma tarefa prática. Você não termina o curso só sabendo. Termina com tudo pronto e funcionando.</p>
-    <div class="semanas">
-      <div class="semana">
+<!-- ============ MÉTODO ============ -->
+<section id="metodo">
+  <div class="wrap">
+    <div class="titulo-sec rv">
+      <span class="pill">O método Destrava</span>
+      <h2>30 dias, 4 semanas, <span class="serif ouro-txt">1 agenda cheia</span></h2>
+      <p>Aulas curtas e uma tarefa prática por etapa. Você não termina só sabendo. Termina com tudo pronto e funcionando.</p>
+    </div>
+    <div class="bento">
+      <div class="card semana rv">
+        <span class="big">01</span>
         <span class="num">Semana 1</span>
         <h3>Posicionamento</h3>
         <ul>
@@ -297,7 +516,8 @@
           <li>Bio, destaques e foto que convertem visita em contato</li>
         </ul>
       </div>
-      <div class="semana">
+      <div class="card semana rv">
+        <span class="big">02</span>
         <span class="num">Semana 2</span>
         <h3>Conteúdo que atrai</h3>
         <ul>
@@ -306,7 +526,8 @@
           <li>Destravar a câmera com roteiros prontos</li>
         </ul>
       </div>
-      <div class="semana">
+      <div class="card semana rv">
+        <span class="big">03</span>
         <span class="num">Semana 3</span>
         <h3>Autoridade e confiança</h3>
         <ul>
@@ -315,7 +536,8 @@
           <li>Conteúdo dentro do código de ética profissional</li>
         </ul>
       </div>
-      <div class="semana">
+      <div class="card semana rv">
+        <span class="big">04</span>
         <span class="num">Semana 4</span>
         <h3>Agenda cheia</h3>
         <ul>
@@ -330,24 +552,23 @@
 
 <!-- ============ PARA QUEM ============ -->
 <section>
-  <div class="container">
-    <span class="eyebrow">Para quem é</span>
-    <h2>O Destrava é para você?</h2>
-    <div class="duas-colunas">
-      <div>
+  <div class="wrap estreito">
+    <div class="titulo-sec rv"><h2>O Destrava é <span class="serif ouro-txt">para você?</span></h2></div>
+    <div class="quem">
+      <div class="card sim rv">
         <h3>É para você se…</h3>
-        <ul class="lista">
-          <li>É psicólogo(a), psicanalista ou terapeuta e atende (ou quer atender) no particular</li>
-          <li>Quer depender menos de indicação e de convênio</li>
-          <li>Topa aparecer e aplicar as tarefas por 30 dias</li>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>É psicólogo(a), psicanalista ou terapeuta e atende (ou quer atender) no particular</li>
+          <li><svg><use href="#i-check"/></svg>Quer depender menos de indicação e de convênio</li>
+          <li><svg><use href="#i-check"/></svg>Topa aparecer e aplicar as tarefas por 30 dias</li>
         </ul>
       </div>
-      <div>
+      <div class="card nao rv">
         <h3>Não é para você se…</h3>
-        <ul class="lista x">
-          <li>Procura uma fórmula mágica sem precisar postar</li>
-          <li>Quer comprar seguidores ou "hackear" o algoritmo</li>
-          <li>Não está disposto(a) a investir 1 hora por dia</li>
+        <ul>
+          <li><svg><use href="#i-x"/></svg>Procura uma fórmula mágica sem precisar postar</li>
+          <li><svg><use href="#i-x"/></svg>Quer comprar seguidores ou "hackear" o algoritmo</li>
+          <li><svg><use href="#i-x"/></svg>Não está disposto(a) a investir 1 hora por dia</li>
         </ul>
       </div>
     </div>
@@ -355,71 +576,74 @@
 </section>
 
 <!-- ============ SOBRE ============ -->
-<section class="alt sobre">
-  <div class="container">
-    <span class="eyebrow">Quem vai te ensinar</span>
-    <h2>César &amp; <span>Thais</span></h2>
+<section>
+  <div class="wrap estreito">
+    <div class="titulo-sec rv"><span class="pill">Quem vai te ensinar</span><h2>César <span class="serif ouro-txt">&amp;</span> Thais</h2></div>
     <div class="pessoas">
-      <div class="pessoa">
-        <img src="../img/hero-cesar.jpg" alt="César Augusto">
-        <h3>César Augusto</h3>
-        <p class="cargo">Terapeuta e psicanalista</p>
-        <p>Construiu no Instagram uma audiência de milhares de pessoas e transformou esse alcance em agenda cheia, em programas como o Reconstrução Masculina e em turmas de masterclass.</p>
+      <div class="card pessoa rv">
+        <div class="foto"><img src="../img/hero-cesar.jpg" alt="César Augusto"></div>
+        <div class="info">
+          <h3>César Augusto</h3>
+          <p class="cargo">Terapeuta e psicanalista</p>
+          <p>Construiu no Instagram uma audiência de milhares de pessoas e transformou esse alcance em agenda cheia, em programas como o Reconstrução Masculina e em turmas de masterclass.</p>
+        </div>
       </div>
-      <div class="pessoa">
-        <img src="../img/thais-retrato-1.jpg" alt="Thais Ayumi">
-        <h3>Thais Ayumi</h3>
-        <!-- TODO: confirmar cargo e bio da Thais -->
-        <p class="cargo">Terapeuta</p>
-        <p>Usa o Instagram para atrair pacientes e conduz ao lado do César a masterclass Reconstrução a Dois. Traz para o Destrava a visão de quem construiu a própria agenda do zero com conteúdo.</p>
+      <div class="card pessoa rv">
+        <div class="foto"><img src="../img/thais-retrato-1.jpg" alt="Thais Ayumi"></div>
+        <div class="info">
+          <h3>Thais Ayumi</h3>
+          <!-- TODO: confirmar cargo e bio da Thais -->
+          <p class="cargo">Terapeuta</p>
+          <p>Usa o Instagram para atrair pacientes e conduz ao lado do César a masterclass Reconstrução a Dois. Traz para o Destrava a visão de quem construiu a própria agenda do zero com conteúdo.</p>
+        </div>
       </div>
     </div>
-    <div class="destaque">No Destrava, abrimos o passo a passo que usamos todos os dias: como escolhemos o que postar, como falamos de temas delicados com ética e como uma pessoa que nos descobre num Reel chega até a primeira sessão.</div>
+    <p class="citacao rv">"No Destrava, abrimos o passo a passo que usamos <span class="serif ouro-txt">todos os dias</span>: do que postar até como alguém que nos descobre num Reel chega à primeira sessão."</p>
   </div>
 </section>
 
 <!-- ============ OFERTA ============ -->
 <section id="oferta">
-  <div class="container">
-    <span class="eyebrow">Inscrições abertas</span>
-    <h2>Comece a destravar <span>hoje</span></h2>
-    <div class="oferta-box">
-      <ul class="lista">
-        <li><span><strong>Curso Destrava completo</strong>: 4 semanas de aulas + tarefas</span></li>
-        <li><span><strong>Banco de 100 ganchos</strong> para Reels de terapeutas</span></li>
-        <li><span><strong>Roteiro de direct</strong> do primeiro contato até a sessão agendada</span></li>
-        <li><span><strong>Planilha de precificação</strong> rumo aos R$ 10 mil/mês</span></li>
-        <li><span><strong>1 ano de acesso</strong> e atualizações</span></li>
-      </ul>
-      <!-- TODO: confirmar valores -->
-      <p class="preco-de">De R$ 997</p>
-      <p class="preco-parc">por 12x de</p>
-      <p class="preco">R$ 49,70</p>
-      <p class="preco-avista">ou R$ 497 à vista</p>
-      <!-- TODO: trocar pelo link real de checkout -->
-      <a href="https://pay.kiwify.com.br/SEU_LINK_AQUI" class="btn-cta" onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout')">Quero entrar no Destrava</a>
-      <p class="seguro">Pagamento 100% seguro · Acesso imediato por e-mail</p>
+  <div class="wrap">
+    <div class="titulo-sec rv"><span class="pill"><span class="ponto"></span>Inscrições abertas</span><h2>Comece a destravar <span class="serif ouro-txt">hoje</span></h2></div>
+    <div class="oferta-grid">
+      <div class="card inclui rv">
+        <h3>Tudo o que você recebe</h3>
+        <ul>
+          <li><span class="ico"><svg><use href="#i-play"/></svg></span><span><strong>Curso Destrava completo</strong><small>4 semanas de aulas curtas + tarefas práticas</small></span></li>
+          <li><span class="ico"><svg><use href="#i-gancho"/></svg></span><span><strong>Banco de 100 ganchos</strong><small>Prontos para Reels de terapeutas</small></span></li>
+          <li><span class="ico"><svg><use href="#i-chat"/></svg></span><span><strong>Roteiro de direct</strong><small>Do primeiro contato até a sessão agendada</small></span></li>
+          <li><span class="ico"><svg><use href="#i-plan"/></svg></span><span><strong>Planilha de precificação</strong><small>Rumo aos R$ 10 mil/mês</small></span></li>
+          <li><span class="ico"><svg><use href="#i-cal"/></svg></span><span><strong>1 ano de acesso</strong><small>Com todas as atualizações</small></span></li>
+        </ul>
+      </div>
+      <div class="preco-card rv">
+        <span class="selo-top">Oferta de lançamento</span>
+        <!-- TODO: confirmar valores -->
+        <p class="preco-de">De R$ 997</p>
+        <p class="preco-parc">por 12x de</p>
+        <p class="preco"><small>R$</small>49,70</p>
+        <p class="preco-avista">ou R$ 497 à vista</p>
+        <!-- TODO: trocar pelo link real de checkout -->
+        <a href="https://pay.kiwify.com.br/SEU_LINK_AQUI" class="btn" onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout')">Quero entrar no Destrava <svg><use href="#i-seta"/></svg></a>
+        <div class="seguro"><span>🔒 Pagamento seguro</span><span>⚡ Acesso imediato</span></div>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- ============ GARANTIA ============ -->
-<section class="alt garantia">
-  <div class="container">
-    <div class="selo"><b>7</b><small>DIAS</small></div>
-    <div>
-      <h3>Garantia incondicional de 7 dias</h3>
-      <p>Entre, assista às aulas e comece a aplicar. Se em até 7 dias você sentir que o Destrava não é para você, basta pedir o reembolso e devolvemos 100% do valor, sem perguntas.</p>
+    <div class="card garantia rv">
+      <div class="selo"><div><span><b>7</b><small>DIAS</small></span></div></div>
+      <div>
+        <h3>Garantia incondicional de 7 dias</h3>
+        <p>Entre, assista às aulas e comece a aplicar. Se em até 7 dias você sentir que o Destrava não é para você, é só pedir o reembolso e devolvemos 100% do valor, sem perguntas.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============ FAQ ============ -->
 <section>
-  <div class="container">
-    <span class="eyebrow">Dúvidas frequentes</span>
-    <h2>Perguntas e respostas</h2>
-    <div class="faq">
+  <div class="wrap estreito">
+    <div class="titulo-sec rv"><h2>Perguntas <span class="serif ouro-txt">frequentes</span></h2></div>
+    <div class="faq rv">
       <details>
         <summary>Funciona para quem tem poucos seguidores?</summary>
         <p>Sim. O método foi pensado justamente para quem está começando ou está travado. Para encher uma agenda de consultório você não precisa de 100 mil seguidores, precisa das pessoas certas te acompanhando.</p>
@@ -449,22 +673,59 @@
 </section>
 
 <!-- ============ CTA FINAL ============ -->
-<section class="alt cta-final">
-  <div class="container">
-    <h2>Daqui a 30 dias seu Instagram pode continuar igual.<br><span>Ou pode estar trazendo pacientes.</span></h2>
-    <p>Você já fez a parte difícil: se formou e aprendeu a cuidar de pessoas. Agora falta deixar que elas te encontrem.</p>
-    <a href="#oferta" class="btn-cta">Quero destravar meu Instagram</a>
-    <p class="cta-aviso">Garantia de 7 dias · Acesso imediato</p>
+<section class="cta-final">
+  <div class="wrap">
+    <div class="caixa rv">
+      <h2>Daqui a 30 dias seu Instagram pode continuar igual. <span class="serif ouro-txt">Ou pode estar trazendo pacientes.</span></h2>
+      <p>Você já fez a parte difícil: se formou e aprendeu a cuidar de pessoas. Agora falta deixar que elas te encontrem.</p>
+      <a href="#oferta" class="btn">Quero destravar meu Instagram <svg><use href="#i-seta"/></svg></a>
+      <div class="micro">
+        <span><svg><use href="#i-raio"/></svg>Acesso imediato</span>
+        <span><svg><use href="#i-escudo"/></svg>Garantia de 7 dias</span>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer>
-  <div class="container">
+  <div class="wrap">
     <p>César Augusto &amp; Thais Ayumi · cesaraugustopsi.com.br<br>
       <a href="../termos.html">Termos de uso</a> · <a href="../privacidade.html">Política de privacidade</a></p>
-    <p class="disclaimer">Os resultados variam de pessoa para pessoa e dependem de fatores como dedicação, nicho de atuação e valor cobrado por sessão. Os valores citados nesta página são metas, não garantia de faturamento. Este site não é afiliado ao Instagram, ao Facebook nem à Meta Platforms, Inc.</p>
+    <p class="disclaimer">Os resultados variam de pessoa para pessoa e dependem de fatores como dedicação, nicho de atuação e valor cobrado por sessão. Os valores citados nesta página são metas, não garantia de faturamento. As notificações exibidas no topo são meramente ilustrativas. Este site não é afiliado ao Instagram, ao Facebook nem à Meta Platforms, Inc.</p>
   </div>
 </footer>
+
+<!-- CTA fixo no celular -->
+<div class="cta-fixo" id="ctaFixo">
+  <span><b>Destrava</b>12x de R$ 49,70</span>
+  <a href="#oferta" class="btn">Quero entrar</a>
+</div>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('.rv');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    } else {
+      els.forEach(function (el) { el.classList.add('in'); });
+    }
+
+    var fixo = document.getElementById('ctaFixo');
+    var hero = document.querySelector('.hero');
+    var oferta = document.getElementById('oferta');
+    function atualiza() {
+      var passouHero = hero.getBoundingClientRect().bottom < 0;
+      var r = oferta.getBoundingClientRect();
+      var naOferta = r.top < window.innerHeight && r.bottom > 0;
+      fixo.classList.toggle('on', passouHero && !naOferta);
+    }
+    window.addEventListener('scroll', atualiza, { passive: true });
+    atualiza();
+  })();
+</script>
 
 </body>
 </html>
