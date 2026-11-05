@@ -2,10 +2,15 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Reunião Secreta — César Augusto</title>
 <meta name="robots" content="noindex,nofollow">
 <meta name="description" content="Reunião restrita para quem já acompanha César Augusto. Como reconstruir o casamento depois da traição, começando pela reconstrução do homem.">
+<meta name="theme-color" content="#0a0d0b">
+<meta property="og:title" content="Reunião Secreta — César Augusto">
+<meta property="og:description" content="Como reconstruir o casamento depois da traição, começando pela reconstrução do homem.">
+<meta property="og:image" content="https://cesaraugustopsi.com.br/reuniao-secreta/img/og.jpg">
+<meta property="og:url" content="https://cesaraugustopsi.com.br/reuniao-secreta/">
 
 <!-- Meta Pixel -->
 <script>
@@ -28,222 +33,255 @@
   (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","vxds1uep01");
 </script>
 
+<link rel="preload" as="image" href="img/hero-mobile-750.webp" media="(max-width: 760px)" imagesrcset="img/hero-mobile-750.webp 750w, img/hero-mobile-1080.webp 1080w" imagesizes="100vw">
+<link rel="preload" as="image" href="img/hero-desktop-1600.webp" media="(min-width: 761px)" imagesrcset="img/hero-desktop-1600.webp 1600w, img/hero-desktop-2560.webp 2560w" imagesizes="100vw">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
+
+<!-- v2: uma dobra só. A versão completa (v1) está em /v1/ para teste A/B. -->
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
     --preto: #0a0d0b;
-    --preto2: #121613;
     --dourado: #C9A84C;
     --dourado-claro: #E4C977;
     --off-white: #EFEBE3;
-    --cinza: #8d938e;
     --cinza-claro: #b7bcb7;
+
+    --linha-forte: rgba(201,168,76,0.32);
+    --display: 'Instrument Sans', sans-serif;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --gutter: 24px;
+    --max: 1200px;
   }
 
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Montserrat', sans-serif; background: var(--preto); color: var(--off-white); overflow-x: hidden; line-height: 1.6; }
-  .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
-  .bebas { font-family: 'Bebas Neue', sans-serif; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Montserrat', sans-serif; background: var(--preto); color: var(--off-white);
+    overflow-x: hidden; line-height: 1.65; font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
 
-  /* HERO */
-  .hero {
-    position: relative;
-    padding: 56px 20px 60px;
-    overflow: hidden;
-    background: var(--preto);
-  }
-  .hero .container {
-    position: relative; z-index: 2;
-    display: flex; align-items: flex-start; justify-content: space-between;
-    gap: 20px;
-  }
-  .hero-texto { flex: 1 1 340px; text-align: left; padding-top: 28px; }
-  .hero-foto {
-    flex: 0 0 auto; width: 220px; height: 220px;
-    position: relative; margin-top: 4px;
-    border: 1px solid rgba(201,168,76,0.5);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.45);
-  }
-  .hero-foto img {
-    width: 100%; height: 100%; object-fit: cover; object-position: top center;
-    filter: grayscale(25%) contrast(1.08) brightness(0.92);
-    display: block;
+  /* Grão de filme sobre a página inteira */
+  body::after {
+    content: ''; position: fixed; inset: -50%; z-index: 100; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.07; mix-blend-mode: overlay;
   }
 
-  .tag-reuniao {
-    display: inline-block;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(15px, 2vw, 17px);
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--dourado-claro);
-    margin-bottom: 12px;
-  }
-
-  .hero h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-weight: 400;
-    font-size: clamp(34px, 5.6vw, 54px);
-    line-height: 1.08;
-    letter-spacing: 0.01em;
-    color: var(--off-white);
-    max-width: 560px;
-  }
-  .hero h1 span { color: var(--dourado-claro); }
-
-  .hero .sub {
-    font-size: clamp(14.5px, 2vw, 15.5px);
-    color: var(--cinza-claro); font-weight: 400;
-    max-width: 440px; margin: 16px 0 30px;
-  }
-
+  /* ---------- CTA ---------- */
   .btn-cta {
-    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    background: linear-gradient(135deg, var(--dourado-claro), var(--dourado));
-    color: #1a1407;
-    font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.95rem;
-    letter-spacing: 0.01em; text-transform: uppercase;
-    padding: 18px 34px; border-radius: 8px; border: none; cursor: pointer;
-    text-decoration: none; text-align: center;
-    box-shadow: 0 8px 30px rgba(201,168,76,0.28);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    position: relative; display: inline-flex; align-items: center; gap: 14px;
+    padding: 8px 30px 8px 8px; border-radius: 999px;
+    background: linear-gradient(135deg, var(--dourado-claro), var(--dourado) 70%);
+    color: #1a1407; text-decoration: none;
+    font-weight: 600; font-size: 14.5px; letter-spacing: 0.06em; text-transform: uppercase;
+    box-shadow: 0 0 0 1px rgba(228,201,119,0.5) inset, 0 14px 40px -10px rgba(201,168,76,0.55);
+    transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+    isolation: isolate; overflow: hidden;
   }
-  .btn-cta:hover { transform: translateY(-1px); box-shadow: 0 10px 36px rgba(201,168,76,0.4); }
-  .btn-cta svg { width: 18px; height: 18px; fill: #1a1407; }
+  .btn-cta::before {
+    content: ''; position: absolute; inset: 0; z-index: -1;
+    background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.45) 50%, transparent 70%);
+    transform: translateX(-120%); animation: brilho 5s var(--ease) 2s infinite;
+  }
+  @keyframes brilho { 0%, 70% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
+  .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 0 0 1px rgba(228,201,119,0.7) inset, 0 20px 50px -10px rgba(201,168,76,0.7); }
+  .btn-cta:focus-visible { outline: 2px solid var(--dourado-claro); outline-offset: 4px; }
+  .btn-cta .ico {
+    width: 44px; height: 44px; border-radius: 50%; flex: none;
+    display: grid; place-items: center; background: #14110a;
+  }
+  .btn-cta .ico svg { width: 20px; height: 20px; fill: var(--dourado-claro); }
+  .cta-aviso {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12.5px; color: rgba(183,188,183,0.75); margin-top: 18px; letter-spacing: 0.02em;
+  }
+  .cta-aviso::before {
+    content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--dourado-claro); flex: none;
+    box-shadow: 0 0 0 0 rgba(228,201,119,0.6); animation: pulso 2.4s ease-out infinite;
+  }
+  @keyframes pulso { 0% { box-shadow: 0 0 0 0 rgba(228,201,119,0.55); } 100% { box-shadow: 0 0 0 10px rgba(228,201,119,0); } }
 
-  .cta-aviso { font-size: 12px; color: rgba(183,188,183,0.65); margin-top: 16px; letter-spacing: 0.02em; }
-
-  @media (max-width: 620px) {
-    .hero .container { flex-direction: column; align-items: center; text-align: center; gap: 6px; }
-    .hero-texto { text-align: center; padding-top: 0; order: 2; }
-    .hero-foto { order: 1; width: 180px; height: 180px; margin: 0 auto 20px; }
-    .hero h1, .hero .sub { margin-left: auto; margin-right: auto; }
+  /* ---------- HERO (página inteira) ---------- */
+  .hero {
+    position: relative; min-height: 100vh; min-height: 100svh;
+    display: flex; flex-direction: column; overflow: hidden; isolation: isolate;
   }
-
-  /* O QUE VOCÊ VAI DESCOBRIR */
-  .conteudo { padding: 60px 20px 52px; border-top: 1px solid rgba(201,168,76,0.12); }
-  .conteudo .container { max-width: 600px; }
-  .conteudo .eyebrow {
-    display: block; text-align: center; font-size: 10.5px; font-weight: 700;
-    letter-spacing: 0.22em; text-transform: uppercase; color: var(--dourado);
-    margin-bottom: 12px;
+  .hero > .container { width: 100%; }
+  .hero-bg { position: absolute; inset: 0; z-index: -2; }
+  .hero-bg img {
+    width: 100%; height: 100%; object-fit: cover; object-position: 72% 30%;
+    animation: heroZoom 2.4s var(--ease) both;
   }
-  .conteudo h3 {
-    font-family: 'Bebas Neue', sans-serif; font-weight: 400;
-    font-size: clamp(28px, 5vw, 38px); color: var(--off-white);
-    margin-bottom: 30px; text-align: center; letter-spacing: 0.01em;
-  }
-  .lista-itens { list-style: none; }
-  .lista-itens li {
-    display: flex; align-items: flex-start; gap: 16px;
-    padding: 18px 0; border-bottom: 1px solid rgba(239,235,227,0.08);
-    font-size: 0.96rem; color: var(--cinza-claro); line-height: 1.6;
-  }
-  .lista-itens li:last-child { border-bottom: none; }
-  .lista-itens li::before {
-    content: ''; width: 20px; height: 20px; min-width: 20px;
-    border-radius: 50%; border: 1px solid rgba(201,168,76,0.5);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C9A84C' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
-    background-size: 11px; background-repeat: no-repeat; background-position: center;
-    margin-top: 2px;
-  }
-
-  /* QUEM SOU EU */
-  .sobre { padding: 52px 20px; background: var(--preto2); border-top: 1px solid rgba(201,168,76,0.12); }
-  .sobre .container { max-width: 600px; display: flex; align-items: center; gap: 26px; }
-  .sobre-foto { flex: 0 0 auto; }
-  .sobre-foto img {
-    width: 88px; height: 88px; border-radius: 50%; object-fit: cover;
-    border: 2px solid var(--dourado); filter: grayscale(15%);
-  }
-  .sobre-texto { flex: 1; }
-  .sobre h4 {
-    font-family: 'Bebas Neue', sans-serif; font-size: 22px; font-weight: 400;
-    letter-spacing: 0.02em;
-    color: var(--off-white); margin-bottom: 6px;
-  }
-  .sobre p { font-size: 0.92rem; color: var(--cinza-claro); }
-
-  @media (max-width: 480px) {
-    .sobre .container { flex-direction: column; text-align: center; }
+  @keyframes heroZoom { from { opacity: 0; scale: 1.08; } to { opacity: 1; scale: 1; } }
+  .hero::before {
+    content: ''; position: absolute; inset: 0; z-index: -1;
+    background:
+      linear-gradient(90deg, rgba(10,13,11,0.92) 0%, rgba(10,13,11,0.7) 32%, rgba(10,13,11,0) 58%),
+      linear-gradient(0deg, rgba(10,13,11,0.6) 0%, rgba(10,13,11,0) 22%),
+      linear-gradient(180deg, rgba(10,13,11,0.55) 0%, rgba(10,13,11,0) 18%);
   }
 
-  /* RODAPÉ AVISO */
-  .aviso-final { padding: 44px 20px; text-align: center; }
-  .aviso-final .container { max-width: 520px; }
-  .aviso-final p { font-size: 0.9rem; color: var(--cinza); font-style: italic; }
+  .topo {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 32px; padding-bottom: 32px;
+  }
+  .marca { font-family: var(--display); font-weight: 600; font-size: 15px; letter-spacing: 0.22em; text-transform: uppercase; }
+  .marca span { color: var(--dourado); }
+  .selo {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 14px; border-radius: 999px; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--dourado-claro);
+    background: rgba(18,22,19,0.55); border: 1px solid var(--linha-forte);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  }
+  .selo svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 2; }
 
-  footer { padding: 28px 20px; text-align: center; border-top: 1px solid rgba(201,168,76,0.12); }
-  footer p { font-size: 11px; color: rgba(141,147,142,0.7); letter-spacing: 0.06em; line-height: 1.8; }
+  .hero-corpo { flex: 1; display: flex; align-items: center; padding-bottom: 96px; }
+  .hero-texto { max-width: 600px; }
+  .tag-reuniao {
+    display: inline-block; font-family: var(--display); font-weight: 600; font-size: 13px; text-transform: uppercase;
+    letter-spacing: 0.3em; color: var(--dourado-claro); margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-family: var(--display); font-weight: 500;
+    font-size: clamp(38px, 4.1vw, 62px); line-height: 1.04; letter-spacing: -0.035em;
+    color: var(--off-white); text-wrap: balance;
+  }
+  .hero h1 em { font-style: normal; color: var(--dourado-claro); }
+  .hero .sub {
+    font-size: clamp(15.5px, 1.3vw, 18px); color: var(--cinza-claro);
+    max-width: 460px; margin: 24px 0 36px;
+  }
+  .hero .sub strong { color: var(--off-white); font-weight: 500; }
+
+  /* palavras do H1 entrando por máscara */
+  .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.04em; margin-bottom: -0.04em; }
+  .w > span { display: inline-block; transform: translateY(105%); animation: subir 1s var(--ease) forwards; animation-delay: calc(0.25s + var(--i) * 45ms); }
+  @keyframes subir { to { transform: none; } }
+  .entra { opacity: 0; transform: translateY(16px); animation: entrar .9s var(--ease) forwards; animation-delay: var(--d, 0.9s); }
+  @keyframes entrar { to { opacity: 1; transform: none; } }
+
+  /* desktop baixo (notebook 768px de altura): aperta o respiro pra caber */
+  @media (min-width: 761px) and (max-height: 760px) {
+    .topo { padding-top: 22px; padding-bottom: 12px; }
+    .hero-corpo { padding-bottom: 40px; }
+    .hero h1 { font-size: clamp(34px, 3.6vw, 52px); }
+    .hero .sub { margin: 18px 0 26px; }
+  }
+
+  /* ---------- Mobile: título em cima, rosto no meio, CTA embaixo ---------- */
+  @media (max-width: 760px) {
+    :root { --gutter: 20px; }
+    body { font-size: 16px; }
+    .hero-bg img { object-position: 50% 48%; }
+    .hero::before {
+      background:
+        linear-gradient(180deg, rgba(10,13,11,0.88) 0%, rgba(10,13,11,0.72) 40%, rgba(10,13,11,0) 58%),
+        linear-gradient(0deg, rgba(10,13,11,0.92) 0%, rgba(10,13,11,0.55) 18%, rgba(10,13,11,0) 34%);
+    }
+    .topo { padding-top: 20px; padding-bottom: 8px; }
+    .marca { font-size: 13px; letter-spacing: 0.18em; }
+    .selo { padding: 6px 11px; font-size: 9.5px; letter-spacing: 0.16em; }
+    .hero-corpo { align-items: stretch; padding-top: 14px; padding-bottom: calc(20px + env(safe-area-inset-bottom)); }
+    .hero-texto { display: flex; flex-direction: column; }
+    .tag-reuniao { font-size: 11.5px; margin-bottom: 10px; }
+    .hero h1 { font-size: clamp(27px, 7.6vw, 34px); line-height: 1.06; }
+    .hero .sub { font-size: 14.5px; margin: 12px 0 0; max-width: 330px; }
+    .hero-acao { margin-top: auto; padding-top: 24px; }
+    .btn-cta { width: 100%; font-size: 13px; gap: 12px; padding: 6px 22px 6px 6px; }
+    .btn-cta .ico { width: 40px; height: 40px; }
+    .btn-cta { white-space: nowrap; }
+    .hero .cta-aviso { margin-top: 12px; font-size: 11px; }
+  }
+  @media (max-width: 370px) {
+    .btn-cta { font-size: 12px; letter-spacing: 0.04em; gap: 10px; padding-right: 16px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .w > span, .entra { opacity: 1 !important; transform: none !important; }
+  }
 </style>
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="ico-wpp" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .9.9-2.9-.2-.3A8 8 0 1 1 12 20z"/></symbol>
+  </defs>
+</svg>
+
+<main class="hero">
+  <picture class="hero-bg">
+    <source media="(max-width: 760px)" srcset="img/hero-mobile-750.webp 750w, img/hero-mobile-1080.webp 1080w" sizes="100vw">
+    <img src="img/hero-desktop-1600.webp" srcset="img/hero-desktop-1600.webp 1600w, img/hero-desktop-2560.webp 2560w" sizes="100vw" alt="César Augusto — Terapeuta masculino e psicanalista" fetchpriority="high">
+  </picture>
+
+  <div class="container topo entra" style="--d:.1s">
+    <span class="marca">César <span>Augusto</span></span>
+    <span class="selo"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Restrita</span>
+  </div>
+
+  <div class="container hero-corpo">
     <div class="hero-texto">
-      <span class="tag-reuniao">Reunião Secreta</span>
-      <h1>Como reconstruir o casamento depois da <span>traição</span>, começando pela reconstrução do homem</h1>
-      <p class="sub">Vou abrir, pela primeira vez, o caminho que não está no curso Reconstrução Masculina.</p>
+      <span class="tag-reuniao entra" style="--d:.2s">Reunião Secreta</span>
+      <h1 data-split>Como reconstruir o casamento depois da <em>traição</em>, começando pela reconstrução do homem</h1>
+      <p class="sub entra" style="--d:1s">Vou abrir, pela primeira vez, o caminho que <strong>não está no curso Reconstrução Masculina.</strong></p>
 
-      <!-- TODO: trocar pelo link real do grupo de WhatsApp -->
-      <a href="https://chat.whatsapp.com/SEU_LINK_AQUI" class="btn-cta" target="_blank" rel="noopener" onclick="if(typeof fbq!=='undefined')fbq('track','Lead')">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .9.9-2.9-.2-.3A8 8 0 1 1 12 20z"/></svg>
-        Entrar no grupo do WhatsApp
-      </a>
-      <p class="cta-aviso">Vagas limitadas · data e horário serão enviados dentro do grupo</p>
-    </div>
-    <div class="hero-foto">
-      <img src="../img/hero-cesar.jpg" alt="César Augusto — Terapeuta masculino e psicanalista">
-    </div>
-  </div>
-</section>
-
-<!-- O QUE VOCÊ VAI DESCOBRIR -->
-<section class="conteudo">
-  <div class="container">
-    <span class="eyebrow">Nessa reunião</span>
-    <h3>O que eu vou te mostrar</h3>
-    <ul class="lista-itens">
-      <li>Por que pedir desculpas, prometer mudar e se esforçar não tem sido suficiente para reconstruir a confiança da sua esposa</li>
-      <li>A diferença entre um homem desesperado para não ser abandonado e um homem que reconstrói a própria identidade antes de tentar reconstruir o casamento</li>
-      <li>Os 3 pilares que sustentam uma reconstrução real: o homem, a confiança, o casamento, nessa ordem</li>
-      <li>Por que a maioria dos homens tenta pular direto pro "casamento" sem nunca ter trabalhado quem eles se tornaram</li>
-      <li>O que estou abrindo, pela primeira vez, para um grupo pequeno de homens que já estão comigo</li>
-    </ul>
-  </div>
-</section>
-
-<!-- QUEM SOU EU -->
-<section class="sobre">
-  <div class="container">
-    <div class="sobre-foto">
-      <img src="../img/hero-cesar.jpg" alt="César Augusto — Terapeuta masculino e psicanalista">
-    </div>
-    <div class="sobre-texto">
-      <h4>CÉSAR AUGUSTO</h4>
-      <p>Terapeuta masculino e psicanalista. Já ajudei milhares de homens através do Reconstrução Masculina e do meu trabalho no Instagram (@cesaraugustoo_). Essa reunião é para o homem que já entendeu que precisa mudar, e agora precisa de um caminho estruturado pra isso acontecer de verdade.</p>
+      <div class="hero-acao entra" style="--d:1.15s">
+        <!-- CTA sem destino até a definição do link do grupo. -->
+        <a role="link" aria-disabled="true" class="btn-cta js-wpp" target="_blank" rel="noopener">
+          <span class="ico"><svg><use href="#ico-wpp"/></svg></span>
+          Entrar no grupo do WhatsApp
+        </a>
+        <p class="cta-aviso">Vagas limitadas · data e horário serão enviados dentro do grupo</p>
+      </div>
     </div>
   </div>
-</section>
+</main>
 
-<!-- AVISO FINAL -->
-<section class="aviso-final">
-  <div class="container">
-    <p>"Essa não é uma reunião de vendas disfarçada de conteúdo. Vou te mostrar um caminho real. No final, se fizer sentido pra você, vou te contar sobre uma oportunidade que estou abrindo para pouquíssimos homens."</p>
-  </div>
-</section>
+<script>
+(function () {
+  var reduz = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-<footer>
-  <div class="container">
-    <p>CÉSAR AUGUSTO</p>
-  </div>
-</footer>
+  // Lead no Pixel em qualquer botão do grupo
+  document.querySelectorAll('.js-wpp').forEach(function (a) {
+    a.addEventListener('click', function (event) {
+      if (!a.getAttribute('href')) { event.preventDefault(); return; }
+      if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+    });
+  });
 
+  // H1: quebra em palavras para entrar por máscara
+  var h1 = document.querySelector('[data-split]');
+  if (h1 && !reduz) {
+    var i = 0;
+    var quebra = function (node) {
+      Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+        if (n.nodeType === 3) {
+          var frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(function (p) {
+            if (!p) return;
+            if (/^\s+$/.test(p)) { frag.appendChild(document.createTextNode(' ')); return; }
+            var w = document.createElement('span'); w.className = 'w';
+            var s = document.createElement('span'); s.style.setProperty('--i', i++); s.textContent = p;
+            w.appendChild(s); frag.appendChild(w);
+          });
+          node.replaceChild(frag, n);
+        } else if (n.nodeType === 1) { quebra(n); }
+      });
+    };
+    quebra(h1);
+  }
+})();
+</script>
 </body>
 </html>
