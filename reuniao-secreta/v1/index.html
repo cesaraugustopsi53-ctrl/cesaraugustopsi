@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Reunião Secreta — César Augusto</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Reunião restrita para quem já acompanha César Augusto. Como reconstruir o casamento depois da traição, começando pela reconstrução do homem.">
+<meta name="theme-color" content="#0a0d0b">
+<meta property="og:title" content="Reunião Secreta — César Augusto">
+<meta property="og:description" content="Como reconstruir o casamento depois da traição, começando pela reconstrução do homem.">
+<meta property="og:image" content="https://cesaraugustopsi.com.br/reuniao-secreta/img/og.jpg">
+<meta property="og:url" content="https://cesaraugustopsi.com.br/reuniao-secreta/">
+
+<!-- Meta Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','702407242839062');
+  fbq('track','PageView');
+</script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VS98RGD9JY"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-VS98RGD9JY');
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","vxds1uep01");
+</script>
+
+<link rel="preload" as="image" href="../img/hero-mobile-750.webp" media="(max-width: 760px)" imagesrcset="../img/hero-mobile-750.webp 750w, ../img/hero-mobile-1080.webp 1080w" imagesizes="100vw">
+<link rel="preload" as="image" href="../img/hero-desktop-1600.webp" media="(min-width: 761px)" imagesrcset="../img/hero-desktop-1600.webp 1600w, ../img/hero-desktop-2560.webp 2560w" imagesizes="100vw">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --preto: #0a0d0b;
+    --preto2: #121613;
+    --preto3: #1a1f1b;
+    --verde: #1e3a2c;
+    --dourado: #C9A84C;
+    --dourado-claro: #E4C977;
+    --off-white: #EFEBE3;
+    --cinza: #8d938e;
+    --cinza-claro: #b7bcb7;
+
+    --linha: rgba(201,168,76,0.16);
+    --linha-forte: rgba(201,168,76,0.32);
+    --display: 'Instrument Sans', sans-serif;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --gutter: 24px;
+    --max: 1200px;
+  }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Montserrat', sans-serif; background: var(--preto); color: var(--off-white);
+    overflow-x: hidden; line-height: 1.65; font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+  .display { font-family: var(--display); font-weight: 500; }
+  .ouro { color: var(--dourado-claro); }
+
+  /* Grão de filme sobre a página inteira */
+  body::after {
+    content: ''; position: fixed; inset: -50%; z-index: 100; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.07; mix-blend-mode: overlay;
+  }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--dourado);
+  }
+  .eyebrow::before { content: ''; width: 22px; height: 1px; background: currentColor; }
+
+  /* ---------- CTA ---------- */
+  .btn-cta {
+    position: relative; display: inline-flex; align-items: center; gap: 14px;
+    padding: 8px 30px 8px 8px; border-radius: 999px;
+    background: linear-gradient(135deg, var(--dourado-claro), var(--dourado) 70%);
+    color: #1a1407; text-decoration: none;
+    font-weight: 600; font-size: 14.5px; letter-spacing: 0.06em; text-transform: uppercase;
+    box-shadow: 0 0 0 1px rgba(228,201,119,0.5) inset, 0 14px 40px -10px rgba(201,168,76,0.55);
+    transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+    isolation: isolate; overflow: hidden;
+  }
+  .btn-cta::before {
+    content: ''; position: absolute; inset: 0; z-index: -1;
+    background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.45) 50%, transparent 70%);
+    transform: translateX(-120%); animation: brilho 5s var(--ease) 2s infinite;
+  }
+  @keyframes brilho { 0%, 70% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
+  .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 0 0 1px rgba(228,201,119,0.7) inset, 0 20px 50px -10px rgba(201,168,76,0.7); }
+  .btn-cta:focus-visible { outline: 2px solid var(--dourado-claro); outline-offset: 4px; }
+  .btn-cta .ico {
+    width: 44px; height: 44px; border-radius: 50%; flex: none;
+    display: grid; place-items: center; background: #14110a;
+  }
+  .btn-cta .ico svg { width: 20px; height: 20px; fill: var(--dourado-claro); }
+  .cta-aviso {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12.5px; color: rgba(183,188,183,0.75); margin-top: 18px; letter-spacing: 0.02em;
+  }
+  .cta-aviso::before {
+    content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--dourado-claro); flex: none;
+    box-shadow: 0 0 0 0 rgba(228,201,119,0.6); animation: pulso 2.4s ease-out infinite;
+  }
+  @keyframes pulso { 0% { box-shadow: 0 0 0 0 rgba(228,201,119,0.55); } 100% { box-shadow: 0 0 0 10px rgba(228,201,119,0); } }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative; min-height: 100vh; min-height: 100svh; max-height: 1080px;
+    display: flex; flex-direction: column; overflow: hidden; isolation: isolate;
+  }
+  .hero > .container { width: 100%; }
+  .hero-bg { position: absolute; inset: 0; z-index: -2; }
+  .hero-bg img {
+    width: 100%; height: 108%; object-fit: cover; object-position: 72% 30%;
+    transform: translate3d(0, var(--py, 0px), 0) scale(1.06);
+    animation: heroZoom 2.4s var(--ease) both;
+    will-change: transform;
+  }
+  @keyframes heroZoom { from { opacity: 0; scale: 1.08; } to { opacity: 1; scale: 1; } }
+  .hero::before {
+    content: ''; position: absolute; inset: 0; z-index: -1;
+    background:
+      linear-gradient(90deg, rgba(10,13,11,0.92) 0%, rgba(10,13,11,0.7) 32%, rgba(10,13,11,0) 58%),
+      linear-gradient(0deg, var(--preto) 0%, rgba(10,13,11,0) 30%),
+      linear-gradient(180deg, rgba(10,13,11,0.55) 0%, rgba(10,13,11,0) 18%);
+  }
+
+  .topo {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 32px; padding-bottom: 32px;
+  }
+  .marca { font-family: var(--display); font-weight: 600; font-size: 15px; letter-spacing: 0.22em; text-transform: uppercase; }
+  .marca span { color: var(--dourado); }
+  .selo {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 14px; border-radius: 999px; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--dourado-claro);
+    background: rgba(18,22,19,0.55); border: 1px solid var(--linha-forte);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  }
+  .selo svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+  .hero-corpo { flex: 1; display: flex; align-items: center; padding-bottom: 150px; }
+  .hero-texto { max-width: 600px; }
+  .tag-reuniao {
+    display: inline-block; font-family: var(--display); font-weight: 600; font-size: 13px; text-transform: uppercase;
+    letter-spacing: 0.3em; color: var(--dourado-claro); margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-family: var(--display); font-weight: 500;
+    font-size: clamp(38px, 4.1vw, 62px); line-height: 1.04; letter-spacing: -0.035em;
+    color: var(--off-white); text-wrap: balance;
+  }
+  .hero h1 em {
+    font-style: normal; color: var(--dourado-claro); position: relative;
+  }
+  .hero .sub {
+    font-size: clamp(15.5px, 1.3vw, 18px); color: var(--cinza-claro);
+    max-width: 460px; margin: 24px 0 36px;
+  }
+  .hero .sub strong { color: var(--off-white); font-weight: 500; }
+
+  /* palavras do H1 entrando por máscara */
+  .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.04em; margin-bottom: -0.04em; }
+  .w > span { display: inline-block; transform: translateY(105%); animation: subir 1s var(--ease) forwards; animation-delay: calc(0.25s + var(--i) * 45ms); }
+  @keyframes subir { to { transform: none; } }
+  .entra { opacity: 0; transform: translateY(16px); animation: entrar .9s var(--ease) forwards; animation-delay: var(--d, 0.9s); }
+  @keyframes entrar { to { opacity: 1; transform: none; } }
+
+  /* ---------- PILARES (faixa de 3 células) ---------- */
+  .pilares { position: relative; z-index: 3; margin-top: -96px; }
+  .pilares-grade {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--linha); border-radius: 22px; overflow: hidden;
+    background: rgba(14,18,15,0.72); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 30px 80px -30px rgba(0,0,0,0.9);
+  }
+  .pilar { position: relative; padding: 30px 32px 32px; }
+  .pilar + .pilar { border-left: 1px solid var(--linha); }
+  .pilar .num { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; color: var(--dourado); }
+  .pilar .nome { display: block; font-family: var(--display); font-weight: 500; font-size: clamp(24px, 2.3vw, 32px); line-height: 1.1; letter-spacing: -0.03em; margin-top: 14px; }
+  .pilar .seta {
+    position: absolute; right: -14px; top: 50%; z-index: 2; translate: 0 -50%;
+    width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center;
+    background: var(--preto); border: 1px solid var(--linha-forte);
+  }
+  .pilar .seta svg { width: 12px; height: 12px; stroke: var(--dourado-claro); fill: none; stroke-width: 2; }
+  .pilares-legenda {
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    margin-top: 16px; padding: 0 6px; font-size: 12.5px; color: var(--cinza);
+  }
+  .pilares-legenda b { font-weight: 600; color: var(--dourado-claro); letter-spacing: 0.18em; text-transform: uppercase; font-size: 11px; }
+
+  /* ---------- Fissura kintsugi ---------- */
+  .kintsugi { display: block; width: 100%; height: 80px; overflow: visible; }
+  .kintsugi path {
+    fill: none; stroke: url(#ouroGrad); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round;
+    filter: drop-shadow(0 0 6px rgba(228,201,119,0.45));
+    stroke-dasharray: var(--len, 1600); stroke-dashoffset: var(--len, 1600);
+    transition: stroke-dashoffset 2.2s var(--ease);
+  }
+  .kintsugi path.fina { stroke-width: 0.9; opacity: 0.7; transition-delay: .5s; }
+  .kintsugi.on path { stroke-dashoffset: 0; }
+
+  /* ---------- O QUE VOU TE MOSTRAR ---------- */
+  .conteudo { position: relative; padding: 120px 0 130px; }
+  .conteudo::before {
+    content: ''; position: absolute; left: -10%; top: 10%; width: 60%; height: 80%; z-index: -1;
+    background: radial-gradient(closest-side, rgba(30,58,44,0.55), transparent);
+    animation: respira 14s ease-in-out infinite alternate;
+  }
+  @keyframes respira { from { opacity: .6; transform: scale(1); } to { opacity: 1; transform: scale(1.12); } }
+  .conteudo .container { display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: start; }
+  .conteudo-titulo { position: sticky; top: 64px; }
+  .conteudo h2, .citacao-sec h2 {
+    font-family: var(--display); font-weight: 500;
+    font-size: clamp(36px, 4vw, 58px); line-height: 1.02; letter-spacing: -0.04em; margin-top: 18px;
+  }
+  .conteudo-titulo .contador {
+    margin-top: 36px; font-family: var(--display); font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cinza);
+  }
+  .conteudo-titulo .contador b { font-weight: 400; font-size: 64px; line-height: 1; color: var(--off-white); vertical-align: -6px; margin-right: 4px; }
+
+  .lista-itens { list-style: none; border-top: 1px solid var(--linha); }
+  .lista-itens li {
+    position: relative; display: grid; grid-template-columns: 56px 1fr 28px; gap: 16px; align-items: start;
+    padding: 28px 20px 28px 16px; border-bottom: 1px solid var(--linha);
+    color: var(--cinza-claro); font-size: 17px; line-height: 1.6;
+    transition: color .35s var(--ease), background .35s var(--ease);
+  }
+  .lista-itens li::before {
+    content: ''; position: absolute; inset: 0; z-index: -1; border-radius: 14px;
+    background: linear-gradient(90deg, rgba(201,168,76,0.12), rgba(201,168,76,0.02));
+    opacity: 0; transition: opacity .35s var(--ease);
+  }
+  .lista-itens li:hover { color: var(--off-white); }
+  .lista-itens li:hover::before { opacity: 1; }
+  .lista-itens .n { font-family: var(--display); font-weight: 500; font-size: 15px; line-height: 1.75; color: var(--dourado); letter-spacing: 0.08em; font-variant-numeric: tabular-nums; }
+  .lista-itens .s {
+    width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; margin-top: 2px;
+    border: 1px solid var(--linha-forte); transition: transform .35s var(--ease), background .35s var(--ease);
+  }
+  .lista-itens .s svg { width: 12px; height: 12px; stroke: var(--dourado-claro); fill: none; stroke-width: 2; }
+  .lista-itens li:hover .s { transform: rotate(-45deg); background: rgba(201,168,76,0.14); }
+  /* item 05: a oportunidade, em destaque */
+  .lista-itens li.destaque {
+    margin-top: 16px; border: 1px solid var(--linha-forte); border-radius: 18px; color: var(--off-white);
+    background: linear-gradient(120deg, rgba(201,168,76,0.16), rgba(201,168,76,0.03) 60%);
+    box-shadow: 0 20px 60px -30px rgba(201,168,76,0.5);
+  }
+  .lista-itens li.destaque .s { background: var(--dourado-claro); border-color: transparent; }
+  .lista-itens li.destaque .s svg { stroke: #1a1407; }
+  .conteudo-cta { margin-top: 48px; }
+
+  /* ---------- QUEM SOU EU ---------- */
+  .sobre { position: relative; padding: 40px 0 140px; }
+  .sobre .container { display: grid; grid-template-columns: 5fr 6fr; gap: 72px; align-items: center; }
+  .sobre-foto { position: relative; }
+  .sobre-foto .moldura {
+    position: relative; border-radius: 22px; overflow: hidden; aspect-ratio: 4 / 5;
+    border: 1px solid var(--linha); box-shadow: 0 40px 100px -40px rgba(0,0,0,0.9);
+    clip-path: inset(100% 0 0 0 round 22px); transition: clip-path 1.4s var(--ease);
+  }
+  .sobre-foto.on .moldura { clip-path: inset(0 0 0 0 round 22px); }
+  .sobre-foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+  .sobre-foto .moldura::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(10,13,11,0.65), transparent 40%); }
+  .sobre-foto .insta {
+    position: absolute; left: 20px; bottom: 20px; z-index: 2;
+    display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
+    padding: 10px 16px 10px 10px; border-radius: 999px; font-size: 13.5px; font-weight: 500;
+    background: rgba(14,18,15,0.6); border: 1px solid var(--linha-forte);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    transition: border-color .25s var(--ease);
+  }
+  .sobre-foto .insta:hover { border-color: var(--dourado-claro); }
+  .sobre-foto .insta i { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--dourado-claro); }
+  .sobre-foto .insta svg { width: 15px; height: 15px; stroke: #1a1407; fill: none; stroke-width: 2; }
+  .sobre-foto .glow {
+    position: absolute; inset: 10% -12% -8% 10%; z-index: -1;
+    background: radial-gradient(closest-side, rgba(201,168,76,0.22), transparent); filter: blur(10px);
+  }
+  .sobre h4 {
+    font-family: var(--display); font-weight: 500;
+    font-size: clamp(48px, 5.8vw, 88px); line-height: 0.96; letter-spacing: -0.045em; margin: 18px 0 28px;
+  }
+  .sobre h4 span { display: block; color: var(--dourado-claro); }
+  .sobre p { font-size: 18px; color: var(--cinza-claro); max-width: 520px; }
+
+  /* ---------- AVISO FINAL ---------- */
+  .aviso-final { position: relative; padding: 130px 0 120px; text-align: center; overflow: hidden; border-top: 1px solid var(--linha); }
+  .aviso-final::before {
+    content: ''; position: absolute; left: 50%; top: 0; width: 900px; height: 600px; translate: -50% -40%; z-index: -1;
+    background: radial-gradient(closest-side, rgba(201,168,76,0.16), transparent);
+    animation: respira 12s ease-in-out infinite alternate;
+  }
+  .aviso-final::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: url('../img/kintsugi.webp') center / cover no-repeat; opacity: 0.2;
+    /* vão escuro no centro pra textura não cruzar a citação */
+    -webkit-mask-image: radial-gradient(ellipse 46% 42% at 50% 46%, transparent 55%, #000 100%);
+    mask-image: radial-gradient(ellipse 46% 42% at 50% 46%, transparent 55%, #000 100%);
+  }
+  .aviso-final .container { max-width: 900px; position: relative; z-index: 1; }
+  .aspas { font-family: var(--display); font-weight: 500; font-size: 120px; line-height: 0.85; color: var(--dourado); height: 52px; }
+  .aviso-final blockquote p {
+    font-size: clamp(21px, 2.4vw, 30px); line-height: 1.5; font-style: italic; color: var(--off-white);
+    text-wrap: balance;
+  }
+  .aviso-final blockquote p .ouro { font-style: italic; }
+  .assinatura { margin-top: 28px; font-family: var(--display); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.28em; color: var(--dourado); }
+  .aviso-final .final-cta { margin-top: 64px; display: flex; flex-direction: column; align-items: center; }
+
+  /* ---------- FOOTER ---------- */
+  footer { position: relative; border-top: 1px solid var(--linha); overflow: hidden; padding-top: 32px; }
+  .rodape-linha { display: flex; justify-content: space-between; gap: 16px; font-size: 11px; color: rgba(141,147,142,0.75); letter-spacing: 0.16em; text-transform: uppercase; }
+  .wordmark {
+    font-family: var(--display); font-weight: 500; font-size: 15.2vw; line-height: 0.8; letter-spacing: -0.05em;
+    text-align: center; white-space: nowrap; margin-top: 28px; margin-bottom: -2.9vw;
+    background: linear-gradient(180deg, rgba(201,168,76,0.32), rgba(201,168,76,0.02) 85%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    user-select: none;
+  }
+
+  /* ---------- CTA fixo (mobile) ---------- */
+  .cta-fixo {
+    position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 50;
+    display: none; padding: 10px; border-radius: 999px;
+    background: rgba(14,18,15,0.78); border: 1px solid var(--linha-forte);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    transform: translateY(150%); transition: transform .5s var(--ease);
+  }
+  .cta-fixo.on { transform: none; }
+  .cta-fixo .btn-cta { width: 100%; justify-content: flex-start; font-size: 13px; padding-right: 20px; }
+  .cta-fixo .btn-cta .ico { width: 38px; height: 38px; }
+
+  /* ---------- Reveal ---------- */
+  .rv { opacity: 0; transform: translateY(28px); transition: opacity 1s var(--ease), transform 1s var(--ease); transition-delay: var(--d, 0s); }
+  .rv.on { opacity: 1; transform: none; }
+
+  /* ---------- Responsivo ---------- */
+  @media (max-width: 900px) {
+    .conteudo .container, .sobre .container { grid-template-columns: 1fr; gap: 40px; }
+    .conteudo-titulo { position: static; }
+    .conteudo-titulo .contador { display: none; }
+    .sobre-foto { max-width: 480px; }
+  }
+
+  @media (max-width: 760px) {
+    :root { --gutter: 20px; }
+    body { font-size: 16px; }
+    /* hero mobile: a foto foi produzida com o topo escuro reservado pro texto */
+    .hero { min-height: 0; max-height: none; aspect-ratio: 1080 / 2333; }
+    .hero-bg img { height: 100%; object-position: 50% 100%; transform: none; }
+    .hero::before {
+      background:
+        linear-gradient(180deg, rgba(10,13,11,0.75) 0%, rgba(10,13,11,0.35) 38%, rgba(10,13,11,0) 52%),
+        linear-gradient(0deg, var(--preto) 0%, rgba(10,13,11,0) 18%);
+    }
+    .topo { padding-top: 20px; padding-bottom: 8px; }
+    .marca { font-size: 13px; letter-spacing: 0.18em; }
+    .selo { padding: 6px 11px; font-size: 9.5px; letter-spacing: 0.16em; }
+    .hero-corpo { align-items: flex-start; padding-top: 18px; padding-bottom: 0; }
+    .tag-reuniao { font-size: 11.5px; margin-bottom: 12px; }
+    .hero h1 { font-size: clamp(29px, 8.2vw, 36px); line-height: 1.06; }
+    .hero .sub { font-size: 14.5px; margin: 14px 0 20px; max-width: 330px; }
+    .btn-cta { font-size: 13px; gap: 12px; padding: 6px 22px 6px 6px; }
+    .btn-cta .ico { width: 40px; height: 40px; }
+    .hero .cta-aviso { margin-top: 12px; font-size: 11.5px; }
+
+    .pilares { margin-top: -40px; }
+    .pilares-grade { grid-template-columns: 1fr; border-radius: 18px; }
+    .pilar { padding: 20px 22px; display: flex; align-items: baseline; gap: 18px; }
+    .pilar + .pilar { border-left: none; border-top: 1px solid var(--linha); }
+    .pilar .nome { margin-top: 0; font-size: 24px; }
+    .pilar .seta { right: auto; left: 50%; top: auto; bottom: -14px; translate: -50% 0; rotate: 90deg; }
+    .pilares-legenda { flex-direction: column; align-items: flex-start; gap: 4px; }
+
+    .conteudo { padding: 72px 0 88px; }
+    .lista-itens li { grid-template-columns: 40px 1fr; padding: 22px 14px 22px 8px; font-size: 15.5px; }
+    .lista-itens .s { display: none; }
+    .lista-itens li.destaque { padding-left: 14px; }
+    .conteudo-cta .btn-cta { width: 100%; }
+
+    .sobre { padding: 16px 0 96px; }
+    .sobre p { font-size: 16px; }
+
+    .aviso-final { padding: 88px 0 96px; }
+    .aspas { font-size: 96px; height: 40px; }
+    .aviso-final .final-cta .btn-cta { width: 100%; justify-content: flex-start; }
+
+    footer { padding-bottom: 96px; }
+    .rodape-linha { flex-direction: column; align-items: center; text-align: center; }
+    .cta-fixo { display: block; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .w > span, .entra, .rv { opacity: 1 !important; transform: none !important; }
+    .kintsugi path { stroke-dashoffset: 0 !important; }
+    .sobre-foto .moldura { clip-path: inset(0 0 0 0 round 22px) !important; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="ouroGrad" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#C9A84C" stop-opacity="0"/>
+      <stop offset=".18" stop-color="#C9A84C"/>
+      <stop offset=".5" stop-color="#F3DD94"/>
+      <stop offset=".82" stop-color="#C9A84C"/>
+      <stop offset="1" stop-color="#C9A84C" stop-opacity="0"/>
+    </linearGradient>
+    <symbol id="ico-wpp" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .9.9-2.9-.2-.3A8 8 0 1 1 12 20z"/></symbol>
+    <symbol id="ico-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<!-- HERO -->
+<section class="hero">
+  <picture class="hero-bg">
+    <source media="(max-width: 760px)" srcset="../img/hero-mobile-750.webp 750w, ../img/hero-mobile-1080.webp 1080w" sizes="100vw">
+    <img src="../img/hero-desktop-1600.webp" srcset="../img/hero-desktop-1600.webp 1600w, ../img/hero-desktop-2560.webp 2560w" sizes="100vw" alt="César Augusto — Terapeuta masculino e psicanalista" fetchpriority="high">
+  </picture>
+
+  <div class="container topo entra" style="--d:.1s">
+    <span class="marca">César <span>Augusto</span></span>
+    <span class="selo"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Restrita</span>
+  </div>
+
+  <div class="container hero-corpo">
+    <div class="hero-texto">
+      <span class="tag-reuniao entra" style="--d:.2s">Reunião Secreta</span>
+      <h1 data-split>Como reconstruir o casamento depois da <em>traição</em>, começando pela reconstrução do homem</h1>
+      <p class="sub entra" style="--d:1s">Vou abrir, pela primeira vez, o caminho que <strong>não está no curso Reconstrução Masculina.</strong></p>
+
+      <div class="entra" style="--d:1.15s">
+        <!-- CTA sem destino até a definição do link do grupo. -->
+        <a role="link" aria-disabled="true" class="btn-cta js-wpp" target="_blank" rel="noopener">
+          <span class="ico"><svg><use href="#ico-wpp"/></svg></span>
+          Entrar no grupo do WhatsApp
+        </a>
+        <p class="cta-aviso">Vagas limitadas · data e horário serão enviados dentro do grupo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OS 3 PILARES -->
+<section class="pilares">
+  <div class="container">
+    <div class="pilares-grade rv">
+      <div class="pilar"><span class="num">01</span><span class="nome">O homem</span><span class="seta"><svg viewBox="0 0 24 24"><use href="#ico-seta"/></svg></span></div>
+      <div class="pilar"><span class="num">02</span><span class="nome">A confiança</span><span class="seta"><svg viewBox="0 0 24 24"><use href="#ico-seta"/></svg></span></div>
+      <div class="pilar"><span class="num">03</span><span class="nome ouro">O casamento</span></div>
+    </div>
+    <div class="pilares-legenda rv" style="--d:.15s">
+      <b>Os 3 pilares de uma reconstrução real</b>
+      <span>Nessa ordem.</span>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE VOCÊ VAI DESCOBRIR -->
+<section class="conteudo">
+  <div class="container">
+    <div class="conteudo-titulo rv">
+      <span class="eyebrow">Nessa reunião</span>
+      <h2>O que eu vou<br>te <span class="ouro">mostrar</span></h2>
+      <p class="contador"><b>05</b> / pontos</p>
+    </div>
+    <div>
+      <ol class="lista-itens">
+        <li class="rv"><span class="n">01</span><span>Por que pedir desculpas, prometer mudar e se esforçar não tem sido suficiente para reconstruir a confiança da sua esposa</span><span class="s"><svg viewBox="0 0 24 24"><use href="#ico-seta"/></svg></span></li>
+        <li class="rv"><span class="n">02</span><span>A diferença entre um homem desesperado para não ser abandonado e um homem que reconstrói a própria identidade antes de tentar reconstruir o casamento</span><span class="s"><svg viewBox="0 0 24 24"><use href="#ico-seta"/></svg></span></li>
+        <li class="rv"><span class="n">03</span><span>Os 3 pilares que sustentam uma reconstrução real: o homem, a confiança, o casamento, nessa ordem</span><span class="s"><svg viewBox="0 0 24 24"><use href="#ico-seta"/></svg></span></li>
+        <li class="rv"><span class="n">04</span><span>Por que a maioria dos homens tenta pular direto pro "casamento" sem nunca ter trabalhado quem eles se tornaram</span><span class="s"><svg viewBox="0 0 24 24"><use href="#ico-seta"/></svg></span></li>
+        <li class="rv destaque"><span class="n">05</span><span>O que estou abrindo, pela primeira vez, para um grupo pequeno de homens que já estão comigo</span><span class="s"><svg viewBox="0 0 24 24"><use href="#ico-seta"/></svg></span></li>
+      </ol>
+      <div class="conteudo-cta rv">
+        <a role="link" aria-disabled="true" class="btn-cta js-wpp" target="_blank" rel="noopener">
+          <span class="ico"><svg><use href="#ico-wpp"/></svg></span>
+          Entrar no grupo do WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- fissura kintsugi -->
+<svg class="kintsugi" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 44 L180 40 L232 52 L340 34 L420 46 L486 30 L560 44 L640 41 L700 58 L760 38 L860 46 L930 28 L1010 42 L1100 36 L1160 50 L1260 38 L1340 44 L1440 40"/>
+  <path class="fina" d="M700 58 L726 70 L770 74 M930 28 L962 14 L1000 10 M340 34 L356 20"/>
+</svg>
+
+<!-- QUEM SOU EU -->
+<section class="sobre">
+  <div class="container">
+    <div class="sobre-foto">
+      <span class="glow"></span>
+      <div class="moldura">
+        <img src="../img/cesar-retrato.webp" alt="César Augusto — Terapeuta masculino e psicanalista" loading="lazy" width="720" height="900">
+      </div>
+      <a class="insta" href="https://www.instagram.com/cesaraugustoo_/" target="_blank" rel="noopener">
+        <i><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg></i>
+        @cesaraugustoo_
+      </a>
+    </div>
+    <div class="sobre-texto">
+      <span class="eyebrow rv">Quem conduz</span>
+      <h4 class="rv" style="--d:.1s">César <span>Augusto</span></h4>
+      <p class="rv" style="--d:.2s">Terapeuta masculino e psicanalista. Já ajudei milhares de homens através do Reconstrução Masculina e do meu trabalho no Instagram (@cesaraugustoo_). Essa reunião é para o homem que já entendeu que precisa mudar, e agora precisa de um caminho estruturado pra isso acontecer de verdade.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AVISO FINAL -->
+<section class="aviso-final">
+  <div class="container">
+    <div class="aspas rv" aria-hidden="true">“</div>
+    <blockquote class="rv" style="--d:.1s">
+      <p>Essa não é uma reunião de vendas disfarçada de conteúdo. <span class="ouro">Vou te mostrar um caminho real.</span> No final, se fizer sentido pra você, vou te contar sobre uma oportunidade que estou abrindo para pouquíssimos homens.</p>
+    </blockquote>
+    <p class="assinatura rv" style="--d:.2s">César Augusto</p>
+
+    <div class="final-cta rv" style="--d:.3s">
+      <a role="link" aria-disabled="true" class="btn-cta js-wpp" target="_blank" rel="noopener">
+        <span class="ico"><svg><use href="#ico-wpp"/></svg></span>
+        Entrar no grupo do WhatsApp
+      </a>
+      <p class="cta-aviso">Vagas limitadas · data e horário serão enviados dentro do grupo</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container rodape-linha">
+    <p>César Augusto · Terapeuta masculino e psicanalista</p>
+    <p>Reunião Secreta</p>
+  </div>
+  <div class="wordmark" aria-hidden="true">César Augusto</div>
+</footer>
+
+<div class="cta-fixo" aria-hidden="true">
+  <a role="link" aria-disabled="true" class="btn-cta js-wpp" target="_blank" rel="noopener" tabindex="-1">
+    <span class="ico"><svg><use href="#ico-wpp"/></svg></span>
+    Entrar no grupo do WhatsApp
+  </a>
+</div>
+
+<script>
+(function () {
+  var reduz = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Lead no Pixel em qualquer botão do grupo
+  document.querySelectorAll('.js-wpp').forEach(function (a) {
+    a.addEventListener('click', function (event) {
+      if (!a.getAttribute('href')) { event.preventDefault(); return; }
+      if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+    });
+  });
+
+  // H1: quebra em palavras para entrar por máscara
+  var h1 = document.querySelector('[data-split]');
+  if (h1 && !reduz) {
+    var i = 0;
+    var quebra = function (node) {
+      Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+        if (n.nodeType === 3) {
+          var frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(function (p) {
+            if (!p) return;
+            if (/^\s+$/.test(p)) { frag.appendChild(document.createTextNode(' ')); return; }
+            var w = document.createElement('span'); w.className = 'w';
+            var s = document.createElement('span'); s.style.setProperty('--i', i++); s.textContent = p;
+            w.appendChild(s); frag.appendChild(w);
+          });
+          node.replaceChild(frag, n);
+        } else if (n.nodeType === 1) { quebra(n); }
+      });
+    };
+    quebra(h1);
+  }
+
+  // Comprimento real das fissuras para o path-draw
+  document.querySelectorAll('.kintsugi path').forEach(function (p) {
+    p.style.setProperty('--len', Math.ceil(p.getTotalLength()));
+  });
+
+  // Reveal ao rolar
+  var alvos = document.querySelectorAll('.rv, .kintsugi, .sobre-foto');
+  if ('IntersectionObserver' in window && !reduz) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    alvos.forEach(function (el) { io.observe(el); });
+  } else {
+    alvos.forEach(function (el) { el.classList.add('on'); });
+  }
+
+  // Parallax leve na foto da hero (desktop)
+  var img = document.querySelector('.hero-bg img');
+  var desk = window.matchMedia('(min-width: 761px)');
+  var tick = false;
+  function parallax() {
+    tick = false;
+    if (!desk.matches) { img.style.removeProperty('--py'); return; }
+    var y = Math.min(window.scrollY, window.innerHeight);
+    img.style.setProperty('--py', (y * 0.12).toFixed(1) + 'px');
+  }
+  if (img && !reduz) {
+    window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(parallax); } }, { passive: true });
+  }
+
+  // CTA fixo no mobile: aparece depois da hero, some quando o CTA final está na tela
+  var fixo = document.querySelector('.cta-fixo');
+  var heroCta = document.querySelector('.hero .btn-cta');
+  var finalCta = document.querySelector('.final-cta');
+  if (fixo && 'IntersectionObserver' in window) {
+    var heroVisivel = true, finalVisivel = false;
+    var atualiza = function () {
+      var on = !heroVisivel && !finalVisivel;
+      fixo.classList.toggle('on', on);
+      fixo.setAttribute('aria-hidden', on ? 'false' : 'true');
+      fixo.querySelector('a').tabIndex = on ? 0 : -1;
+    };
+    new IntersectionObserver(function (es) { heroVisivel = es[0].isIntersecting; atualiza(); }).observe(heroCta);
+    new IntersectionObserver(function (es) { finalVisivel = es[0].isIntersecting; atualiza(); }).observe(finalCta);
+  }
+})();
+</script>
+</body>
+</html>
