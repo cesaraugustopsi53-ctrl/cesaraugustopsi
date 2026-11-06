@@ -280,11 +280,11 @@
   .dentro .pilares { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
   .dentro .pilares span { border: 1px solid var(--fio); padding: 10px 16px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--osso-60); font-weight: 600; }
   .modulos { border-top: 1px solid var(--fio); }
-  .modulo { display: grid; grid-template-columns: 1fr 1.2fr auto; gap: 32px; align-items: center; padding: 34px 0; border-bottom: 1px solid var(--fio); transition: padding .5s cubic-bezier(.2,.7,.2,1); }
+  .modulo { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.15fr) 120px; gap: 32px; align-items: center; padding: 34px 0; border-bottom: 1px solid var(--fio); transition: padding .5s cubic-bezier(.2,.7,.2,1); }
   .modulo:hover { padding-left: 16px; }
   .modulo h3 { font-stretch: 118%; font-weight: 400; font-size: clamp(22px, 2.4vw, 34px); text-transform: uppercase; letter-spacing: -0.015em; line-height: 1.05; }
   .modulo p { color: var(--osso-60); font-size: 15.5px; }
-  .modulo .tag { font-size: 10.5px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--osso-35); font-weight: 600; white-space: nowrap; }
+  .modulo .tag { justify-self: end; font-size: 10.5px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--osso-35); font-weight: 600; white-space: nowrap; }
   .modulo.bonus .tag { color: var(--preto); background: var(--champanhe); padding: 6px 10px; }
   @media (max-width: 860px) { .dentro .cab { grid-template-columns: 1fr; } .modulo { grid-template-columns: 1fr; gap: 10px; } .modulo .tag { order: -1; justify-self: start; } }
 
@@ -605,10 +605,12 @@
     <div class="modulos">
       <div class="modulo rv"><h3>Cronograma de 30 dias</h3><p>Um mês inteiro de postagens planejado com os conteúdos que mais trouxeram pacientes para nós.</p><span class="tag">Conteúdo</span></div>
       <div class="modulo rv"><h3>Roteiros + ChatGPT</h3><p>Pegue o nosso roteiro e transforme no seu, para o seu nicho, em minutos.</p><span class="tag">Ferramenta</span></div>
-      <div class="modulo rv"><h3>Script de stories que vende</h3><p>A sequência que transforma quem assiste em quem agenda.</p><span class="tag">Vendas</span></div>
+      <div class="modulo rv"><h3>Stories que vendem</h3><p>A aula com o script e a sequência que transformam quem assiste em quem agenda.</p><span class="tag">Aula especial</span></div>
       <div class="modulo rv"><h3>A caixinha de perguntas</h3><p>Aula do César: como transformar a caixinha numa máquina de viralização e vendas.</p><span class="tag">Aula especial</span></div>
       <div class="modulo rv"><h3>1 conteúdo, 7 dias</h3><p>Um vídeo vira reels, carrossel, stories e legenda. Menos tempo produzindo, mais tempo vivendo.</p><span class="tag">Produtividade</span></div>
-      <div class="modulo bonus rv"><h3>Como vender curso on-line</h3><p>O caminho que fez o curso do César passar de R$ 240 mil, para faturar 5 dígitos por mês além do consultório.</p><span class="tag">Bônus</span></div>
+      <div class="modulo bonus rv"><h3>Como vender curso on&#8209;line</h3><p>O caminho que fez o curso do César passar de R$ 240 mil, para faturar 5 dígitos por mês além do consultório.</p><span class="tag">Bônus</span></div>
+      <div class="modulo bonus rv"><h3>O que postar quando você não quer aparecer</h3><p>Formatos que atraem pacientes sem você precisar mostrar o rosto todos os dias.</p><span class="tag">Bônus</span></div>
+      <div class="modulo bonus rv"><h3>Carrosséis virais com&nbsp;IA</h3><p>Como criar carrosséis que alcançam e engajam em minutos, usando inteligência artificial.</p><span class="tag">Bônus</span></div>
     </div>
   </div>
 </section>
@@ -657,6 +659,9 @@
       <ul>
         <li>Acesso imediato à área de membros</li>
         <li>Cronograma de 30 dias, roteiros e scripts</li>
+        <li>Aulas: stories que vendem e caixinha de perguntas</li>
+        <li>Bônus: o que postar quando você não quer aparecer</li>
+        <li>Bônus: carrosséis virais com IA</li>
         <li>Bônus: como vender curso on-line</li>
         <li>Garantia incondicional de 7 dias</li>
       </ul>
@@ -682,7 +687,7 @@
       <details><summary>Já tentei outras coisas e não funcionou.<i></i></summary><p>Provavelmente você tentou dicas soltas. Aqui é um protocolo de 4 semanas, em ordem: posicionamento, conteúdo, stories e lista de espera. Cada etapa prepara a próxima.</p></details>
       <details><summary>Sou estudante. Funciona para mim?<i></i></summary><p>Funciona, e quanto antes começar, melhor. Quem se forma já com o perfil posicionado começa a carreira com pacientes procurando, em vez de correr atrás deles.</p></details>
       <details><summary>Não tenho dinheiro agora porque estou com poucos pacientes.<i></i></summary><p>É exatamente esse ciclo que o Destrava quebra. A parcela é de R$ 49,70: uma única sessão sua paga o mês e ainda sobra. E você tem 7 dias de garantia para testar sem risco.</p></details>
-      <details><summary>Ainda não me sinto pronto ou pronta para aparecer.<i></i></summary><p>Quase ninguém se sente. O protocolo começa pelo posicionamento justamente para você aparecer com segurança e do seu jeito. A confiança vem com a prática, não antes dela.</p></details>
+      <details><summary>Ainda não me sinto pronto ou pronta para aparecer.<i></i></summary><p>Quase ninguém se sente. O protocolo começa pelo posicionamento justamente para você aparecer com segurança e do seu jeito. E tem um bônus inteiro sobre o que postar quando você não quer aparecer. A confiança vem com a prática, não antes dela.</p></details>
       <details><summary>Como recebo o acesso?<i></i></summary><p>Logo após a confirmação do pagamento, você recebe por e-mail o login da área de membros.</p></details>
     </div>
   </div>
