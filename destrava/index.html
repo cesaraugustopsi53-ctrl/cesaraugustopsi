@@ -231,6 +231,36 @@
   @media (max-width: 960px) { .protocolo .cab { grid-template-columns: 1fr; } .semanas { grid-template-columns: 1fr 1fr; } .semana:nth-child(3) { border-left: none; padding-left: 0; } .semana:nth-child(n+3) { border-top: 1px solid var(--fio); margin-top: 24px; } }
   @media (max-width: 560px) { .semanas { grid-template-columns: 1fr; } .semana + .semana { border-left: none; padding-left: 0; border-top: 1px solid var(--fio); margin-top: 24px; } }
 
+
+  /* VOCÊ NÃO PRECISA */
+  .nao-precisa .cab { max-width: 900px; margin-bottom: clamp(48px, 6vw, 80px); }
+  .nao-precisa .cab .rot { display: block; margin-bottom: 24px; }
+  .lista-nao { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--fio); }
+  .lista-nao div { padding: 28px 26px 28px 0; border-bottom: 1px solid var(--fio); }
+  .lista-nao div:not(:nth-child(3n+1)) { padding-left: 26px; border-left: 1px solid var(--fio); }
+  .lista-nao s { display: block; font-stretch: 118%; font-weight: 300; font-size: clamp(20px, 1.9vw, 26px); text-transform: uppercase; letter-spacing: -0.01em; line-height: 1.1; color: var(--osso); text-decoration-color: var(--champanhe); text-decoration-thickness: 1px; margin-bottom: 12px; }
+  .lista-nao p { color: var(--osso-60); font-size: 15px; }
+  @media (max-width: 900px) { .lista-nao { grid-template-columns: 1fr 1fr; } .lista-nao div:not(:nth-child(3n+1)) { padding-left: 0; border-left: none; } .lista-nao div:nth-child(even) { padding-left: 22px; border-left: 1px solid var(--fio); } }
+  @media (max-width: 560px) { .lista-nao { grid-template-columns: 1fr; } .lista-nao div:nth-child(even) { padding-left: 0; border-left: none; } }
+
+  /* CARTA */
+  .carta .wrap { max-width: 780px; }
+  .carta .rot { display: block; margin-bottom: 26px; }
+  .carta h2 { margin-bottom: 40px; }
+  .carta p { font-size: clamp(17px, 1.4vw, 19px); color: rgba(236,230,220,0.78); line-height: 1.75; }
+  .carta p + p { margin-top: 20px; }
+  .carta p strong { color: var(--osso); font-weight: 600; }
+  .carta .assina { margin-top: 44px; padding-top: 26px; border-top: 1px solid var(--fio); display: flex; align-items: center; gap: 18px; }
+  .carta .assina img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; object-position: top; border: 1px solid var(--fio); }
+  .carta .assina img + img { margin-left: -26px; }
+  .carta .assina span { font-family: var(--serif); font-style: italic; font-size: 26px; color: var(--champanhe-claro); margin-left: 6px; }
+
+  /* WHATSAPP */
+  .duvida { margin-top: 22px; text-align: center; font-size: 13.5px; color: var(--osso-60); }
+  .duvida a { color: var(--osso); text-decoration: none; border-bottom: 1px solid var(--champanhe); padding-bottom: 2px; }
+  .duvida a:hover { color: var(--champanhe-claro); }
+  .conta { margin: -18px 0 30px; font-size: 13px; color: var(--champanhe-claro); }
+
   /* AGÊNCIA */
   .agencia { background: var(--osso); color: var(--preto); }
   .agencia .rot { color: rgba(9,9,9,0.55); }
@@ -499,7 +529,7 @@
         <p>Lista de espera, horários escolhidos a dedo e pacientes que chegam já querendo você.</p>
       </div>
     </div>
-    <p class="fecho rv">A diferença não está no currículo. Está em <em>como o mercado te enxerga</em>. E hoje o mercado te enxerga pelo Instagram.</p>
+    <p class="fecho rv">Não é que o paciente não queira pagar. Ele ainda não enxergou o seu valor. A diferença não está no currículo. Está em <em>como o mercado te enxerga</em>. E hoje o mercado te enxerga pelo Instagram.</p>
   </div>
 </section>
 
@@ -508,7 +538,7 @@
   <div class="wrap grid">
     <div class="rv">
       <span class="rot">O atalho caro</span>
-      <h2 class="l">Agência custa caro e te deixa <span class="it">genérico.</span></h2>
+      <h2 class="l">Agência custa caro e deixa o seu perfil <span class="it">genérico.</span></h2>
       <p class="txt">Muita gente contrata agência, faz um baita investimento e recebe posts bonitos que não têm a sua voz. No Destrava, você usa o nosso roteiro e adapta para o seu nicho com o ChatGPT.</p>
     </div>
     <div class="comp rv">
@@ -538,6 +568,24 @@
       <div class="semana rv"><span class="rot ouro">Semana 4</span><h3>Lista de espera</h3><p>Valor da sessão reajustado, agenda cheia e uma lista de espera para você escolher quem atende.</p></div>
     </div>
     <div class="selos rv"><span>Fórmula pronta</span><span>Conteúdos validados</span><span>Adaptável com IA</span><span>Sem tráfego pago</span></div>
+  </div>
+</section>
+
+<!-- ============ VOCÊ NÃO PRECISA ============ -->
+<section class="nao-precisa">
+  <div class="wrap">
+    <div class="cab rv">
+      <span class="rot ouro">Pode respirar</span>
+      <h2 class="l">Com o método certo, <span class="it ouro">você não precisa mais:</span></h2>
+    </div>
+    <div class="lista-nao">
+      <div class="rv"><s>Dançar ou fazer trend</s><p>Conteúdo de terapeuta não é palco. É escuta transformada em post.</p></div>
+      <div class="rv"><s>Se expor além do que quer</s><p>Você aparece com verdade, estratégia e os limites que escolher.</p></div>
+      <div class="rv"><s>Postar todo dia</s><p>1 conteúdo rende a semana inteira. Qualidade vence volume.</p></div>
+      <div class="rv"><s>Baixar o valor da sessão</s><p>Quem chega pelo seu conteúdo já chega entendendo o seu valor.</p></div>
+      <div class="rv"><s>Aceitar qualquer paciente</s><p>Com lista de espera, você escolhe com quem quer trabalhar.</p></div>
+      <div class="rv"><s>Pagar agência ou anúncio</s><p>Tudo orgânico, com a sua voz e o nosso roteiro.</p></div>
+    </div>
   </div>
 </section>
 
@@ -603,6 +651,7 @@
       <p class="parc">12x de</p>
       <p class="valor"><sup>R$</sup>49,70</p>
       <p class="vista">ou R$ 497 à vista</p>
+      <p class="conta">Uma única sessão sua paga a parcela do mês.</p>
       <!-- TODO: trocar pelo link real de checkout -->
       <a href="https://pay.kiwify.com.br/SEU_LINK_AQUI" class="btn btn-ouro" onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout')">Garantir minha vaga <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="12" x2="21" y2="12"/><polyline points="15 6 21 12 15 18"/></svg></a>
       <ul>
@@ -611,6 +660,7 @@
         <li>Bônus: como vender curso on-line</li>
         <li>Garantia incondicional de 7 dias</li>
       </ul>
+      <p class="duvida">Ficou com dúvida? <a href="https://wa.me/5531991550421" target="_blank" rel="noopener">Fale com a gente no WhatsApp</a> <span style="white-space:nowrap">· (31) 99155-0421</span></p>
     </div>
   </div>
 </section>
@@ -624,11 +674,34 @@
     </div>
     <div class="rv">
       <details><summary>Preciso investir em tráfego pago?<i></i></summary><p>Não. Todo o método é orgânico: conteúdo, stories e caixinha de perguntas. Foi assim que chegamos até aqui.</p></details>
-      <details><summary>Funciona para quem tem poucos seguidores?<i></i></summary><p>Sim. Para encher uma agenda de consultório você não precisa de milhares de seguidores, precisa das pessoas certas te acompanhando. O método foi feito para quem está começando ou travado.</p></details>
+      <details><summary>Funciona para quem tem poucos seguidores?<i></i></summary><p>Sim. Para encher uma agenda de consultório você não precisa de milhares de seguidores, precisa das pessoas certas te acompanhando. O método foi feito para quem está começando ou está com o perfil parado.</p></details>
       <details><summary>Não sei usar o ChatGPT. Vou conseguir?<i></i></summary><p>Vai. Mostramos exatamente o que pedir para ele adaptar os nossos roteiros ao seu nicho. É copiar, colar e ajustar.</p></details>
-      <details><summary>Sou psicólogo(a). Respeita o Código de Ética?<i></i></summary><p>Sim. Ensinamos a se posicionar e vender os seus atendimentos sem expor pacientes e sem prometer resultado terapêutico.</p></details>
+      <details><summary>Sou psicólogo ou psicóloga. Respeita o Código de Ética?<i></i></summary><p>Sim. Ensinamos a se posicionar e vender os seus atendimentos sem expor pacientes e sem prometer resultado terapêutico.</p></details>
       <details><summary>Os R$ 10 mil por mês são garantidos?<i></i></summary><p>Não. É a meta para a qual o método foi desenhado, e dá para ir muito além, mas o resultado depende do seu nicho, do valor da sua sessão e da sua aplicação. O que garantimos é o reembolso integral em até 7 dias.</p></details>
+      <details><summary>Não tenho tempo. Vou conseguir aplicar?<i></i></summary><p>Vai. As aulas são curtas e direto ao ponto, e o cronograma já diz o que postar em cada dia. Com 1 conteúdo rendendo a semana inteira, você gasta menos tempo do que gasta hoje tentando adivinhar o que postar.</p></details>
+      <details><summary>Já tentei outras coisas e não funcionou.<i></i></summary><p>Provavelmente você tentou dicas soltas. Aqui é um protocolo de 4 semanas, em ordem: posicionamento, conteúdo, stories e lista de espera. Cada etapa prepara a próxima.</p></details>
+      <details><summary>Sou estudante. Funciona para mim?<i></i></summary><p>Funciona, e quanto antes começar, melhor. Quem se forma já com o perfil posicionado começa a carreira com pacientes procurando, em vez de correr atrás deles.</p></details>
+      <details><summary>Não tenho dinheiro agora porque estou com poucos pacientes.<i></i></summary><p>É exatamente esse ciclo que o Destrava quebra. A parcela é de R$ 49,70: uma única sessão sua paga o mês e ainda sobra. E você tem 7 dias de garantia para testar sem risco.</p></details>
+      <details><summary>Ainda não me sinto pronto ou pronta para aparecer.<i></i></summary><p>Quase ninguém se sente. O protocolo começa pelo posicionamento justamente para você aparecer com segurança e do seu jeito. A confiança vem com a prática, não antes dela.</p></details>
       <details><summary>Como recebo o acesso?<i></i></summary><p>Logo após a confirmação do pagamento, você recebe por e-mail o login da área de membros.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CARTA ============ -->
+<section class="carta">
+  <div class="wrap">
+    <span class="rot ouro rv">Carta aberta</span>
+    <h2 class="m rv">Para quem cuida de gente <span class="it ouro">e ainda não vive disso como merece</span></h2>
+    <div class="rv">
+      <p>A gente sabe como é estudar anos, investir em formação, supervisão e análise, e mesmo assim olhar para a agenda e não saber como vai ser o mês que vem.</p>
+      <p>Nenhuma faculdade ensinou a gente a ser encontrado. A gente aprendeu fazendo, testando e errando no Instagram. Sem agência, <strong>sem gastar um real com tráfego pago</strong>, só com conteúdo e com a mesma escuta que usamos no consultório.</p>
+      <p>Foi isso que fez o curso on-line do César passar de <strong>R$ 240 mil</strong>, que levou a mentoria da Thais a <strong>R$ 15 mil</strong> e que nos deu o que mais valorizamos hoje: liberdade para escolher onde, quando e com quem trabalhar.</p>
+      <p>O Destrava é esse caminho, organizado em 30 dias, para você não precisar descobrir tudo por conta própria. A fórmula está pronta. O que falta é a sua decisão de parar de tentar no escuro.</p>
+    </div>
+    <div class="assina rv">
+      <img src="../img/hero-cesar.jpg" alt="César Augusto"><img src="../img/thais-retrato-1.jpg" alt="Thais Ayumi">
+      <span>César &amp; Thais</span>
     </div>
   </div>
 </section>
@@ -641,7 +714,7 @@
     <span class="rot ouro rv">A decisão é sua</span>
     <h2 class="l rv">Daqui a um ano, você quer estar <span class="it ouro">aqui</span>, ou esperando a próxima indicação?</h2>
     <div class="base rv">
-      <p class="txt">Você já fez a parte difícil: se formou e aprendeu a cuidar de pessoas. Agora é hora de ser encontrado, cobrar o que vale e viver a vida que o seu trabalho pode pagar.</p>
+      <p class="txt">Você já fez a parte difícil: se formou e aprendeu a cuidar de pessoas. Agora é hora de os pacientes certos te encontrarem, de cobrar o que você vale e viver a vida que o seu trabalho pode pagar.</p>
       <a href="#oferta" class="btn">Quero destravar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="12" x2="21" y2="12"/><polyline points="15 6 21 12 15 18"/></svg></a>
     </div>
   </div>
