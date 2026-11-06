@@ -188,6 +188,49 @@
   .sessao .fecho em { color: var(--champanhe-claro); }
   @media (max-width: 700px) { .duelo { grid-template-columns: 1fr; } .duelo > div + div { border-left: none; padding-left: 0; border-top: 1px solid var(--fio); margin-top: 40px; } }
 
+
+  /* INSTABILIDADE */
+  .medo { background: var(--grafite); border-top: 1px solid var(--fio); border-bottom: 1px solid var(--fio); }
+  .medo .grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 7vw, 120px); align-items: center; }
+  .medo .m { margin: 22px 0 34px; }
+  .agenda-mal { border-top: 1px solid var(--fio); }
+  .agenda-mal div { display: grid; grid-template-columns: 96px 1fr auto; gap: 16px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--fio); font-size: 15px; color: var(--osso-60); }
+  .agenda-mal b { font-weight: 500; color: var(--osso-35); font-variant-numeric: tabular-nums; letter-spacing: 0.04em; white-space: nowrap; }
+  .agenda-mal s { color: var(--osso-35); }
+  .agenda-mal em { font-style: normal; font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #d98c7a; border: 1px solid rgba(217,140,122,0.35); padding: 4px 8px; white-space: nowrap; }
+  .medo .virada { margin-top: 30px; font-family: var(--serif); font-style: italic; font-size: clamp(22px, 2.4vw, 32px); line-height: 1.25; color: var(--osso-60); }
+  .medo .depois .m { margin: 22px 0 22px; }
+  .depois .txt { color: var(--osso-60); margin-bottom: 30px; }
+  .tela { position: relative; max-width: 420px; padding: 22px; border: 1px solid rgba(203,174,130,0.3); background: linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01)); }
+  .tela .story { display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid var(--fio); margin-bottom: 14px; }
+  .tela .story span:first-child { font-size: 13px; font-weight: 600; }
+  .tela .story span:last-child { font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--champanhe); }
+  .dm { display: flex; gap: 12px; align-items: center; padding: 10px 0; font-size: 14px; color: var(--osso); }
+  .dm i { width: 30px; height: 30px; border-radius: 50%; flex: 0 0 auto; background: linear-gradient(135deg, #3a342c, #1d1a16); border: 1px solid var(--fio); }
+  .dm span { background: rgba(236,230,220,0.06); padding: 9px 13px; }
+  .tela .mais { font-size: 12.5px; color: var(--osso-35); padding: 8px 0 16px 42px; }
+  .espera { display: flex; justify-content: space-between; align-items: center; padding: 16px 18px; background: var(--champanhe); color: var(--preto); font-size: 11.5px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; }
+  .espera b { font-size: 11px; background: var(--preto); color: var(--champanhe-claro); padding: 5px 9px; letter-spacing: 0.18em; }
+  @media (max-width: 900px) { .medo .grid { grid-template-columns: 1fr; } }
+  @media (max-width: 480px) { .agenda-mal div { grid-template-columns: 1fr auto; } .agenda-mal b { grid-column: 1 / -1; } }
+
+  /* PROTOCOLO */
+  .protocolo .cab { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: end; margin-bottom: clamp(56px, 7vw, 88px); }
+  .protocolo .cab .txt strong { color: var(--osso); font-weight: 600; }
+  .semanas { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--fio); }
+  .semana { padding: 30px 26px 8px 0; position: relative; }
+  .semana + .semana { padding-left: 26px; border-left: 1px solid var(--fio); }
+  .semana::before { content: ''; position: absolute; top: -1px; left: 0; height: 1px; width: 0; background: var(--champanhe); transition: width 1.4s cubic-bezier(.2,.7,.2,1); }
+  .semana.in::before { width: 100%; }
+  .semana .rot { display: block; margin-bottom: 18px; }
+  .semana h3 { font-stretch: 118%; font-weight: 400; font-size: clamp(22px, 2vw, 28px); text-transform: uppercase; letter-spacing: -0.015em; line-height: 1.05; margin-bottom: 14px; }
+  .semana p { color: var(--osso-60); font-size: 15px; }
+  .selos { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 52px; }
+  .selos span { display: inline-flex; gap: 10px; align-items: center; border: 1px solid var(--fio); padding: 12px 16px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--osso-60); font-weight: 600; }
+  .selos span::before { content: ''; width: 6px; height: 6px; background: var(--champanhe); transform: rotate(45deg); }
+  @media (max-width: 960px) { .protocolo .cab { grid-template-columns: 1fr; } .semanas { grid-template-columns: 1fr 1fr; } .semana:nth-child(3) { border-left: none; padding-left: 0; } .semana:nth-child(n+3) { border-top: 1px solid var(--fio); margin-top: 24px; } }
+  @media (max-width: 560px) { .semanas { grid-template-columns: 1fr; } .semana + .semana { border-left: none; padding-left: 0; border-top: 1px solid var(--fio); margin-top: 24px; } }
+
   /* AGÊNCIA */
   .agencia { background: var(--osso); color: var(--preto); }
   .agencia .rot { color: rgba(9,9,9,0.55); }
@@ -332,7 +375,7 @@
     <div class="marca">Destrava</div>
     <div class="menu">
       <a href="#galeria">Lifestyle</a>
-      <a href="#dentro">O curso</a>
+      <a href="#protocolo">O protocolo</a>
       <a href="#quem">Quem somos</a>
       <a href="#oferta" class="cta">Entrar</a>
     </div>
@@ -346,7 +389,7 @@
   <div class="wrap">
     <div class="hero-meta fade">
       <span class="rot">César Augusto &amp; Thais Ayumi</span>
-      <span class="rot">Instagram para terapeutas</span>
+      <span class="rot">Protocolo de 30 dias</span>
     </div>
     <h1 class="xl">
       <span class="linha"><span><b>R$ 10 mil</b></span></span>
@@ -368,8 +411,8 @@
 
 <div class="marquee" aria-hidden="true">
   <div class="trilho">
-    <span>Atenda de onde quiser</span><span>faça os seus horários</span><span>Cobre o que você vale</span><span>lista de espera</span><span>Sem tráfego pago</span><span>liberdade</span>
-    <span>Atenda de onde quiser</span><span>faça os seus horários</span><span>Cobre o que você vale</span><span>lista de espera</span><span>Sem tráfego pago</span><span>liberdade</span>
+    <span>Atenda de onde quiser</span><span>faça os seus horários</span><span>Cobre o que você vale</span><span>lista de espera</span><span>Sem tráfego pago</span><span>liberdade</span><span>Protocolo de 30 dias</span><span>escolha os seus pacientes</span>
+    <span>Atenda de onde quiser</span><span>faça os seus horários</span><span>Cobre o que você vale</span><span>lista de espera</span><span>Sem tráfego pago</span><span>liberdade</span><span>Protocolo de 30 dias</span><span>escolha os seus pacientes</span>
   </div>
 </div>
 
@@ -403,6 +446,37 @@
     <figure class="foto"><div class="moldura"><img src="../img/thais-retrato-2.jpg" alt="Thais Ayumi"></div><figcaption><b>Cobrar alto</b><span>sem pedir desculpas</span></figcaption></figure>
     <figure class="foto larga"><div class="moldura"><img src="../img/casal-cesar.jpg" alt="César e Thais" style="object-position:center 45%"></div><figcaption><b>Trabalhar juntos</b><span>do jeito que a gente escolheu</span></figcaption></figure>
     <figure class="foto"><div class="moldura"><img src="../img/thais-consultorio-1.jpg" alt="Thais no consultório"></div><figcaption><b>Lista de espera</b><span>em vez de horário vago</span></figcaption></figure>
+  </div>
+</section>
+
+<!-- ============ INSTABILIDADE ============ -->
+<section class="medo">
+  <div class="wrap grid">
+    <div class="rv">
+      <span class="rot">O medo que ninguém fala</span>
+      <h2 class="m">Quando o paciente some, <span class="it">o mês some junto.</span></h2>
+      <div class="agenda-mal">
+        <div><b>SEG 09:00</b><span>Paciente desmarcou em cima da hora</span><em>Cancelado</em></div>
+        <div><b>QUA 14:00</b><span>Não apareceu e não respondeu</span><em>Faltou</em></div>
+        <div><b>QUI 18:00</b><span><s>Paciente de 8 meses</s> recebeu alta</span><em>Encerrou</em></div>
+        <div><b>SEX 10:00</b><span>Horário vago há três semanas</span><em>Vazio</em></div>
+      </div>
+      <p class="virada">E lá vem a conta do aluguel, do cartão, da supervisão. Viver com medo de não fechar o mês porque você depende de cada paciente.</p>
+    </div>
+    <div class="depois rv">
+      <span class="rot ouro">Depois do Destrava</span>
+      <h2 class="m">Você nunca mais depende de paciente. <span class="it ouro">Você escolhe os seus.</span></h2>
+      <p class="txt">Você posta um story abrindo a caixinha e recebe dezenas de mensagens de pessoas querendo ser atendidas por você. Abre uma lista de espera, e ela fica sempre cheia.</p>
+      <div class="tela" aria-label="Exemplo ilustrativo de mensagens recebidas">
+        <div class="story"><span>Caixinha de perguntas</span><span>Aberta</span></div>
+        <div class="dm"><i></i><span>Oi! Você tem horário essa semana?</span></div>
+        <div class="dm"><i></i><span>Quero muito começar com você</span></div>
+        <div class="dm"><i></i><span>Atende on-line? Posso entrar na lista?</span></div>
+        <div class="dm"><i></i><span>Me avisa quando abrir vaga 🙏</span></div>
+        <p class="mais">+ dezenas de mensagens</p>
+        <div class="espera">Lista de espera <b>Cheia</b></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -447,12 +521,32 @@
   </div>
 </section>
 
+<!-- ============ PROTOCOLO ============ -->
+<section class="protocolo" id="protocolo">
+  <div class="wrap">
+    <div class="cab">
+      <div class="rv">
+        <span class="rot ouro">Protocolo de 30 dias</span>
+        <h2 class="l" style="margin-top:22px">4 semanas. <span class="it ouro">Você não vai precisar nem pensar.</span></h2>
+      </div>
+      <p class="txt rv">A fórmula já está pronta. São <strong>conteúdos vencedores e validados</strong>, que trouxeram pacientes para nós. Você só adapta para o seu nicho com IA e posta. Em 30 dias, o seu Instagram está trabalhando por você.</p>
+    </div>
+    <div class="semanas">
+      <div class="semana rv"><span class="rot">Semana 1</span><h3>Posicionamento</h3><p>Nicho, bio, destaques e perfil prontos para o paciente certo te enxergar como a escolha óbvia.</p></div>
+      <div class="semana rv"><span class="rot">Semana 2</span><h3>Conteúdo no ar</h3><p>O cronograma começa a rodar com os roteiros adaptados ao seu nicho pela IA. Você só grava e posta.</p></div>
+      <div class="semana rv"><span class="rot">Semana 3</span><h3>Stories que vendem</h3><p>Caixinha aberta, script de stories e as primeiras conversas no direct virando agendamento.</p></div>
+      <div class="semana rv"><span class="rot ouro">Semana 4</span><h3>Lista de espera</h3><p>Valor da sessão reajustado, agenda cheia e uma lista de espera para você escolher quem atende.</p></div>
+    </div>
+    <div class="selos rv"><span>Fórmula pronta</span><span>Conteúdos validados</span><span>Adaptável com IA</span><span>Sem tráfego pago</span></div>
+  </div>
+</section>
+
 <!-- ============ DENTRO ============ -->
 <section class="dentro" id="dentro">
   <div class="wrap">
     <div class="cab">
       <div class="rv">
-        <span class="rot">O curso</span>
+        <span class="rot">Tudo o que você recebe</span>
         <h2 class="l" style="margin-top:22px">Do primeiro post <span class="it ouro">ao pix.</span></h2>
       </div>
       <div class="rv">
@@ -557,7 +651,7 @@
   <div class="wrap">
     <span>César Augusto &amp; Thais Ayumi · cesaraugustopsi.com.br</span>
     <span><a href="../termos.html">Termos de uso</a> · <a href="../privacidade.html">Política de privacidade</a></span>
-    <p class="disc">Os resultados variam de pessoa para pessoa e dependem de dedicação, nicho de atuação e valor cobrado por sessão. Os valores citados são metas e resultados dos autores, não garantia de faturamento. Este site não é afiliado ao Instagram, ao Facebook, à OpenAI nem à Meta Platforms, Inc.</p>
+    <p class="disc">Os resultados variam de pessoa para pessoa e dependem de dedicação, nicho de atuação e valor cobrado por sessão. Os valores citados são metas e resultados dos autores, não garantia de faturamento. As mensagens e a agenda exibidas na página são ilustrativas. Este site não é afiliado ao Instagram, ao Facebook, à OpenAI nem à Meta Platforms, Inc.</p>
   </div>
 </footer>
 
