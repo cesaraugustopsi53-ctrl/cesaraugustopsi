@@ -32,9 +32,10 @@
   (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","vxds1uep01");
 </script>
 
+<link rel="preload" as="image" href="../img/otimizadas/viagem-fuji-1170.webp" imagesrcset="../img/otimizadas/viagem-fuji-320.webp 320w, ../img/otimizadas/viagem-fuji-640.webp 640w, ../img/otimizadas/viagem-fuji-1170.webp 1170w" imagesizes="(orientation: portrait) 170vh, 100vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,200..800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,200..700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 
 <style>
   /* Marca de luxo cinematográfica: preto profundo, fotos sangradas, sans larga em caixa alta, champanhe só nos detalhes */
@@ -112,7 +113,7 @@
   .hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; }
   .hero-img { position: absolute; inset: 0; }
   .hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 60%; filter: saturate(0.95) contrast(1.05); animation: respira 2.4s cubic-bezier(.2,.7,.2,1) both; }
-  @keyframes respira { from { transform: scale(1.12); filter: saturate(0.85) contrast(1.05) brightness(0.4); } }
+  @keyframes respira { from { transform: scale(1.1); opacity: 0; } }
   .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(9,9,9,0.5) 0%, rgba(9,9,9,0) 24%, rgba(9,9,9,0.25) 48%, rgba(9,9,9,0.92) 86%, var(--preto) 100%), linear-gradient(90deg, rgba(9,9,9,0.5) 0%, rgba(9,9,9,0) 55%); }
   .hero .wrap { position: relative; z-index: 2; width: 100%; padding-top: 120px; padding-bottom: 44px; }
   .hero-meta { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 22px; flex-wrap: wrap; }
@@ -415,6 +416,17 @@
   .fixo a { background: var(--champanhe); color: var(--preto); text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 14px 18px; white-space: nowrap; }
   @media (max-width: 760px) { .fixo { display: flex; } }
 
+
+  /* Desempenho no celular: sem granulação, sem desfoque de fundo e sem efeitos de hover */
+  @media (max-width: 760px), (hover: none) {
+    body::after { display: none; }
+    nav.solida { background: rgba(9,9,9,0.96); backdrop-filter: none; -webkit-backdrop-filter: none; }
+    .fixo { background: rgba(9,9,9,0.97); backdrop-filter: none; -webkit-backdrop-filter: none; }
+    .cartao { background: #161513; backdrop-filter: none; -webkit-backdrop-filter: none; }
+    .foto:hover img, .modulo:hover { transform: none; padding-left: 0; }
+    .quem .lado-foto img + img { display: none; }
+  }
+
   /* entrada suave */
   .rv { transition: opacity 1.1s cubic-bezier(.2,.7,.2,1), transform 1.1s cubic-bezier(.2,.7,.2,1); }
   .js .rv:not(.in) { opacity: 0.001; transform: translateY(40px); }
@@ -444,7 +456,7 @@
 
 <!-- ============ HERO ============ -->
 <header class="hero">
-  <div class="hero-img"><img src="../img/viagem-fuji.jpg" alt="César Augusto e Thais Ayumi diante do Monte Fuji, no Japão"></div>
+  <div class="hero-img"><img src="../img/viagem-fuji.jpg" srcset="../img/otimizadas/viagem-fuji-320.webp 320w, ../img/otimizadas/viagem-fuji-640.webp 640w, ../img/otimizadas/viagem-fuji-1170.webp 1170w" sizes="(orientation: portrait) 170vh, 100vw" fetchpriority="high" decoding="async" alt="César Augusto e Thais Ayumi diante do Monte Fuji, no Japão"></div>
   <div class="wrap">
     <div class="hero-meta fade">
       <span class="rot">César Augusto &amp; Thais Ayumi</span>
@@ -498,13 +510,13 @@
     </div>
   </div>
   <div class="trilho-fotos" id="trilho">
-    <figure class="foto larga"><div class="moldura"><img src="../img/viagem-fuji.jpg" alt="César e Thais diante do Monte Fuji" style="object-position:62% center"></div><figcaption><b>Monte Fuji</b><span>Japão</span></figcaption></figure>
-    <figure class="foto"><div class="moldura"><img src="../img/viagem-abudhabi-casal.jpg" alt="César e Thais na Grande Mesquita Sheikh Zayed" style="object-position:30% center"></div><figcaption><b>Mesquita Sheikh Zayed</b><span>Abu Dhabi</span></figcaption></figure>
-    <figure class="foto"><div class="moldura"><img src="../img/viagem-dubai-cesar.jpg" alt="César em piscina com vista para o Burj Khalifa" style="object-position:60% center"></div><figcaption><b>Vista para o Burj Khalifa</b><span>Dubai</span></figcaption></figure>
-    <figure class="foto larga"><div class="moldura"><img src="../img/viagem-hotel.jpg" alt="César e Thais tomando café no quarto de hotel" style="object-position:center 60%"></div><figcaption><b>Café sem pressa</b><span>A agenda é nossa</span></figcaption></figure>
-    <figure class="foto"><div class="moldura"><img src="../img/viagem-toquio.jpg" alt="César e Thais à noite nas ruas de Tóquio"></div><figcaption><b>Noite em Tóquio</b><span>Japão</span></figcaption></figure>
-    <figure class="foto"><div class="moldura"><img src="../img/viagem-abudhabi-thais.jpg" alt="Thais na Grande Mesquita Sheikh Zayed"></div><figcaption><b>Thais</b><span>Abu Dhabi</span></figcaption></figure>
-    <figure class="foto"><div class="moldura"><img src="../img/thais-trabalho.jpg" alt="Thais trabalhando no notebook"></div><figcaption><b>Escritório?</b><span>Onde estiver o notebook</span></figcaption></figure>
+    <figure class="foto larga"><div class="moldura"><img src="../img/viagem-fuji.jpg" srcset="../img/otimizadas/viagem-fuji-320.webp 320w, ../img/otimizadas/viagem-fuji-640.webp 640w, ../img/otimizadas/viagem-fuji-1170.webp 1170w" sizes="(max-width: 760px) 80vw, 40vw" loading="lazy" decoding="async" alt="César e Thais diante do Monte Fuji" style="object-position:62% center"></div><figcaption><b>Monte Fuji</b><span>Japão</span></figcaption></figure>
+    <figure class="foto"><div class="moldura"><img src="../img/viagem-abudhabi-casal.jpg" srcset="../img/otimizadas/viagem-abudhabi-casal-320.webp 320w, ../img/otimizadas/viagem-abudhabi-casal-640.webp 640w, ../img/otimizadas/viagem-abudhabi-casal-1170.webp 1170w" sizes="(max-width: 760px) 80vw, 40vw" loading="lazy" decoding="async" alt="César e Thais na Grande Mesquita Sheikh Zayed" style="object-position:30% center"></div><figcaption><b>Mesquita Sheikh Zayed</b><span>Abu Dhabi</span></figcaption></figure>
+    <figure class="foto"><div class="moldura"><img src="../img/viagem-dubai-cesar.jpg" srcset="../img/otimizadas/viagem-dubai-cesar-320.webp 320w, ../img/otimizadas/viagem-dubai-cesar-640.webp 640w, ../img/otimizadas/viagem-dubai-cesar-1170.webp 1148w" sizes="(max-width: 760px) 80vw, 40vw" loading="lazy" decoding="async" alt="César em piscina com vista para o Burj Khalifa" style="object-position:60% center"></div><figcaption><b>Vista para o Burj Khalifa</b><span>Dubai</span></figcaption></figure>
+    <figure class="foto larga"><div class="moldura"><img src="../img/viagem-hotel.jpg" srcset="../img/otimizadas/viagem-hotel-320.webp 320w, ../img/otimizadas/viagem-hotel-640.webp 640w, ../img/otimizadas/viagem-hotel-1170.webp 1170w" sizes="(max-width: 760px) 80vw, 40vw" loading="lazy" decoding="async" alt="César e Thais tomando café no quarto de hotel" style="object-position:center 60%"></div><figcaption><b>Café sem pressa</b><span>A agenda é nossa</span></figcaption></figure>
+    <figure class="foto"><div class="moldura"><img src="../img/viagem-toquio.jpg" srcset="../img/otimizadas/viagem-toquio-320.webp 320w, ../img/otimizadas/viagem-toquio-640.webp 640w, ../img/otimizadas/viagem-toquio-1170.webp 1170w" sizes="(max-width: 760px) 80vw, 40vw" loading="lazy" decoding="async" alt="César e Thais à noite nas ruas de Tóquio"></div><figcaption><b>Noite em Tóquio</b><span>Japão</span></figcaption></figure>
+    <figure class="foto"><div class="moldura"><img src="../img/viagem-abudhabi-thais.jpg" srcset="../img/otimizadas/viagem-abudhabi-thais-320.webp 320w, ../img/otimizadas/viagem-abudhabi-thais-640.webp 640w, ../img/otimizadas/viagem-abudhabi-thais-1170.webp 1170w" sizes="(max-width: 760px) 80vw, 40vw" loading="lazy" decoding="async" alt="Thais na Grande Mesquita Sheikh Zayed"></div><figcaption><b>Thais</b><span>Abu Dhabi</span></figcaption></figure>
+    <figure class="foto"><div class="moldura"><img src="../img/thais-trabalho.jpg" srcset="../img/otimizadas/thais-trabalho-320.webp 320w, ../img/otimizadas/thais-trabalho-640.webp 640w, ../img/otimizadas/thais-trabalho-1170.webp 900w" sizes="(max-width: 760px) 80vw, 40vw" loading="lazy" decoding="async" alt="Thais trabalhando no notebook"></div><figcaption><b>Escritório?</b><span>Onde estiver o notebook</span></figcaption></figure>
   </div>
 </section>
 
@@ -687,8 +699,8 @@
 <!-- ============ QUEM ============ -->
 <section class="quem" id="quem">
   <div class="lado-foto">
-    <img src="../img/hero-cesar.jpg" alt="César Augusto">
-    <img src="../img/thais-retrato-1.jpg" alt="Thais Ayumi">
+    <img src="../img/hero-cesar.jpg" srcset="../img/otimizadas/hero-cesar-320.webp 320w, ../img/otimizadas/hero-cesar-640.webp 640w, ../img/otimizadas/hero-cesar-1170.webp 800w" sizes="(max-width: 960px) 100vw, 50vw" loading="lazy" decoding="async" alt="César Augusto">
+    <img src="../img/thais-retrato-1.jpg" srcset="../img/otimizadas/thais-retrato-1-320.webp 320w, ../img/otimizadas/thais-retrato-1-640.webp 640w, ../img/otimizadas/thais-retrato-1-1170.webp 900w" sizes="(max-width: 960px) 100vw, 50vw" loading="lazy" decoding="async" alt="Thais Ayumi">
     <span class="rot legenda">César Augusto · Thais Ayumi</span>
   </div>
   <div class="lado-txt">
@@ -706,7 +718,7 @@
 
 <!-- ============ OFERTA ============ -->
 <section class="oferta" id="oferta">
-  <div class="bg"><img src="../img/viagem-dubai-cesar.jpg" alt="" aria-hidden="true"></div>
+  <div class="bg"><img src="../img/viagem-dubai-cesar.jpg" srcset="../img/otimizadas/viagem-dubai-cesar-320.webp 320w, ../img/otimizadas/viagem-dubai-cesar-640.webp 640w, ../img/otimizadas/viagem-dubai-cesar-1170.webp 1148w" sizes="(max-width: 760px) 213px, 100vw" loading="lazy" decoding="async" alt="" aria-hidden="true"></div>
   <div class="wrap">
     <div class="rv">
       <span class="rot ouro">Sendo bem sinceros</span>
@@ -776,7 +788,7 @@
       <p>O Destrava é esse caminho, organizado em 30 dias, para você não precisar descobrir tudo por conta própria. A fórmula está pronta. O que falta é a sua decisão de parar de tentar no escuro.</p>
     </div>
     <div class="assina rv">
-      <img src="../img/hero-cesar.jpg" alt="César Augusto"><img src="../img/thais-retrato-1.jpg" alt="Thais Ayumi">
+      <img src="../img/hero-cesar.jpg" srcset="../img/otimizadas/hero-cesar-320.webp 320w, ../img/otimizadas/hero-cesar-640.webp 640w, ../img/otimizadas/hero-cesar-1170.webp 800w" sizes="60px" loading="lazy" decoding="async" alt="César Augusto"><img src="../img/thais-retrato-1.jpg" srcset="../img/otimizadas/thais-retrato-1-320.webp 320w, ../img/otimizadas/thais-retrato-1-640.webp 640w, ../img/otimizadas/thais-retrato-1-1170.webp 900w" sizes="60px" loading="lazy" decoding="async" alt="Thais Ayumi">
       <span>César &amp; Thais</span>
     </div>
   </div>
@@ -784,7 +796,7 @@
 
 <!-- ============ FINAL ============ -->
 <section class="final">
-  <div class="bg"><img src="../img/viagem-toquio.jpg" alt="" aria-hidden="true"></div>
+  <div class="bg"><img src="../img/viagem-toquio.jpg" srcset="../img/otimizadas/viagem-toquio-320.webp 320w, ../img/otimizadas/viagem-toquio-640.webp 640w, ../img/otimizadas/viagem-toquio-1170.webp 1170w" sizes="100vw" loading="lazy" decoding="async" alt="" aria-hidden="true"></div>
   <div class="wrap">
     <span class="rot ouro rv">A decisão é sua</span>
     <h2 class="l rv">Daqui a um ano, você quer estar <span class="it ouro">aqui</span>, ou esperando a próxima indicação?</h2>
@@ -828,6 +840,7 @@
       return '<span class="' + cls + '">' + p + '</span>';
     }).join(' ');
     var ws = m.querySelectorAll('.w');
+    var ultimo = -1;
 
     var nav = document.getElementById('nav');
     var fixo = document.getElementById('fixo');
@@ -839,14 +852,16 @@
       var r = m.getBoundingClientRect();
       var prog = Math.min(1, Math.max(0, (vh * 0.85 - r.top) / (r.height + vh * 0.35)));
       var n = Math.round(prog * ws.length);
-      for (var i = 0; i < ws.length; i++) ws[i].classList.toggle('on', i < n);
+      if (n !== ultimo) { for (var i = 0; i < ws.length; i++) ws[i].classList.toggle('on', i < n); ultimo = n; }
 
       nav.classList.toggle('solida', scrollY > 40);
       var o = oferta.getBoundingClientRect();
       fixo.classList.toggle('on', hero.getBoundingClientRect().bottom < 0 && !(o.top < vh && o.bottom > 0));
     }
-    addEventListener('scroll', tick, { passive: true });
-    addEventListener('resize', tick);
+    var pend = false;
+    function agenda() { if (!pend) { pend = true; requestAnimationFrame(function () { pend = false; tick(); }); } }
+    addEventListener('scroll', agenda, { passive: true });
+    addEventListener('resize', agenda);
     tick();
 
     // galeria
