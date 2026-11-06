@@ -206,7 +206,7 @@
   .espera b { font-size: 11px; background: var(--preto); color: var(--champanhe-claro); padding: 5px 9px; letter-spacing: 0.18em; }
   .prints { columns: 2; column-gap: 10px; }
   .prints img { width: 100%; height: auto; display: block; margin-bottom: 10px; break-inside: avoid; border-radius: 16px; border: 1px solid var(--fio); }
-  .medo .espera { margin-top: 4px; }
+  .dm-sec .espera { margin-top: 4px; }
   .prints-nota { margin-top: 12px; font-size: 12px; color: var(--osso-35); letter-spacing: 0.02em; }
   @media (max-width: 560px) { .prints { columns: 1; } .prints img:nth-child(n+6) { display: none; } }
   @media (max-width: 900px) { .medo .grid { grid-template-columns: 1fr; } }
@@ -259,6 +259,19 @@
   .duvida a:hover { color: var(--champanhe-claro); }
   .conta { margin: -18px 0 30px; font-size: 13px; color: var(--champanhe-claro); }
 
+
+
+  /* DM */
+  .dm-sec .cab { max-width: 980px; margin-bottom: clamp(44px, 6vw, 72px); }
+  .dm-sec .cab .rot { display: block; margin-bottom: 24px; }
+  .dm-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(28px, 5vw, 72px); align-items: start; }
+  .dm-foto { position: sticky; top: 96px; }
+  .dm-foto img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 25%; display: block; }
+  .dm-foto figcaption { margin-top: 18px; font-size: 15px; color: var(--osso-60); max-width: 420px; }
+  .dm-foto figcaption b { color: var(--osso); font-weight: 600; }
+  .ver-dm { display: inline-flex; align-items: center; gap: 10px; margin-top: 8px; color: var(--champanhe-claro); text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; border-bottom: 1px solid rgba(203,174,130,0.4); padding-bottom: 6px; }
+  .ver-dm svg { width: 16px; height: 16px; }
+  @media (max-width: 900px) { .dm-grid { grid-template-columns: 1fr; } .dm-foto { position: static; } .dm-foto img { aspect-ratio: 4 / 4.4; } }
 
   /* 80/20 */
   .oitenta .cab { max-width: 1000px; }
@@ -534,8 +547,26 @@
     <div class="depois rv">
       <span class="rot ouro">Depois do Destrava</span>
       <h2 class="m">Você nunca mais depende de paciente. <span class="it ouro">Você escolhe os seus.</span></h2>
-      <p class="txt">Você posta um story abrindo a caixinha e recebe dezenas de mensagens de pessoas querendo ser atendidas por você. Abre uma lista de espera, e ela fica sempre cheia. Olha como é uma semana normal no nosso direct:</p>
-      <div class="prints" aria-label="Mensagens reais recebidas no direct">
+      <p class="txt">Você posta um story abrindo a caixinha e recebe dezenas de mensagens de pessoas querendo ser atendidas por você. Abre uma lista de espera, e ela fica sempre cheia.</p>
+      <a href="#dm" class="ver-dm">Veja como é o nosso direct <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="4" x2="12" y2="20"/><polyline points="6 14 12 20 18 14"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DM ============ -->
+<section class="dm-sec" id="dm">
+  <div class="wrap">
+    <div class="cab rv">
+      <span class="rot ouro">Uma semana normal</span>
+      <h2 class="l">Sua DM cheia de pessoas <span class="it ouro">esperando uma vaga.</span></h2>
+    </div>
+    <div class="dm-grid">
+      <figure class="dm-foto rv">
+        <img src="../img/thais-sessao.jpg" srcset="../img/otimizadas/thais-sessao-320.webp 320w, ../img/otimizadas/thais-sessao-640.webp 640w, ../img/otimizadas/thais-sessao-1066.webp 1066w" sizes="(max-width: 900px) 92vw, 40vw" width="1066" height="1600" loading="lazy" decoding="async" alt="Thais Ayumi">
+        <figcaption><b>Isso não é sorte.</b> É posicionamento. É o que acontece quando o seu conteúdo fala com a pessoa certa.</figcaption>
+      </figure>
+      <div class="rv">
+        <div class="prints" aria-label="Mensagens reais recebidas no direct">
           <img src="../img/dm/dm-3-723.webp" srcset="../img/dm/dm-3-480.webp 480w, ../img/dm/dm-3-723.webp 723w" sizes="(max-width: 900px) 92vw, 300px" width="723" height="269" loading="lazy" decoding="async" alt="Mensagem: você está aberto a novos pacientes?">
           <img src="../img/dm/dm-1-953.webp" srcset="../img/dm/dm-1-480.webp 480w, ../img/dm/dm-1-953.webp 953w" sizes="(max-width: 900px) 92vw, 300px" width="953" height="226" loading="lazy" decoding="async" alt="Mensagem: estou procurando um terapeuta para o meu marido">
           <img src="../img/dm/dm-5-932.webp" srcset="../img/dm/dm-5-480.webp 480w, ../img/dm/dm-5-932.webp 932w" sizes="(max-width: 900px) 92vw, 300px" width="932" height="376" loading="lazy" decoding="async" alt="Mensagem: qual é sua disponibilidade e quais seriam os valores?">
@@ -544,9 +575,10 @@
           <img src="../img/dm/dm-2-762.webp" srcset="../img/dm/dm-2-480.webp 480w, ../img/dm/dm-2-762.webp 762w" sizes="(max-width: 900px) 92vw, 300px" width="762" height="418" loading="lazy" decoding="async" alt="Mensagem: você faz atendimento online?">
           <img src="../img/dm/dm-6-886.webp" srcset="../img/dm/dm-6-480.webp 480w, ../img/dm/dm-6-886.webp 886w" sizes="(max-width: 900px) 92vw, 300px" width="886" height="467" loading="lazy" decoding="async" alt="Mensagem: você atende online? Meu marido gostaria de fazer terapia com você">
           <img src="../img/dm/dm-8-884.webp" srcset="../img/dm/dm-8-480.webp 480w, ../img/dm/dm-8-884.webp 884w" sizes="(max-width: 900px) 92vw, 300px" width="884" height="392" loading="lazy" decoding="async" alt="Mensagem: você também faz terapia para casais? Atende online?">
+        </div>
+        <div class="espera">Lista de espera <b>Cheia</b></div>
+        <p class="prints-nota">Mensagens reais recebidas no direct do César. Nomes ocultados.</p>
       </div>
-      <div class="espera">Lista de espera <b>Cheia</b></div>
-      <p class="prints-nota">Mensagens reais recebidas no direct do César. Nomes ocultados.</p>
     </div>
   </div>
 </section>
