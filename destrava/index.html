@@ -202,16 +202,13 @@
   .medo .virada { margin-top: 30px; font-family: var(--serif); font-style: italic; font-size: clamp(22px, 2.4vw, 32px); line-height: 1.25; color: var(--osso-60); }
   .medo .depois .m { margin: 22px 0 22px; }
   .depois .txt { color: var(--osso-60); margin-bottom: 30px; }
-  .tela { position: relative; max-width: 420px; padding: 22px; border: 1px solid rgba(203,174,130,0.3); background: linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01)); }
-  .tela .story { display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid var(--fio); margin-bottom: 14px; }
-  .tela .story span:first-child { font-size: 13px; font-weight: 600; }
-  .tela .story span:last-child { font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--champanhe); }
-  .dm { display: flex; gap: 12px; align-items: center; padding: 10px 0; font-size: 14px; color: var(--osso); }
-  .dm i { width: 30px; height: 30px; border-radius: 50%; flex: 0 0 auto; background: linear-gradient(135deg, #3a342c, #1d1a16); border: 1px solid var(--fio); }
-  .dm span { background: rgba(236,230,220,0.06); padding: 9px 13px; }
-  .tela .mais { font-size: 12.5px; color: var(--osso-35); padding: 8px 0 16px 42px; }
   .espera { display: flex; justify-content: space-between; align-items: center; padding: 16px 18px; background: var(--champanhe); color: var(--preto); font-size: 11.5px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; }
   .espera b { font-size: 11px; background: var(--preto); color: var(--champanhe-claro); padding: 5px 9px; letter-spacing: 0.18em; }
+  .prints { columns: 2; column-gap: 10px; }
+  .prints img { width: 100%; height: auto; display: block; margin-bottom: 10px; break-inside: avoid; border-radius: 16px; border: 1px solid var(--fio); }
+  .medo .espera { margin-top: 4px; }
+  .prints-nota { margin-top: 12px; font-size: 12px; color: var(--osso-35); letter-spacing: 0.02em; }
+  @media (max-width: 560px) { .prints { columns: 1; } .prints img:nth-child(n+6) { display: none; } }
   @media (max-width: 900px) { .medo .grid { grid-template-columns: 1fr; } }
   @media (max-width: 480px) { .agenda-mal div { grid-template-columns: 1fr auto; } .agenda-mal b { grid-column: 1 / -1; } }
 
@@ -537,16 +534,19 @@
     <div class="depois rv">
       <span class="rot ouro">Depois do Destrava</span>
       <h2 class="m">Você nunca mais depende de paciente. <span class="it ouro">Você escolhe os seus.</span></h2>
-      <p class="txt">Você posta um story abrindo a caixinha e recebe dezenas de mensagens de pessoas querendo ser atendidas por você. Abre uma lista de espera, e ela fica sempre cheia.</p>
-      <div class="tela" aria-label="Exemplo ilustrativo de mensagens recebidas">
-        <div class="story"><span>Caixinha de perguntas</span><span>Aberta</span></div>
-        <div class="dm"><i></i><span>Oi! Você tem horário essa semana?</span></div>
-        <div class="dm"><i></i><span>Quero muito começar com você</span></div>
-        <div class="dm"><i></i><span>Atende on-line? Posso entrar na lista?</span></div>
-        <div class="dm"><i></i><span>Me avisa quando abrir vaga 🙏</span></div>
-        <p class="mais">+ dezenas de mensagens</p>
-        <div class="espera">Lista de espera <b>Cheia</b></div>
+      <p class="txt">Você posta um story abrindo a caixinha e recebe dezenas de mensagens de pessoas querendo ser atendidas por você. Abre uma lista de espera, e ela fica sempre cheia. Olha como é uma semana normal no nosso direct:</p>
+      <div class="prints" aria-label="Mensagens reais recebidas no direct">
+          <img src="../img/dm/dm-3-723.webp" srcset="../img/dm/dm-3-480.webp 480w, ../img/dm/dm-3-723.webp 723w" sizes="(max-width: 900px) 92vw, 300px" width="723" height="269" loading="lazy" decoding="async" alt="Mensagem: você está aberto a novos pacientes?">
+          <img src="../img/dm/dm-1-953.webp" srcset="../img/dm/dm-1-480.webp 480w, ../img/dm/dm-1-953.webp 953w" sizes="(max-width: 900px) 92vw, 300px" width="953" height="226" loading="lazy" decoding="async" alt="Mensagem: estou procurando um terapeuta para o meu marido">
+          <img src="../img/dm/dm-5-932.webp" srcset="../img/dm/dm-5-480.webp 480w, ../img/dm/dm-5-932.webp 932w" sizes="(max-width: 900px) 92vw, 300px" width="932" height="376" loading="lazy" decoding="async" alt="Mensagem: qual é sua disponibilidade e quais seriam os valores?">
+          <img src="../img/dm/dm-7-767.webp" srcset="../img/dm/dm-7-480.webp 480w, ../img/dm/dm-7-767.webp 767w" sizes="(max-width: 900px) 92vw, 300px" width="767" height="289" loading="lazy" decoding="async" alt="Mensagem: você ainda está com vagas para atendimento?">
+          <img src="../img/dm/dm-4-817.webp" srcset="../img/dm/dm-4-480.webp 480w, ../img/dm/dm-4-817.webp 817w" sizes="(max-width: 900px) 92vw, 300px" width="817" height="294" loading="lazy" decoding="async" alt="Mensagem: arranja uma vaga para mim e meu esposo">
+          <img src="../img/dm/dm-2-762.webp" srcset="../img/dm/dm-2-480.webp 480w, ../img/dm/dm-2-762.webp 762w" sizes="(max-width: 900px) 92vw, 300px" width="762" height="418" loading="lazy" decoding="async" alt="Mensagem: você faz atendimento online?">
+          <img src="../img/dm/dm-6-886.webp" srcset="../img/dm/dm-6-480.webp 480w, ../img/dm/dm-6-886.webp 886w" sizes="(max-width: 900px) 92vw, 300px" width="886" height="467" loading="lazy" decoding="async" alt="Mensagem: você atende online? Meu marido gostaria de fazer terapia com você">
+          <img src="../img/dm/dm-8-884.webp" srcset="../img/dm/dm-8-480.webp 480w, ../img/dm/dm-8-884.webp 884w" sizes="(max-width: 900px) 92vw, 300px" width="884" height="392" loading="lazy" decoding="async" alt="Mensagem: você também faz terapia para casais? Atende online?">
       </div>
+      <div class="espera">Lista de espera <b>Cheia</b></div>
+      <p class="prints-nota">Mensagens reais recebidas no direct do César. Nomes ocultados.</p>
     </div>
   </div>
 </section>
@@ -811,7 +811,7 @@
   <div class="wrap">
     <span>César Augusto &amp; Thais Ayumi · cesaraugustopsi.com.br</span>
     <span><a href="../termos.html">Termos de uso</a> · <a href="../privacidade.html">Política de privacidade</a></span>
-    <p class="disc">Os resultados variam de pessoa para pessoa e dependem de dedicação, nicho de atuação e valor cobrado por sessão. Os valores citados são metas e resultados dos autores, não garantia de faturamento. As mensagens e a agenda exibidas na página são ilustrativas. Este site não é afiliado ao Instagram, ao Facebook, à OpenAI nem à Meta Platforms, Inc.</p>
+    <p class="disc">Os resultados variam de pessoa para pessoa e dependem de dedicação, nicho de atuação e valor cobrado por sessão. Os valores citados são metas e resultados dos autores, não garantia de faturamento. A agenda exibida na seção sobre instabilidade é ilustrativa; as mensagens de direct são reais, com nomes ocultados. Este site não é afiliado ao Instagram, ao Facebook, à OpenAI nem à Meta Platforms, Inc.</p>
   </div>
 </footer>
 
