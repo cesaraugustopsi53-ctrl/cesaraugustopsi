@@ -261,6 +261,36 @@
   .duvida a:hover { color: var(--champanhe-claro); }
   .conta { margin: -18px 0 30px; font-size: 13px; color: var(--champanhe-claro); }
 
+
+  /* 80/20 */
+  .oitenta .cab { max-width: 1000px; }
+  .oitenta .cab .rot { display: block; margin-bottom: 26px; }
+  .oitenta .corpo { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 7vw, 120px); margin-top: clamp(48px, 6vw, 80px); align-items: start; }
+  .oitenta .corpo p { color: var(--osso-60); font-size: clamp(16px, 1.3vw, 18px); }
+  .oitenta .corpo p + p { margin-top: 18px; }
+  .oitenta .corpo p strong { color: var(--osso); font-weight: 600; }
+  .ciclo { border-top: 1px solid var(--fio); margin-top: 30px; }
+  .ciclo div { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--fio); font-size: 15px; color: var(--osso-60); }
+  .ciclo div span { font-size: 10.5px; letter-spacing: 0.2em; color: var(--osso-35); font-weight: 600; min-width: 22px; }
+  .ciclo div:last-child { color: #d98c7a; }
+  .pareto { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--fio); }
+  .pareto div { padding: clamp(26px, 3vw, 40px); }
+  .pareto div + div { border-left: 1px solid var(--fio); background: linear-gradient(160deg, rgba(203,174,130,0.14), rgba(203,174,130,0.02)); }
+  .pareto b { display: block; font-stretch: 125%; font-weight: 200; font-size: clamp(60px, 7vw, 108px); line-height: 0.9; letter-spacing: -0.05em; }
+  .pareto div + div b { color: var(--champanhe-claro); }
+  .pareto span { display: block; margin-top: 14px; font-size: 14px; color: var(--osso-60); }
+  .pareto-nota { margin-top: 22px; font-family: var(--serif); font-style: italic; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.25; }
+  .pareto-nota em { color: var(--champanhe-claro); }
+  @media (max-width: 860px) { .oitenta .corpo { grid-template-columns: 1fr; } }
+
+  /* PLATAFORMA */
+  .plataforma { margin-top: 30px; padding: 22px 24px; border: 1px solid rgba(203,174,130,0.3); background: linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01)); }
+  .plataforma .topo-p { display: flex; align-items: center; gap: 10px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--champanhe); font-weight: 600; margin-bottom: 14px; }
+  .plataforma .topo-p::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #7fd18b; box-shadow: 0 0 0 4px rgba(127,209,139,0.15); }
+  .plataforma ul { list-style: none; display: grid; gap: 10px; }
+  .plataforma li { display: flex; gap: 12px; align-items: baseline; font-size: 14.5px; color: var(--osso); }
+  .plataforma li::before { content: ''; width: 14px; height: 1px; background: var(--champanhe); flex: 0 0 auto; transform: translateY(-4px); }
+
   /* AGÊNCIA */
   .agencia { background: var(--osso); color: var(--preto); }
   .agencia .rot { color: rgba(9,9,9,0.55); }
@@ -533,6 +563,36 @@
   </div>
 </section>
 
+<!-- ============ 80/20 ============ -->
+<section class="oitenta">
+  <div class="wrap">
+    <div class="cab rv">
+      <span class="rot ouro">Postar não é o mesmo que se posicionar</span>
+      <h2 class="l">O que separa quem só posta do profissional <span class="it ouro">valorizado</span> é o posicionamento.</h2>
+    </div>
+    <div class="corpo">
+      <div class="rv">
+        <p>Postar por postar é exaustivo e frustrante. <strong>Não adianta postar todo dia se você não sabe o que está fazendo.</strong></p>
+        <p>Muito terapeuta já se frustrou várias vezes. E o ciclo é sempre o mesmo:</p>
+        <div class="ciclo">
+          <div><span>01</span>Posta todo dia, do jeito que dá</div>
+          <div><span>02</span>Ninguém chama no direct</div>
+          <div><span>03</span>Tenta outra dica solta da internet</div>
+          <div><span>04</span>Cansa, se frustra e desiste</div>
+        </div>
+      </div>
+      <div class="rv">
+        <p>Por isso a gente vai destrinchar <strong>exatamente o que funcionou para nós</strong>, e que vai funcionar para você. Sem achismo e sem volume desenfreado.</p>
+        <div class="pareto" style="margin-top:30px">
+          <div><b>20%</b><span>do esforço</span></div>
+          <div><b>80%</b><span>do resultado</span></div>
+        </div>
+        <p class="pareto-nota">Você faz menos, mas faz <em>o que realmente traz paciente.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ AGÊNCIA ============ -->
 <section class="agencia">
   <div class="wrap grid">
@@ -598,12 +658,22 @@
         <h2 class="l" style="margin-top:22px">Do primeiro post <span class="it ouro">ao pix.</span></h2>
       </div>
       <div class="rv">
-        <p class="txt">Tudo orgânico. Você posta com estratégia, vende pelos stories e faz cada conteúdo trabalhar por você a semana inteira.</p>
-        <div class="pilares"><span>Posicionamento</span><span>Marketing</span><span>Mentalidade</span></div>
+        <p class="txt">Uma plataforma com aulas gravadas para você assistir no seu ritmo, quantas vezes quiser, e aplicar no mesmo dia.</p>
+        <div class="plataforma">
+          <div class="topo-p">Na sua área de membros</div>
+          <ul>
+            <li>Aulas gravadas de mentalidade, posicionamento e marketing</li>
+            <li>Cronograma de postagens de 30 dias</li>
+            <li>Banco de ganchos virais</li>
+            <li>Roteiros e scripts prontos para adaptar com IA</li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="modulos">
+      <div class="modulo rv"><h3>Mentalidade, posicionamento e marketing</h3><p>As aulas gravadas que ensinam a pensar como um profissional valorizado, não como alguém que só posta.</p><span class="tag">Aulas gravadas</span></div>
       <div class="modulo rv"><h3>Cronograma de 30 dias</h3><p>Um mês inteiro de postagens planejado com os conteúdos que mais trouxeram pacientes para nós.</p><span class="tag">Conteúdo</span></div>
+      <div class="modulo rv"><h3>Ganchos virais</h3><p>Um banco de ganchos testados para os primeiros segundos de cada reels prenderem quem rola o feed.</p><span class="tag">Conteúdo</span></div>
       <div class="modulo rv"><h3>Roteiros + ChatGPT</h3><p>Pegue o nosso roteiro e transforme no seu, para o seu nicho, em minutos.</p><span class="tag">Ferramenta</span></div>
       <div class="modulo rv"><h3>Stories que vendem</h3><p>A aula com o script e a sequência que transformam quem assiste em quem agenda.</p><span class="tag">Aula especial</span></div>
       <div class="modulo rv"><h3>A caixinha de perguntas</h3><p>Aula do César: como transformar a caixinha numa máquina de viralização e vendas.</p><span class="tag">Aula especial</span></div>
@@ -657,8 +727,10 @@
       <!-- TODO: trocar pelo link real de checkout -->
       <a href="https://pay.kiwify.com.br/SEU_LINK_AQUI" class="btn btn-ouro" onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout')">Garantir minha vaga <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="12" x2="21" y2="12"/><polyline points="15 6 21 12 15 18"/></svg></a>
       <ul>
-        <li>Acesso imediato à área de membros</li>
-        <li>Cronograma de 30 dias, roteiros e scripts</li>
+        <li>Plataforma com aulas gravadas, acesso imediato</li>
+        <li>Aulas de mentalidade, posicionamento e marketing</li>
+        <li>Cronograma de postagens de 30 dias e ganchos virais</li>
+        <li>Roteiros e scripts prontos para adaptar com IA</li>
         <li>Aulas: stories que vendem e caixinha de perguntas</li>
         <li>Bônus: o que postar quando você não quer aparecer</li>
         <li>Bônus: carrosséis virais com IA</li>
